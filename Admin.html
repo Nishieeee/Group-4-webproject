@@ -3,65 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management System</title>
+    <title>NovaCare Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS folder/admin.css"> 
     <script src="/Script/admin.js"></script>
 </head>
 <body>
-    <header class="d-flex justify-content-between align-items-center text-bg-primary p-3">
-        <div class="logo-container d-flex align-items-center">
-            <img src="node_modules/bootstrap-icons/icons/list.svg" alt="Logo" class="logo me-2 h-25 w-25">
-            <h3 class="">NovaCare</h3>
+    <header class="d-flex justify-content-between align-items-center text-bg-primary py-3 px-5 shadow">
+        <div class="logo-container d-flex align-items-center justify-content-between">
+            <img src="assets/img/Frame 7.png" width="35px" height="50px" class="py-2">
+            <img src="assets/img/Frame 5.png" width="150px" height="50px" class="ms-2">
         </div> 
         <div>
-            <div id="search">
-                <input class="border rounded p-right-1" type="search" name="search" id="search" placeholder="Search...">
+            <div id="search" class="search-container d-flex align-items-center justify-content-center w-100">
+                <input class="form-control me-2 border rounded ps-3 py-1 w-100" type="search" name="search" id="search" placeholder="Search...">
+                <button class="btn rounded-5 btn-light"><img src="node_modules/bootstrap-icons/icons/search.svg" style="color:white"></button>
             </div>
         </div>
     </header>
-    <aside></aside>
-    <main>
-        <nav></nav>
-        <section id="container">
-
-        </section>
-        <section>
-            <div class="stat-container"></div>
-            <div class="stat-container"></div>
-            <div class="stat-container"></div>
-            <div class="stat-container"></div>
-        </section>
-        <section>
-            <div class="staff-containers"></div>
-            <div class="staff-containers"></div>
-            <div class="staff-containers"></div>
-            <div class="staff-containers"></div>
-            <div class="staff-containers"></div>
-            <div class="staff-containers"></div>
-        </section>
-        <section id="available-beds">
-
-        </section>
-        <section id="patients">
-
-        </section>
-        <section id="treatment-types">
-
-        </section>
-        <section id="earnings">
-            <div class="grid-container"></div>
-            <div class="grid-container"></div>
-            <div class="grid-container"></div>
-            <div class="grid-container"></div>
-        </section>
-        <section>
-            <div id="insurance-claims">
-
-            </div>
-            <div id="gender-stats">
+    
+    <main class="" >
+        <aside class="col-md-12 h-100 w-25 border-primary sidebar-wrapper">
+            <div id="side-profile" class="sidebar-profile h-100 w-100">
                 
             </div>
-        </section>
+        </aside>
+        <!--main Content here-->
+        <div class="col-lg-2">
+            <nav></nav>
+            <section id="container">
+
+            </section>
+            <section>
+                <div class="stat-container"></div>
+                <div class="stat-container"></div>
+                <div class="stat-container"></div>
+                <div class="stat-container"></div>
+            </section>
+            <section>
+                <div class="staff-containers"></div>
+                <div class="staff-containers"></div>
+                <div class="staff-containers"></div>
+                <div class="staff-containers"></div>
+                <div class="staff-containers"></div>
+                <div class="staff-containers"></div>
+            </section>
+            <section id="available-beds">
+
+            </section>
+            <section id="patients">
+
+            </section>
+            <section id="treatment-types">
+
+            </section>
+            <section id="earnings">
+                <div class="grid-container"></div>
+                <div class="grid-container"></div>
+                <div class="grid-container"></div>
+                <div class="grid-container"></div>
+            </section>
+            <section>
+                <div id="insurance-claims">
+
+                </div>
+                <div id="gender-stats">
+                    
+                </div>
+            </section>
+        </div>
     </main>
     <footer></footer>
 </body>
