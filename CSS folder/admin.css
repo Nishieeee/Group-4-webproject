@@ -1,21 +1,107 @@
+:root {
+    --primary-color: #006efd; /*boostrap blue*/
+    --secondary-color: #f8f9fa; /*text 3*/
+    --text-color: #212529; /*text*/
+    --text-color-dark: #343a40; /*text 2*/
+    --text-color-danger: #dc3545; /*danger color*/
+    --text-color-success: #28a745; /*success color*/
+    --text-color-warning: #ffc107; /*warning color*/
+    --text-color-info: #17a2b8; /*idk*/
+
+}
+
+.txt-primary {
+    color: var(--primary-color);
+}
+.txt-secondary {
+    color: var(--secondary-color);
+}
+.txt-dark {
+    color: var(--text-color-dark);
+}
+.txt-danger {
+    color: var(--text-color-danger);
+}
+.txt-success {
+    color: var(--text-color-success);
+}
+.txt-warning {
+    color: var(--text-color-warning);
+}
+.txt-info {
+    color: var(--text-color-info);
+}
+
 aside {
     background: white;
     height: 135vh;
+    transition: all 0.3s ease-in-out;
+}
+main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.nav-loc {
+    height: 8%;
+}
+.main-content {
+    height: 100vh;
 }
 #side-profile {
     height: 15%;
 }
 
-.side-nav > a {
+a {
     text-decoration: none;
-    color: #5e9beb;
-    padding: 10px 10px 3px 10px;
+    color: var(--primary-color);
     display: block;
     font-weight: 600;
     width: 100%;
 }
+.bi-house-door{
+    font-size: 20px;
+}
+.nav-path > a {
+
+}
+.side-nav {
+
+}
+.side-nav > a > i {
+    margin-right: 10px;
+    font-size: 20px;
+}
 .side-nav > a:hover, .side-nav > a:active {
     padding-left: 0;
-    border-left: 3px solid #5e9beb;
-    background-color: rgb(226, 226, 226);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+}
+.dashboard-header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.stats-box {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.stats-box > i{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color-dark);
 }

@@ -42,43 +42,101 @@
             </div>
         </div>
     </header>
-    <aside class="col-md-2 p-3 w-25 border sidebar-wrapper">
-        <div id="side-profile" class="sidebar-profile  w-100 d-flex align-items-center justify-content-center bg-primary  p-1 rounded text-white ">
-            <img src="assets/img/doctors/doctors-1.jpg" class=" rounded-5 border" width="70px" height="70px">
-            <div id="side-profile-name" class="mx-1">
-                <h3 class="text-white my-0"><a>Ali Bitun</a></h3>
-                <h6 class="my-0">Dept Admin</h6>
+
+    <main class="col">
+        <aside class="p-3 w-100 border sidebar-wrapper">
+            <div id="side-profile" class="sidebar-profile  w-100 d-flex align-items-center justify-content-center bg-primary  p-1 rounded text-white ">
+                <img src="assets/img/doctors/doctors-1.jpg" class=" rounded-5 border" width="70px" height="70px">
+                <div id="side-profile-name" class="mx-1">
+                    <h3 class="text-white my-0"><a>Ali Bitun</a></h3>
+                    <h6 class="my-0">Dept Admin</h6>
+                </div>
             </div>
-        </div>
-
-        <div class="side-nav p-2 d-flex flex-column align-items-start justify-content-center">
-            <a href="#" class="m-2 "><img src="node_modules/bootstrap-icons/icons/hospital.svg" class="mx-1 p-3">Hospital Dashboard</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/file-medical.svg"  class="mx-1 p-3">Medical Dashboard</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/people.svg"  class="mx-1 p-3">Patients</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/people.svg"  class="mx-1 p-3">Staff</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/postage-heart.svg" class="mx-1 p-3">Doctors</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/clipboard-heart.svg"class="mx-1 p-3">Appointments</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/hospital.svg" alt="" class="mx-1 p-3">Departments</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/credit-card.svg" class="mx-1 p-3">Insurance</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/clipboard-data.svg" class="mx-1 p-3">Reports</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/gear.svg" class="mx-1 p-3">Settings</a>
-            <a href="#" class="m-2"><img src="node_modules/bootstrap-icons/icons/box-arrow-right.svg" class="mx-1 p-3">Logout</a>
-        </div>
-    </aside>
-    <main>       
-        <!--main Content here-->
-        <div class="col-lg-2">
-            <nav class="border">
-                <img src="node_modules/bootstrap-icons/icons/house.svg" alt="">
+    
+            <nav aria-label="page navigation" class="side-nav p-2 d-flex flex-column align-items-start justify-content-center">
+                <a href="#" class="page-item-active m-1 px-3 py-2"><i class="bi bi-hospital"></i>Hospital Dashboard</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-file-earmark-medical"></i>Medical Dashboard</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-people"></i>Patients</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-people"></i>Staff</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-postage-heart"></i>Doctors</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-clipboard-heart"></i>Appointments</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-hospital"></i>Departments</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-credit-card"></i>Insurance</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-clipboard-data"></i>Reports</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-gear"></i>Settings</a>
+                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-arrow-right"></i>Logout</a>
             </nav>
-            <section id="container">
-
+        </aside>       
+        <!--main Content here-->
+        <div class="main-content">
+            <nav class="nav-loc border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm">
+                <div class="">
+                    <i class="bi bi-house-door text-primary px-2 py-1 border-end"></i>
+                </div>
+                <div class="nav-path d-flex ms-2">
+                    <p class="txt-dark my-0 mx-1"> <a href="#"> Home </a> </p>
+                    <p class="txt-dark my-0 mx-1 text-primary"> / </p>
+                    <p class="txt-dark my-0 mx-1"> <a href="#"> Dashboard </a> </p>
+                </div>   
+            </nav>
+            <div class="main-content">
+            <section id="hero-page" class=" p-3 my-0">
+                <div class="dashboard-header">
+                    <h4>Good Morning,</h4>
+                    <h2>Dr. Ali Bitun</h2>
+                    <p>Your schedule today</p>
+                    <div class="row text-white mt-3">
+                      <div class="col">
+                        <div class="icon-circle bg-info">👁️</div>
+                        <p>9 Patients</p>
+                      </div>
+                      <div class="col">
+                        <div class="icon-circle bg-success">🔪</div>
+                        <p>3 Surgeries</p>
+                      </div>
+                      <div class="col">
+                        <div class="icon-circle bg-warning">🚶</div>
+                        <p>2 Discharges</p>
+                      </div>
+                    </div>
+                  </div>
             </section>
-            <section>
-                <div class="stat-container"></div>
-                <div class="stat-container"></div>
-                <div class="stat-container"></div>
-                <div class="stat-container"></div>
+            <section class=" p-3 my-0">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                      <div class="stats-box">
+                        <i class="bi bi-people-fill text-success"></i>
+                        <h5>890</h5>
+                        <p>New Patients</p>
+                        <small class="text-success">+40% this month</small>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="stats-box">
+                        <i class="bi bi-lungs-fill text-primary"></i>
+                        <h5>360</h5>
+                        <p>OPD Patients</p>
+                        <small class="text-primary">+30% this month</small>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="stats-box">
+                        <i class="bi bi-virus text-danger"></i>
+                        <h5>980</h5>
+                        <p>Lab Tests</p>
+                        <small class="text-danger">+60% this month</small>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="stats-box">
+                        <i class="bi bi-currency-dollar text-warning"></i>
+                        <h5>$98,000</h5>
+                        <p>Total Earnings</p>
+                        <small class="text-warning">+20% this month</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </section>
             <section>
                 <div class="staff-containers"></div>
@@ -112,6 +170,7 @@
                 </div>
             </section>
         </div>
+    </div>
     </main>
     <footer></footer>
 </body>
