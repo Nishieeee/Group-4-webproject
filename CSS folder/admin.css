@@ -136,7 +136,27 @@ a {
     height: 80%;
     width: 100%;
     background-color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
+.bar {
+    background-color: var(--primary-color);
+    height: 80%;
+}
+svg {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+  }
+
+  .bar {
+    transition: height 1s ease, y 1s ease;
+  }
+
+  .label {
+    font-size: 10px;
+    text-anchor: middle;
+  }
+
+  .legend {
+    font-size: 10px;
+  }
 

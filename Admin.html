@@ -221,54 +221,65 @@
             </section>
             <section id="available-beds" class="p-3 my-0">
               <div class="bar-graph border shadow border">
-                <div class="bar-groups">
-                  <div class="bar" height="80%"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
-                <div class="bar-groups">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
-                <div class="bar-groups">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
-                <div class="bar-groups">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
-                <div class="bar-groups">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
-                <div class="bar-groups">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
-                <div class="bar-groups">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
-                <div class="bar-groups">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
+                <svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                  <!-- Title -->
+                  <text x="350" y="25" font-size="18" text-anchor="middle" fill="#333">Hospital Bed Usage (Jan–May)</text>
+                
+                  <!-- Axes -->
+                  <line x1="60" y1="350" x2="650" y2="350" stroke="#000"/>
+                  <line x1="60" y1="50" x2="60" y2="350" stroke="#000"/>
+                
+                  <!-- Y-Axis Labels -->
+                  <text x="55" y="345" font-size="10" text-anchor="end">0</text>
+                  <text x="55" y="305" font-size="10" text-anchor="end">50</text>
+                  <text x="55" y="260" font-size="10" text-anchor="end">100</text>
+                  <text x="55" y="215" font-size="10" text-anchor="end">150</text>
+                  <text x="55" y="170" font-size="10" text-anchor="end">200</text>
+                  <text x="55" y="125" font-size="10" text-anchor="end">250</text>
+                
+                  <!-- Bars -->
+                  <!-- Jan -->
+                  <rect class="bar" x="80"  y="180" width="20" height="120" fill="#4CAF50"/>
+                  <rect class="bar" x="105" y="120" width="20" height="180" fill="#F44336"/>
+                  <rect class="bar" x="130" y="250" width="20" height="50"  fill="#FF9800"/>
+                
+                  <!-- Feb -->
+                  <rect class="bar" x="180" y="160" width="20" height="140" fill="#4CAF50"/>
+                  <rect class="bar" x="205" y="140" width="20" height="160" fill="#F44336"/>
+                  <rect class="bar" x="230" y="240" width="20" height="60"  fill="#FF9800"/>
+                
+                  <!-- Mar -->
+                  <rect class="bar" x="280" y="140" width="20" height="160" fill="#4CAF50"/>
+                  <rect class="bar" x="305" y="100" width="20" height="200" fill="#F44336"/>
+                  <rect class="bar" x="330" y="230" width="20" height="70"  fill="#FF9800"/>
+                
+                  <!-- Apr -->
+                  <rect class="bar" x="380" y="160" width="20" height="140" fill="#4CAF50"/>
+                  <rect class="bar" x="405" y="120" width="20" height="180" fill="#F44336"/>
+                  <rect class="bar" x="430" y="240" width="20" height="60"  fill="#FF9800"/>
+                
+                  <!-- May -->
+                  <rect class="bar" x="480" y="180" width="20" height="120" fill="#4CAF50"/>
+                  <rect class="bar" x="505" y="140" width="20" height="160" fill="#F44336"/>
+                  <rect class="bar" x="530" y="250" width="20" height="50"  fill="#FF9800"/>
+                
+                  <!-- Month Labels -->
+                  <text class="label" x="105" y="360">Jan</text>
+                  <text class="label" x="205" y="360">Feb</text>
+                  <text class="label" x="305" y="360">Mar</text>
+                  <text class="label" x="405" y="360">Apr</text>
+                  <text class="label" x="505" y="360">May</text>
+                
+                  <!-- Legend -->
+                  <rect x="600" y="60" width="12" height="12" fill="#4CAF50"/>
+                  <text x="620" y="70" class="legend">Available</text>
+                
+                  <rect x="600" y="80" width="12" height="12" fill="#F44336"/>
+                  <text x="620" y="90" class="legend">Taken</text>
+                
+                  <rect x="600" y="100" width="12" height="12" fill="#FF9800"/>
+                  <text x="620" y="110" class="legend">Cleaning</text>
+                </svg>
               </div>
             </section>
             <section id="patients">
