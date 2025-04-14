@@ -31,7 +31,7 @@
 </head>
 <body>
     <header class="header d-flex justify-content-between align-items-center text-bg-primary py-3 px-5 shadow">
-        <div class="logo-container d-flex align-items-center justify-content-between">
+        <div class=" d-flex align-items-center justify-content-between">
             <img src="assets/img/Frame 7.png" width="35px" height="50px" class="py-2">
             <img src="assets/img/Frame 5.png" width="150px" height="50px" class="ms-2">
         </div> 
@@ -80,7 +80,7 @@
                 </div>   
             </nav>
             <div class="main-content">
-            <section id="hero-page" class=" p-3 my-0">
+            <section id="hero-page" class="container-fluid p-3 my-0">
                 <div class="dashboard-header">
                     <h4>Good Morning,</h4>
                     <h2>Dr. Ali Bitun</h2>
@@ -101,10 +101,10 @@
                     </div>
                   </div>
             </section>
-            <section class=" p-3 my-0">
+            <section id="statistics" class=" p-3 my-0">
                 <div class="row g-4">
                     <div class="col-md-3">
-                      <div class="stats-box">
+                      <div class="stats-box border">
                         <i class="bi bi-people-fill text-success"></i>
                         <h5>890</h5>
                         <p>New Patients</p>
@@ -112,7 +112,7 @@
                       </div>
                     </div>
                     <div class="col-md-3">
-                      <div class="stats-box">
+                      <div class="stats-box border">
                         <i class="bi bi-lungs-fill text-primary"></i>
                         <h5>360</h5>
                         <p>OPD Patients</p>
@@ -120,7 +120,7 @@
                       </div>
                     </div>
                     <div class="col-md-3">
-                      <div class="stats-box">
+                      <div class="stats-box border">
                         <i class="bi bi-virus text-danger"></i>
                         <h5>980</h5>
                         <p>Lab Tests</p>
@@ -128,7 +128,7 @@
                       </div>
                     </div>
                     <div class="col-md-3">
-                      <div class="stats-box">
+                      <div class="stats-box border">
                         <i class="bi bi-currency-dollar text-warning"></i>
                         <h5>$98,000</h5>
                         <p>Total Earnings</p>
@@ -136,18 +136,97 @@
                       </div>
                     </div>
                   </div>
-                </div>
             </section>
             <section>
-                <div class="staff-containers"></div>
-                <div class="staff-containers"></div>
-                <div class="staff-containers"></div>
-                <div class="staff-containers"></div>
-                <div class="staff-containers"></div>
-                <div class="staff-containers"></div>
+              <div class="p-3 row gx-3 my-0">
+                <div class="col-xl-2 col-sm-6 col-12 my-0">
+                  <div class="card mb-3">
+                    <div class="card-body shadow">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="icon-container rounded-5 text-white bg-primary">
+                          <i class="bi bi-clipboard-heart"></i>
+                        </div>
+                        <h6>Appointments</h6>
+                        <h2 class="text-primary m-0">639</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-sm-6 col-12 my-0">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="icon-container rounded-5 text-white bg-primary">
+                          <i class="bi bi-postage-heart"></i>
+                        </div>
+                        <h6>Doctors</h6>
+                        <h2 class="text-primary m-0">83</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-sm-6 col-12 my-0">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="icon-container rounded-5 text-white bg-primary">
+                          <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h6>Staff</h6>
+                        <h2 class="text-primary m-0">296</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-sm-6 col-12 my-0">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="icon-container rounded-5 text-white bg-primary">
+                          <i class="bi bi-clipboard-pulse "></i>
+                        </div>
+                        <h6>Operations</h6>
+                        <h2 class="text-primary m-0">49</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-sm-6 col-12 my-0">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="icon-container rounded-5 text-white bg-primary">
+                          <i class="bi bi-clipboard-heart "></i>
+                        </div>
+                        <h6>Admitted</h6>
+                        <h2 class="text-primary m-0">372</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-sm-6 col-12 my-0">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="icon-container rounded-5 text-white bg-primary">
+                          <i class="bi bi-person-walking "></i>
+                        </div>
+                        <h6>Discharged</h6>
+                        <h2 class="text-primary m-0">253</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
-            <section id="available-beds">
-
+            <section id="available-beds p-3">
+              <div class="bar-chart">
+                <div class="bar" style="height: 40%"></div>
+                <div class="bar" style="height: 60%"></div>
+                <div class="bar" style="height: 80%"></div>
+                <div class="bar" style="height: 50%"></div>
+                <div class="bar" style="height: 70%"></div>
+              </div>
             </section>
             <section id="patients">
 
