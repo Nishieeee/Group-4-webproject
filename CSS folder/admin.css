@@ -32,6 +32,7 @@
 }
 header {
     transition: all 0.3s ease-in;
+  
 }
 aside {
   background: white;
@@ -41,6 +42,9 @@ aside {
 main {
   display: grid;
   grid-template-columns: 20% 80%;
+  padding-top: 85px;
+  display: grid;
+  
 }
 .nav-loc {
   height: 8%;
@@ -117,7 +121,6 @@ a {
   align-items: center;
   width: 50%;
   height: 50%;
-  background-color: var(--primary-color);
 }
 .card-body > .d-flex > .icon-container > i {
   font-size: 2rem;
@@ -130,7 +133,7 @@ a {
   transform: scale(1.03);
 }
 #available-beds {
-    height: 100vh;
+    height: 90vh;
 }
 .bar-graph {
     height: 80%;

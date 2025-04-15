@@ -30,21 +30,21 @@
 
 </head>
 <body>
-    <header class="header d-flex justify-content-between align-items-center text-bg-primary py-3 px-5 shadow">
+    <header class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow">
         <div class=" d-flex align-items-center justify-content-between">
             <img src="assets/img/Frame 7.png" width="35px" height="50px" class="py-2">
             <img src="assets/img/Frame 5.png" width="150px" height="50px" class="ms-2">
         </div> 
         <div>
-            <div id="search" class="search-container d-flex align-items-center justify-content-center w-100">
-                <input class="form-control me-2 border rounded ps-3 py-1 w-100" type="search" name="search" id="search" placeholder="Search...">
-                <button class="btn rounded-5 btn-light"><img src="node_modules/bootstrap-icons/icons/search.svg" style="color:white"></button>
+            <div id="search" class="search-container  d-flex align-items-center justify-content-center w-100">
+                <input class="form-control shadow-sm me-2 border rounded ps-3 py-1 pe-2 py-1 " type="search" name="search" id="search" placeholder="Search..." style="width:250px;">
+                <button class="btn rounded-5 btn-primary shadow-sm"><i class="bi bi-search"></i></button>
             </div>
         </div>
     </header>
 
     <main class="col">
-        <aside class="p-3 w-100 border sidebar-wrapper">
+        <aside class="p-3 w-100 h-100 border sidebar-wrapper">
             <div id="side-profile" class="sidebar-profile  w-100 d-flex align-items-center justify-content-center bg-primary  p-1 rounded text-white ">
                 <img src="assets/img/doctors/doctors-1.jpg" class=" rounded-5 border" width="70px" height="70px">
                 <div id="side-profile-name" class="mx-1">
@@ -55,7 +55,7 @@
     
             <nav aria-label="page navigation" class="side-nav p-2 d-flex flex-column align-items-start justify-content-center">
                 <a href="#" class="page-item-active m-1 px-3 py-2"><i class="bi bi-hospital"></i>Hospital Dashboard</a>
-                <a href="#" class="m-1 px-3 py-2"><i class="bi bi-file-earmark-medical"></i>Medical Dashboard</a>
+               
                 <a href="#" class="m-1 px-3 py-2"><i class="bi bi-people"></i>Patients</a>
                 <a href="#" class="m-1 px-3 py-2"><i class="bi bi-people"></i>Staff</a>
                 <a href="#" class="m-1 px-3 py-2"><i class="bi bi-postage-heart"></i>Doctors</a>
@@ -143,7 +143,7 @@
                   <div class="card mb-3">
                     <div class="card-body shadow">
                       <div class="d-flex flex-column align-items-center">
-                        <div class="icon-container rounded-5 text-white bg-primary">
+                        <div class="icon-container rounded-5 text-primary">
                           <i class="bi bi-clipboard-heart"></i>
                         </div>
                         <h6>Appointments</h6>
@@ -156,7 +156,7 @@
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex flex-column align-items-center">
-                        <div class="icon-container rounded-5 text-white bg-primary">
+                        <div class="icon-container rounded-5 text-primary">
                           <i class="bi bi-postage-heart"></i>
                         </div>
                         <h6>Doctors</h6>
@@ -169,7 +169,7 @@
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex flex-column align-items-center">
-                        <div class="icon-container rounded-5 text-white bg-primary">
+                        <div class="icon-container rounded-5 text-primary">
                           <i class="bi bi-people-fill"></i>
                         </div>
                         <h6>Staff</h6>
@@ -182,7 +182,7 @@
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex flex-column align-items-center">
-                        <div class="icon-container rounded-5 text-white bg-primary">
+                        <div class="icon-container rounded-5 text-primary">
                           <i class="bi bi-clipboard-pulse "></i>
                         </div>
                         <h6>Operations</h6>
@@ -195,7 +195,7 @@
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex flex-column align-items-center">
-                        <div class="icon-container rounded-5 text-white bg-primary">
+                        <div class="icon-container rounded-5 text-primary">
                           <i class="bi bi-clipboard-heart "></i>
                         </div>
                         <h6>Admitted</h6>
@@ -208,7 +208,7 @@
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex flex-column align-items-center">
-                        <div class="icon-container rounded-5 text-white bg-primary">
+                        <div class="icon-container rounded-5 text-primary">
                           <i class="bi bi-person-walking "></i>
                         </div>
                         <h6>Discharged</h6>
@@ -220,66 +220,67 @@
               </div>
             </section>
             <section id="available-beds" class="p-3 my-0">
-              <div class="bar-graph border shadow border">
-                <svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+              <div class="bar-graph border shadow border d-flex align-items-center justify-content-center">
+                <svg width="100%" height="auto" viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
                   <!-- Title -->
                   <text x="350" y="25" font-size="18" text-anchor="middle" fill="#333">Hospital Bed Usage (Jan–May)</text>
                 
                   <!-- Axes -->
-                  <line x1="60" y1="350" x2="650" y2="350" stroke="#000"/>
-                  <line x1="60" y1="50" x2="60" y2="350" stroke="#000"/>
+                  <line x1="70" y1="300" x2="650" y2="300" stroke="#000"/>
+                  <line x1="70" y1="50" x2="70" y2="300" stroke="#000"/>
                 
                   <!-- Y-Axis Labels -->
-                  <text x="55" y="345" font-size="10" text-anchor="end">0</text>
-                  <text x="55" y="305" font-size="10" text-anchor="end">50</text>
-                  <text x="55" y="260" font-size="10" text-anchor="end">100</text>
-                  <text x="55" y="215" font-size="10" text-anchor="end">150</text>
-                  <text x="55" y="170" font-size="10" text-anchor="end">200</text>
-                  <text x="55" y="125" font-size="10" text-anchor="end">250</text>
+                  <text x="65" y="305" font-size="10" text-anchor="end">0</text>
+                  <text x="65" y="250" font-size="10" text-anchor="end">50</text>
+                  <text x="65" y="200" font-size="10" text-anchor="end">100</text>
+                  <text x="65" y="150" font-size="10" text-anchor="end">150</text>
+                  <text x="65" y="100" font-size="10" text-anchor="end">200</text>
+                  <text x="65" y="50" font-size="10" text-anchor="end">250</text>
                 
-                  <!-- Bars -->
-                  <!-- Jan -->
-                  <rect class="bar" x="80"  y="180" width="20" height="120" fill="#4CAF50"/>
-                  <rect class="bar" x="105" y="120" width="20" height="180" fill="#F44336"/>
-                  <rect class="bar" x="130" y="250" width="20" height="50"  fill="#FF9800"/>
+                  <!-- Bars (grouped by month) -->
+                  <!-- January -->
+                  <rect x="100" y="180" width="20" height="120" fill="#4CAF50"/>
+                  <rect x="125" y="120" width="20" height="180" fill="#F44336"/>
+                  <rect x="150" y="250" width="20" height="50"  fill="#FF9800"/>
                 
-                  <!-- Feb -->
-                  <rect class="bar" x="180" y="160" width="20" height="140" fill="#4CAF50"/>
-                  <rect class="bar" x="205" y="140" width="20" height="160" fill="#F44336"/>
-                  <rect class="bar" x="230" y="240" width="20" height="60"  fill="#FF9800"/>
+                  <!-- February -->
+                  <rect x="200" y="160" width="20" height="140" fill="#4CAF50"/>
+                  <rect x="225" y="140" width="20" height="160" fill="#F44336"/>
+                  <rect x="250" y="240" width="20" height="60"  fill="#FF9800"/>
                 
-                  <!-- Mar -->
-                  <rect class="bar" x="280" y="140" width="20" height="160" fill="#4CAF50"/>
-                  <rect class="bar" x="305" y="100" width="20" height="200" fill="#F44336"/>
-                  <rect class="bar" x="330" y="230" width="20" height="70"  fill="#FF9800"/>
+                  <!-- March -->
+                  <rect x="300" y="140" width="20" height="160" fill="#4CAF50"/>
+                  <rect x="325" y="100" width="20" height="200" fill="#F44336"/>
+                  <rect x="350" y="230" width="20" height="70"  fill="#FF9800"/>
                 
-                  <!-- Apr -->
-                  <rect class="bar" x="380" y="160" width="20" height="140" fill="#4CAF50"/>
-                  <rect class="bar" x="405" y="120" width="20" height="180" fill="#F44336"/>
-                  <rect class="bar" x="430" y="240" width="20" height="60"  fill="#FF9800"/>
+                  <!-- April -->
+                  <rect x="400" y="160" width="20" height="140" fill="#4CAF50"/>
+                  <rect x="425" y="120" width="20" height="180" fill="#F44336"/>
+                  <rect x="450" y="240" width="20" height="60"  fill="#FF9800"/>
                 
                   <!-- May -->
-                  <rect class="bar" x="480" y="180" width="20" height="120" fill="#4CAF50"/>
-                  <rect class="bar" x="505" y="140" width="20" height="160" fill="#F44336"/>
-                  <rect class="bar" x="530" y="250" width="20" height="50"  fill="#FF9800"/>
+                  <rect x="500" y="180" width="20" height="120" fill="#4CAF50"/>
+                  <rect x="525" y="140" width="20" height="160" fill="#F44336"/>
+                  <rect x="550" y="250" width="20" height="50"  fill="#FF9800"/>
                 
                   <!-- Month Labels -->
-                  <text class="label" x="105" y="360">Jan</text>
-                  <text class="label" x="205" y="360">Feb</text>
-                  <text class="label" x="305" y="360">Mar</text>
-                  <text class="label" x="405" y="360">Apr</text>
-                  <text class="label" x="505" y="360">May</text>
+                  <text x="135" y="320" font-size="10" text-anchor="middle">Jan</text>
+                  <text x="235" y="320" font-size="10" text-anchor="middle">Feb</text>
+                  <text x="335" y="320" font-size="10" text-anchor="middle">Mar</text>
+                  <text x="435" y="320" font-size="10" text-anchor="middle">Apr</text>
+                  <text x="535" y="320" font-size="10" text-anchor="middle">May</text>
                 
                   <!-- Legend -->
                   <rect x="600" y="60" width="12" height="12" fill="#4CAF50"/>
-                  <text x="620" y="70" class="legend">Available</text>
+                  <text x="620" y="70" font-size="10">Available</text>
                 
                   <rect x="600" y="80" width="12" height="12" fill="#F44336"/>
-                  <text x="620" y="90" class="legend">Taken</text>
+                  <text x="620" y="90" font-size="10">Taken</text>
                 
                   <rect x="600" y="100" width="12" height="12" fill="#FF9800"/>
-                  <text x="620" y="110" class="legend">Cleaning</text>
+                  <text x="620" y="110" font-size="10">Cleaning</text>
                 </svg>
+                
               </div>
             </section>
             <section id="patients">
