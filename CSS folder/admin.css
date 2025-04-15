@@ -31,8 +31,7 @@
   color: var(--text-color-info);
 }
 header {
-    transition: all 0.3s ease-in;
-  
+  transition: all 0.3s ease-in;
 }
 aside {
   background: white;
@@ -82,7 +81,7 @@ a {
   height: 90%;
 }
 .side-nav > a {
-    transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .side-nav > a > i {
   margin-right: 10px;
@@ -140,7 +139,7 @@ a {
   font-weight: 600;
 }
 .card {
-    transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 .card:hover {
   transform: scale(1.03);
@@ -148,86 +147,96 @@ a {
 
 .bar-graph,
 .line-graph {
-    height: 80%;
-    width: 100%;
-    background-color: white;
+  height: 80%;
+  width: 100%;
+  background-color: white;
 }
 .bar {
-    background-color: var(--primary-color);
-    height: 80%;
+  background-color: var(--primary-color);
+  height: 80%;
+  transition: transform 0.2s ease-in-out;
+}
+.bar:hover {
+  transform: scale(1.03);
+}
+rect {
+  transition: transform 0.2s ease-in-out;
+}
+rect:hover {
+  transform: scale(1.01);
 }
 svg {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-  }
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
 
-  .bar {
-    transition: height 1s ease, y 1s ease;
-  }
+.bar {
+  transition: height 1s ease, y 1s ease;
+}
 
-  .label {
-    font-size: 10px;
-    text-anchor: middle;
-  }
+.label {
+  font-size: 10px;
+  text-anchor: middle;
+}
 
-  .legend {
-    font-size: 10px;
-  }
-  .earnings-card {
-    border: 1px solid #eee;
-    border-radius: 12px;
-    padding: 1rem;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-    transition: transform 0.2s ease-in-out;
-  }
-  .earnings-card:hover {
-    transform: scale(1.05);
-  }
-  .earnings-icon {
-    width: 40px;
-    height: 40px;
-  }
+.legend {
+  font-size: 10px;
+}
+.earnings-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease-in-out;
+}
+.earnings-card:hover {
+  transform: scale(1.05);
+}
+.earnings-icon {
+  width: 40px;
+  height: 40px;
+}
 
-  .trend-up {
-    color: #3B82F6;
-  }
+.trend-up {
+  color: #3b82f6;
+}
 
-  .trend-down {
-    color: #EF4444;
-  }
+.trend-down {
+  color: #ef4444;
+}
 
-  .amount {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  .card {
-    border: none;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    border-radius: 12px;
-    padding: 1rem;
-  }
-  .bar {
-    width: 30px;
-    display: inline-block;
-    margin: 0 19px;
-    position: relative;
-    border-radius: 6px 6px 0 0;
-  }
-  .bar span {
-    position: absolute;
-    bottom: 100%;
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-  }
-  .legend-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 5px;
-  }
+.amount {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+}
+.bar {
+  width: 30px;
+  display: inline-block;
+  margin: 0 19px;
+  position: relative;
+  border-radius: 6px 6px 0 0;
+}
+.bar span {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
