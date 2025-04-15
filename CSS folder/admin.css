@@ -36,7 +36,7 @@ header {
 }
 aside {
   background: white;
-  height: 135vh;
+  height: 100vh;
   transition: all 0.3s ease-in;
 }
 main {
@@ -67,6 +67,9 @@ a {
   font-size: 20px;
 }
 .nav-path > a {
+}
+.side-nav {
+  height: 90%;
 }
 .side-nav > a {
     transition: color 0.3s ease-in-out;
@@ -132,10 +135,9 @@ a {
 .card:hover {
   transform: scale(1.03);
 }
-#available-beds {
-    height: 90vh;
-}
-.bar-graph {
+
+.bar-graph,
+.line-graph {
     height: 80%;
     width: 100%;
     background-color: white;
@@ -162,4 +164,28 @@ svg {
   .legend {
     font-size: 10px;
   }
+  .earnings-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  }
 
+  .earnings-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .trend-up {
+    color: #3B82F6;
+  }
+
+  .trend-down {
+    color: #EF4444;
+  }
+
+  .amount {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
