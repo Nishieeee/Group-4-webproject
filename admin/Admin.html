@@ -83,6 +83,7 @@
     </header>
 
     <main class="col">
+      <!--side nav-->
       <aside class="p-3 z-2 w-100 h-100 border sidebar-wrapper">
         <div
           id="side-profile"
@@ -104,7 +105,7 @@
           aria-label="page navigation"
           class="side-nav p-2 d-flex flex-column align-items-start justify-content-center"
         >
-          <a href="#" id="current-page" class="hp page-item-active m-1 px-3 py-2"
+          <a href="#" id="" class="main-page page-item-active hp m-1 px-3 py-2"
             ><i class="bi bi-hospital"></i>Hospital Dashboard</a
           >
           <a href="#" class="pts m-1 px-3 py-2"
@@ -136,12 +137,13 @@
           >
         </nav>
       </aside>
+
       <!--main Content here-->
       <div class="main-content">
         <nav
           class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
         >
-          <div class="">
+          <div>
             <i class="bi bi-house-door text-primary px-2 py-1 border-end"></i>
           </div>
           <div class="nav-path d-flex ms-2">
@@ -752,9 +754,12 @@
           </section>
         </div>
       </div>
+
+      <!--Patients page-->
       <div class="patients-page"> 
         <h1>Jello Wolrd</h1>
       </div>
+
     </main>
     <footer>
       <div class="container-fluid text-center py-3 bg-light border-top">
@@ -762,21 +767,28 @@
       </div>
     </footer>
     <script>
-      $("document").ready(function () {
-        $(".main-content").show();
-        $(".patients-page").hide();
+      $("document").ready( () => {
+        
 
-        $(".pts").click(function () {
+        $(".pts").click(() => {
+          //show patients page and hide main page
           $(".main-content").hide();
+          $(".pts").addClass("page-item-active");
+          $("#main-page").removeClass("page-item-active");
           $(".patients-page").fadeIn();
           $(".patients-page").fadeIn(slow);
           $(".patients-page").fadeIn(1000);
         });
-        $("#current-page").click(function () {
-          // $(".main-content").show();
+
+        $(".main-page").click(() => {
+          $(".pts").removeClass("page-item-active");
+          $(".main-page").addClass("page-item-active");
+          //show main and hide patients page
           $(".main-content").fadeIn();
           $(".main-content").fadeIn(slow);
           $(".main-content").fadeIn(1000);
+
+          
           $(".patients-page").hide();
         });
       });
