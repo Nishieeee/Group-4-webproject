@@ -42,11 +42,11 @@
       rel="stylesheet"
     />
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
     <header
-      class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow"
+      class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow-sm"
     >
       <div class="d-flex align-items-center justify-content-between">
         <img
@@ -83,7 +83,7 @@
     </header>
 
     <main class="col">
-      <aside class="p-3 w-100 h-100 border sidebar-wrapper">
+      <aside class="p-3 z-2 w-100 h-100 border sidebar-wrapper">
         <div
           id="side-profile"
           class="sidebar-profile mb-1 w-100 d-flex align-items-center justify-content-center bg-primary p-1 rounded text-white"
@@ -139,7 +139,7 @@
       <!--main Content here-->
       <div class="main-content">
         <nav
-          class="nav-loc border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
+          class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
         >
           <div class="">
             <i class="bi bi-house-door text-primary px-2 py-1 border-end"></i>
@@ -173,7 +173,7 @@
             </div>
           </section>
           <section id="statistics" class="p-3 my-0">
-            <div class="row g-4">
+            <div class="row g-4 my-0">
               <div class="col-md-3">
                 <div class="stats-box border">
                   <i class="bi bi-people-fill text-success"></i>
@@ -208,7 +208,7 @@
               </div>
             </div>
           </section>
-          <section>
+          <section class="p-3 my-0">
             <div class="p-3 row gx-3 my-0">
               <div class="col-xl-2 col-sm-6 col-12 my-0">
                 <div class="card mb-3">
@@ -483,8 +483,8 @@
               </svg>
             </div>
           </section>
-          <section id="hospital-earnings" class="border bg-white mx-3 my-0">
-            <div class="container py-4 border">
+          <section id="hospital-earnings" class="border bg-white p-3 mx-3 my-0">
+            <div class="container py-2">
               <h5 class="mb-4">Hospital Earnings</h5>
               <div class="row g-3">
                 <div class="col-md-6">
@@ -606,57 +606,57 @@
               </div>
             </div>
           </section>
-          <section>
-            <div class="container mt-4">
+          <section id="other-stats" class="my-0 p-3">
+            <div class="container">
               <div class="row g-3">
                 <div class="col-md-6">
                   <div class="card border">
                     <h5 class="mb-3">Insurance Claims</h5>
                     <div class="d-flex align-items-end" style="height: 150px">
                       <div
-                        class="bar bg-primary"
+                        class="bar-2 bg-primary"
                         style="height: 52%"
                         title="52"
                       >
                         <span>52</span>
                       </div>
                       <div
-                        class="bar bg-primary"
+                        class="bar-2 bg-primary"
                         style="height: 73%"
                         title="73"
                       >
                         <span>73</span>
                       </div>
                       <div
-                        class="bar bg-primary"
+                        class="bar-2 bg-primary"
                         style="height: 34%; opacity: 0.6"
                         title="34"
                       >
                         <span>34</span>
                       </div>
                       <div
-                        class="bar bg-primary"
+                        class="bar-2 bg-primary"
                         style="height: 66%; opacity: 0.6"
                         title="66"
                       >
                         <span>66</span>
                       </div>
                       <div
-                        class="bar bg-primary"
+                        class="bar-2 bg-primary"
                         style="height: 82%; opacity: 0.3"
                         title="82"
                       >
                         <span>82</span>
                       </div>
                       <div
-                        class="bar bg-primary"
+                        class="bar-2 bg-primary"
                         style="height: 49%; opacity: 0.3"
                         title="49"
                       >
                         <span>49</span>
                       </div>
                       <div
-                        class="bar bg-primary"
+                        class="bar-2 bg-primary"
                         style="height: 38%"
                         title="38"
                       >
@@ -664,7 +664,7 @@
                       </div>
                     </div>
                     <div
-                      class="d-flex justify-content-between mt-2 px-2 text-muted"
+                      class="d-flex justify-content-around mt-2 px-2 text-muted"
                       style="font-size: 12px"
                     >
                       <span>S</span><span>M</span><span>T</span><span>W</span

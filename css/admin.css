@@ -43,12 +43,26 @@ main {
   grid-template-columns: 20% 80%;
   padding-top: 85px;
   display: grid;
-  overflow-y: hidden;
+  overflow: hidden;
+}
+main::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+main::-webkit-scrollbar-thumb {
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 .main-content {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+.main-content::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.main-content::-webkit-scrollbar-thumb {
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 .nav-loc {
   height: 8%;
@@ -217,14 +231,14 @@ svg {
   border-radius: 12px;
   padding: 1rem;
 }
-.bar {
+.bar-2 {
   width: 30px;
   display: inline-block;
-  margin: 0 19px;
+  margin: 0 21px;
   position: relative;
   border-radius: 6px 6px 0 0;
 }
-.bar span {
+.bar-2 span {
   position: absolute;
   bottom: 100%;
   width: 100%;
