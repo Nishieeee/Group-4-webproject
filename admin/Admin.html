@@ -105,10 +105,10 @@
           aria-label="page navigation"
           class="side-nav p-2 d-flex flex-column align-items-start justify-content-center"
         >
-          <a href="#" id="" class="main-page hp m-1 px-3 py-2"
+          <a id="" class="main-page hp m-1 px-3 py-2"
             ><i class="bi bi-hospital"></i>Hospital Dashboard</a
           >
-          <a href="#" class="pts m-1 px-3 py-2"
+          <a class="pts m-1 px-3 py-2"
             ><i class="bi bi-people"></i>Patients</a
           >
           <a href="#" class="m-1 px-3 py-2"
@@ -768,12 +768,10 @@
     </footer>
     <script>
       $("document").ready( () => {
-        $(".main-page").addClass("page-item-active");
+        
         $(".pts").click(() => {
           //show patients page and hide main page
-          $(".main-content").fadeOut();
-          $(".main-content").fadeOut(slow);
-          $(".main-content").fadeOut(500);
+          $(".main-content").hide();
           $(".pts").addClass("page-item-active");
           $("#main-page").removeClass("page-item-active");
           $(".patients-page").fadeIn();
@@ -785,13 +783,12 @@
           $(".pts").removeClass("page-item-active");
           $(".main-page").addClass("page-item-active");
           //show main and hide patients page
+          $(".patients-page").hide();
+          
+
           $(".main-content").fadeIn();
           $(".main-content").fadeIn(slow);
-          $(".main-content").fadeIn(500);
-      
-          $(".patients-page").fadeOut();
-          $(".patients-page").fadeOut(slow);
-          $(".patients-page").fadeOut(500);
+          $(".main-content").fadeIn(500); 
         });
       });
     </script>
