@@ -105,7 +105,7 @@
           aria-label="page navigation"
           class="side-nav p-2 d-flex flex-column align-items-start justify-content-center"
         >
-          <a href="#" id="" class="main-page page-item-active hp m-1 px-3 py-2"
+          <a href="#" id="" class="main-page hp m-1 px-3 py-2"
             ><i class="bi bi-hospital"></i>Hospital Dashboard</a
           >
           <a href="#" class="pts m-1 px-3 py-2"
@@ -768,16 +768,17 @@
     </footer>
     <script>
       $("document").ready( () => {
-        
-
+        $(".main-page").addClass("page-item-active");
         $(".pts").click(() => {
           //show patients page and hide main page
-          $(".main-content").hide();
+          $(".main-content").fadeOut();
+          $(".main-content").fadeOut(slow);
+          $(".main-content").fadeOut(500);
           $(".pts").addClass("page-item-active");
           $("#main-page").removeClass("page-item-active");
           $(".patients-page").fadeIn();
           $(".patients-page").fadeIn(slow);
-          $(".patients-page").fadeIn(1000);
+          $(".patients-page").fadeIn(500);
         });
 
         $(".main-page").click(() => {
@@ -786,10 +787,11 @@
           //show main and hide patients page
           $(".main-content").fadeIn();
           $(".main-content").fadeIn(slow);
-          $(".main-content").fadeIn(1000);
-
-          
-          $(".patients-page").hide();
+          $(".main-content").fadeIn(500);
+      
+          $(".patients-page").fadeOut();
+          $(".patients-page").fadeOut(slow);
+          $(".patients-page").fadeOut(500);
         });
       });
     </script>
