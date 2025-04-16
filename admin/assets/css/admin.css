@@ -265,12 +265,6 @@ td {
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
-tr td:nth-child(3) {
-  color: var(--text-color-warning);
-}
-td:nth-child(3) {
-  color: var(--primary-color);
-}
 th {
   cursor: pointer;
   user-select: none;

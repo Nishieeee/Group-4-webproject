@@ -97,7 +97,7 @@
           />
           <div id="side-profile-name" class="mx-1">
             <h3 class="text-white my-0"><a>Ali Bitun</a></h3>
-            <h6 class="my-0">Dept Admin</h6>
+            <h6 class="my-0 text-white">Dept Admin</h6>
           </div>
         </div>
 
@@ -774,8 +774,15 @@
           </div>
         </nav>
         <!--main patients content-->
-        <div class="p-3 my-0">
-          <section class="border">
+        <div class="p-2 my-0">
+          <section class="border p-0">
+            <div class="mx-1 my-0 shadow-sm">
+              <div class="d-flex justify-content-between align-items-center py-2 px-5">
+                <h5 class="mb-0">Patients</h5>
+              <button class="btn btn-primary rounded-5 shadow-sm px-3">
+                <i class="bi bi-plus p-0 m-0"></i> Add Patient
+              </button>
+              </div>
             <table id="patientTable" class="table table-bordered table-striped">
               <!--Table header-->
               <thead>
@@ -818,7 +825,7 @@
                   <td>Jada Poe</td>
                   <td>Female</td>
                   <td>60</td>
-                  <td>b+</td>
+                  <td>B+</td>
                   <td>Cardiology</td>
                   <td>+1 234 567 890</td>
                   <td>test@testing</td>
@@ -883,6 +890,10 @@
     <script src="assets/js/jquery/dist/jquery.min.js"></script>
     <script src="assets/js/admin.js"></script>
     <script>
+      $("document").ready(() => {
+        // Hide the patients page initially
+        $(".patients-page").hide();
+      });
       $("document").ready(() => {
         $(".pts").click(() => {
           //show patients page and hide main page
