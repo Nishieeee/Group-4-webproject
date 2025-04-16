@@ -775,7 +775,7 @@
         </nav>
         <!--main patients content-->
         <div class="p-2 my-0">
-          <section class="border p-0">
+          <section class="border p-0 shadow-sm">
             <div class="mx-1 my-0 shadow-sm">
               <div class="d-flex justify-content-between align-items-center py-2 px-5">
                 <h5 class="mb-0">Patients</h5>
@@ -895,19 +895,21 @@
         $(".patients-page").hide();
       });
       $("document").ready(() => {
+        $(".main-page").addClass("page-item-active");
         $(".pts").click(() => {
           //show patients page and hide main page
           $(".main-content").hide();
           $(".pts").addClass("page-item-active");
-          $("#main-page").removeClass("page-item-active");
+          $(".main-page").removeClass("page-item-active");
           $(".patients-page").fadeIn();
           $(".patients-page").fadeIn(slow);
           $(".patients-page").fadeIn(500);
         });
 
         $(".main-page").click(() => {
-          $(".pts").removeClass("page-item-active");
           $(".main-page").addClass("page-item-active");
+          $(".pts").removeClass("page-item-active");
+          
           //show main and hide patients page
           $(".patients-page").hide();
 

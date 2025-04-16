@@ -273,8 +273,8 @@ th:hover {
   background-color: #ddd;
 }
 th.asc::after {
-  content: " ▲";
+  content: "▲";
 }
 th.desc::after {
-  content: " ▼";
+  content: "▼";
 }
