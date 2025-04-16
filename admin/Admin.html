@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/admin.css" />
 
     <!-- Favicons -->
     <link href="/assets/img/Frame 6.png" rel="icon" />
@@ -41,8 +41,8 @@
       rel="stylesheet"
     />
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
   </head>
   <body>
     <header
@@ -108,9 +108,7 @@
           <a id="" class="main-page hp m-1 px-3 py-2"
             ><i class="bi bi-hospital"></i>Hospital Dashboard</a
           >
-          <a class="pts m-1 px-3 py-2"
-            ><i class="bi bi-people"></i>Patients</a
-          >
+          <a class="pts m-1 px-3 py-2"><i class="bi bi-people"></i>Patients</a>
           <a href="#" class="m-1 px-3 py-2"
             ><i class="bi bi-people"></i>Staff</a
           >
@@ -159,16 +157,22 @@
               <h2 class="text-white">Dr. Ali Bitun</h2>
               <p>Your schedule today</p>
               <div class="row text-white mt-3">
-                <div class="col ">
-                  <div class="icon-circle bg-info h-75 w-25"><i class="bi bi-people-fill"></i></div>
+                <div class="col">
+                  <div class="icon-circle bg-info h-75 w-25">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
                   <p>9 Patients</p>
                 </div>
                 <div class="col">
-                  <div class="icon-circle bg-success"><i class="bi bi-lungs"></i></div>
+                  <div class="icon-circle bg-success">
+                    <i class="bi bi-lungs"></i>
+                  </div>
                   <p>3 Surgeries</p>
                 </div>
                 <div class="col">
-                  <div class="icon-circle bg-warning"><i class="bi bi-person-walking"></i></div>
+                  <div class="icon-circle bg-warning">
+                    <i class="bi bi-person-walking"></i>
+                  </div>
                   <p>2 Discharges</p>
                 </div>
               </div>
@@ -756,7 +760,7 @@
       </div>
 
       <!--Patients page-->
-      <div class="patients-page"> 
+      <div class="patients-page">
         <nav
           class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
         >
@@ -769,17 +773,117 @@
             <p class="txt-dark my-0 mx-1"><a href="#"> Patients </a></p>
           </div>
         </nav>
-      </div>
+        <!--main patients content-->
+        <div class="p-3 my-0">
+          <section class="border">
+            <table id="patientTable" class="table table-bordered table-striped">
+              <!--Table header-->
+              <thead>
+                <tr>
+                  <th scope="col" data-type="text">No.</th>
+                  <th scope="col" data-type="text">Patient Name</th>
+                  <th scope="col" data-type="text">Gender</th>
+                  <th scope="col" data-type="number">Age</th>
+                  <th scope="col" data-type="text">Blood Group</th>
 
+                  <th scope="col" data-type="text">Treatment</th>
+                  <th scope="col" data-type="text">Mobile</th>
+                  <th scope="col" data-type="text">Email</th>
+                  <th scope="col" data-type="text">Address</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <!--Table contents-->
+              <tbody>
+                <tr>
+                  <td>#89990</td>
+                  <td>Allan Stuart</td>
+                  <td>Male</td>
+                  <td>55</td>
+                  <td>AB+</td>
+                  <td>Cardiology</td>
+                  <td>+1 234 567 890</td>
+                  <td>test@testing</td>
+                  <td>337, McGinn Orchard</td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#89995</td>
+                  <td>Jada Poe</td>
+                  <td>Female</td>
+                  <td>60</td>
+                  <td>b+</td>
+                  <td>Cardiology</td>
+                  <td>+1 234 567 890</td>
+                  <td>test@testing</td>
+                  <td>337, McGinn Orchard</td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#89989</td>
+                  <td>Zamora Miko</td>
+                  <td>Male</td>
+                  <td>45</td>
+                  <td>B-</td>
+                  <td>surgery</td>
+                  <td>+1 234 567 890</td>
+                  <td>test@testing</td>
+                  <td>337, McGinn Orchard</td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#89993</td>
+                  <td>Jane Smith</td>
+                  <td>Female</td>
+                  <td>32</td>
+                  <td>O-</td>
+                  <td>Cardiology</td>
+                  <td>+1 234 567 890</td>
+                  <td>test@testing</td>
+                  <td>337, McGinn Orchard</td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="border mt-4"></section>
+        </div>
+      </div>
+      <!--end of patients page-->
     </main>
     <footer>
       <div class="container-fluid text-center py-3 bg-light border-top">
         <p class="mb-0">&copy; 2025 NovaCare. All rights reserved.</p>
       </div>
     </footer>
+    <script src="assets/js/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/admin.js"></script>
     <script>
-      $("document").ready( () => {
-        
+      $("document").ready(() => {
         $(".pts").click(() => {
           //show patients page and hide main page
           $(".main-content").hide();
@@ -795,11 +899,40 @@
           $(".main-page").addClass("page-item-active");
           //show main and hide patients page
           $(".patients-page").hide();
-          
 
           $(".main-content").fadeIn();
           $(".main-content").fadeIn(slow);
-          $(".main-content").fadeIn(500); 
+          $(".main-content").fadeIn(500);
+        });
+
+        //table sorter
+        $("#patientTable th").click(function () {
+          var table = $(this).parents("table");
+          var tbody = table.find("tbody");
+          var rows = tbody.find("tr").toArray();
+          var columnIndex = $(this).index();
+          var type = $(this).data("type");
+          var asc = !$(this).hasClass("asc");
+
+          table.find("th").removeClass("asc desc");
+          $(this).addClass(asc ? "asc" : "desc");
+
+          rows.sort(function (a, b) {
+            var A = $(a).children("td").eq(columnIndex).text().trim();
+            var B = $(b).children("td").eq(columnIndex).text().trim();
+
+            if (type === "number") {
+              A = parseFloat(A);
+              B = parseFloat(B);
+              return asc ? A - B : B - A;
+            } else {
+              return asc ? A.localeCompare(B) : B.localeCompare(A);
+            }
+          });
+
+          $.each(rows, function (i, row) {
+            tbody.append(row);
+          });
         });
       });
     </script>

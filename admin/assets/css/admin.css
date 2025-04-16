@@ -260,3 +260,27 @@ svg {
   border-radius: 50%;
   margin-right: 5px;
 }
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+tr td:nth-child(3) {
+  color: var(--text-color-warning);
+}
+td:nth-child(3) {
+  color: var(--primary-color);
+}
+th {
+  cursor: pointer;
+  user-select: none;
+}
+th:hover {
+  background-color: #ddd;
+}
+th.asc::after {
+  content: " ▲";
+}
+th.desc::after {
+  content: " ▼";
+}
