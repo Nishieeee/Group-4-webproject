@@ -1,25 +1,58 @@
-function sortTable(columnIndex) {
-  const table = document.getElementById("sortableTable");
-  const rows = Array.from(table.rows).slice(1); // skip the header
-  let ascending = table.getAttribute("data-sort-direction") !== "asc";
-  
-  rows.sort((a, b) => {
-    const cellA = a.cells[columnIndex].innerText.toLowerCase();
-    const cellB = b.cells[columnIndex].innerText.toLowerCase();
-    
-    const isNumber = !isNaN(cellA) && !isNaN(cellB);
-    
-    if (isNumber) {
-      return ascending ? cellA - cellB : cellB - cellA;
-    } else {
-      return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
-    }
+$("document").ready(() => {
+  // Hide the patients page initially
+  $(".patients-page").hide();
+});
+$("document").ready(() => {
+  $(".main-page").addClass("page-item-active");
+  $(".pts").click(() => {
+    //show patients page and hide main page
+    $(".main-content").hide();
+    $(".pts").addClass("page-item-active");
+    $(".main-page").removeClass("page-item-active");
+    $(".patients-page").fadeIn();
+    $(".patients-page").fadeIn(slow);
+    $(".patients-page").fadeIn(500);
   });
 
-  table.setAttribute("data-sort-direction", ascending ? "asc" : "desc");
+  $(".main-page").click(() => {
+    $(".main-page").addClass("page-item-active");
+    $(".pts").removeClass("page-item-active");
+    
+    //show main and hide patients page
+    $(".patients-page").hide();
 
-  const tbody = table.querySelector("tbody");
-  rows.forEach(row => tbody.appendChild(row));
-}
+    $(".main-content").fadeIn();
+    $(".main-content").fadeIn(slow);
+    $(".main-content").fadeIn(500);
+  });
 
+  //table sorter
+  $("#patientTable th").click(function () {
+    var table = $(this).parents("table");
+    var tbody = table.find("tbody");
+    var rows = tbody.find("tr").toArray();
+    var columnIndex = $(this).index();
+    var type = $(this).data("type");
+    var asc = !$(this).hasClass("asc");
 
+    table.find("th").removeClass("asc desc");
+    $(this).addClass(asc ? "asc" : "desc");
+
+    rows.sort(function (a, b) {
+      var A = $(a).children("td").eq(columnIndex).text().trim();
+      var B = $(b).children("td").eq(columnIndex).text().trim();
+
+      if (type === "number") {
+        A = parseFloat(A);
+        B = parseFloat(B);
+        return asc ? A - B : B - A;
+      } else {
+        return asc ? A.localeCompare(B) : B.localeCompare(A);
+      }
+    });
+
+    $.each(rows, function (i, row) {
+      tbody.append(row);
+    });
+  });
+});
