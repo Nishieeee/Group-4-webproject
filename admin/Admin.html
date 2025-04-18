@@ -893,6 +893,7 @@
                 </button>
               </div>
               <div class="row g-3 my-0 p-3">
+                <!--1st column-->
                 <div class="col">
                   <label for="patientName" class="form-label"
                     >First Name <span class="text-danger">*</span></label
@@ -922,12 +923,13 @@
                     /><label for="female-gender">Female</label>
                   </div>
 
-                  <label for="number" class="form-label"
+                  <label for="number" class="form-label my-3"
                     >Mobile number <span class="text-danger">*</span></label
                   >
                   <input type="text" class="form-control" />
                 </div>
 
+                <!--2nd column-->
                 <div class="col">
                   <label for="patientName" class="form-label"
                     >Last Name <span class="text-danger">*</span></label
@@ -950,10 +952,13 @@
                     required
                   />
 
-                  <label for="" class="form-label">Marital Status</label>
+                  <label for="marital-status" class="form-label"
+                    >Marital Status</label
+                  >
                   <select
                     class="form-select"
                     aria-label="Default select example"
+                    name="marital-status"
                   >
                     <option selected>Choose...</option>
                     <option value="1">Single</option>
@@ -964,6 +969,7 @@
                   </select>
                 </div>
 
+                <!--3rd column-->
                 <div class="col">
                   <label for="patientName" class="form-label"
                     >Age <span class="text-danger">*</span></label
@@ -981,7 +987,21 @@
                   <input type="text" class="form-control" />
 
                   <label for="occupation" class="form-label">Occupation</label>
-                  <select name="" id="" class="form-select"></select>
+                  <select name="occupation" id="occupation" class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="Civilian">Civilian</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="IT">IT</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Pharmacist">Pharmacist</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Business">Business</option>
+                    <option value="Student">Student</option>
+                    <option value="Unemployed">Unemployed</option>
+                    <option value="Retired">Retired</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
               </div>
             </form>
