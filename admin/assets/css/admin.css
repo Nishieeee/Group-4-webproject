@@ -30,6 +30,7 @@
 .txt-info {
   color: var(--text-color-info);
 }
+
 header {
   transition: all 0.3s ease-in;
 }
@@ -259,6 +260,12 @@ svg {
   height: 10px;
   border-radius: 50%;
   margin-right: 5px;
+}
+.patient-content {
+  height:97vh;
+}
+.patients-table {
+  height: 100%;
 }
 td {
   padding: 10px;

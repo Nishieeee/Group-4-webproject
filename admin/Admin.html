@@ -774,12 +774,12 @@
           </div>
         </nav>
         <!--main patients content-->
-        <div class="p-2 my-0">
-          <section class="border p-0 shadow-sm">
+        <div class="patient-content p-2 my-0">
+          <section class="patients-table border p-0 shadow-sm">
             <div class="mx-1 my-0 shadow-sm">
               <div class="d-flex justify-content-between align-items-center py-2 px-5">
                 <h5 class="mb-0">Patients</h5>
-              <button class="btn btn-primary rounded-5 shadow-sm px-3">
+              <button class="btn btn-primary btnAddPatient rounded-5 shadow-sm px-3">
                 <i class="bi bi-plus p-0 m-0"></i> Add Patient
               </button>
               </div>
@@ -876,6 +876,64 @@
                 </tr>
               </tbody>
             </table>
+          </section>
+          <section class="add-patient border p-0 shadow-sm bg-white">
+            <form>
+              <div class="d-flex justify-content-between align-items-center py-2 px-5">
+                <h5 class="mb-0">Add Patient</h5>
+                <button class="btn btn-primary rounded-5 shadow-sm px-3">
+                  <i class="bi bi-plus p-0 m-0"></i> Add Patient
+                </button>
+
+                </div>
+                <div class="row g-3 my-0 p-3">
+                  <div class="col">
+                    <label for="patientName" class="form-label">First Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="patientName" required />
+
+                    <label class="form-label">Gender <span class="text-danger">*</span></label>
+                    <div class="">
+                      <input type="radio" name="gender" id="male-gender" class="mx-2"><label for="male-gender">Male</label>
+                      <input type="radio" name="gender" id="Female-gender" class="mx-2"><label for="female-gender">Female</label>
+                    </div>
+
+                    <label for="number" class="form-label">Mobile number <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control">
+
+
+                  </div>
+
+                  <div class="col">
+                    <label for="patientName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="patientName" required />
+
+                    <label for="id" class="form-label">Create ID <span class="text-danger">*</span></label>
+                    <input type="text" name="id" id="id" class="form-control" required />
+
+                    <label for="" class="form-label">Marital Status</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Choose...</option>
+                      <option value="1">Single</option>
+                      <option value="2">Married</option>
+                      <option value="3">Divorced</option>
+                      <option value="4">Widowed</option>
+                      <option value="5">Separated</option>  
+                  </div>
+
+                  <div class="col">
+
+                    <label for="patientName" class="form-label">Age <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="patientName" required />
+
+                    <label for="email" class="form-label" >Email <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control">
+
+                    <label for="occupation" class="form-label">Occupation</label>
+                    <select name="" id="" class="form-select"></select>
+                  </div>
+
+                </div>
+            </form>
           </section>
         </div>
       </div>

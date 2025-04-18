@@ -12,6 +12,9 @@ $("document").ready(() => {
     $(".patients-page").fadeIn();
     $(".patients-page").fadeIn(slow);
     $(".patients-page").fadeIn(500);
+
+    $(".add-patient").hide();
+    
   });
 
   $(".main-page").click(() => {
@@ -54,5 +57,13 @@ $("document").ready(() => {
     $.each(rows, function (i, row) {
       tbody.append(row);
     });
+  });
+
+  $(".btnAddPatient").click(() => {
+    
+    $(".patients-table").hide();
+    $(".add-patient").fadeIn();
+    $(".add-patient").fadeIn(slow);
+    $(".add-patient").fadeIn(500);
   });
 });
