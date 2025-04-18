@@ -133,7 +133,7 @@
             ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a
             </span></a
           >
-          <a href="#" class="m-1 px-3 py-2"
+          <a href="/landing/index.html" class="m-1 px-3 py-2"
             ><i class="bi bi-arrow-right"></i><span class="nav-text">Logout</span></a
           >
         </nav>
@@ -791,7 +791,7 @@
                 </button>
               </div>
             </div>
-            <table id="patientTable" class="table table-bordered table-striped">
+            <table id="patientTable" class="table ">
               <!--Table header-->
               <thead>
                 <tr>
@@ -1063,7 +1063,10 @@
                   <label for="baranggay" class="form-label">Baranggay</label>
                   <input type="text" class="form-control" name="baranggay" />
                 </div>
-                <input type="file">
+                <div class="file-upload my-5">
+                  <label for="formFile" class="form-label">Click Or Drag health report Here <br> <span class="text-info-emphasis fw-bold fs-5">Upload Health Reports</span></label>
+                  <input type="file" class="form-control" id="formFile">
+                </div>
                 <div class="d-flex justify-content-end mt-3">
                   <button class="btn btn-white text-danger btn-cancel" type="reset">Cancel</button>
                   <button class="btn btn-primary" type="submit">Add Patient</button>

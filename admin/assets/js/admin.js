@@ -2,12 +2,17 @@ $("document").ready(() => {
   // Hide the patients page initially
   $(".patients-page").hide();
 });
-$(".menu").click(() => {
-  $(".nav-text").toggle();
-  $("aside").toggleClass("minimize");
-  $(".side-profile").toggleClass("side-profile-minimized");
-});
+
+
+
 $("document").ready(() => {
+  
+  $(".menu").click(() => {
+    $(".nav-text").toggle();
+    $("aside").toggleClass("minimize");
+    $(".side-profile").toggleClass("side-profile-minimized");
+  });
+
   $(".main-page").addClass("page-item-active");
   $(".pts").click(() => {
     //show patients page and hide main page
