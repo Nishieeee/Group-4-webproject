@@ -9,11 +9,11 @@ $("document").ready(() => {
     $(".main-content").hide();
     $(".pts").addClass("page-item-active");
     $(".main-page").removeClass("page-item-active");
+    $(".add-patient").hide();
+    $(".patients-table").fadeIn();
     $(".patients-page").fadeIn();
     $(".patients-page").fadeIn(slow);
     $(".patients-page").fadeIn(500);
-
-    $(".add-patient").hide();
     
   });
 
@@ -65,5 +65,12 @@ $("document").ready(() => {
     $(".add-patient").fadeIn();
     $(".add-patient").fadeIn(slow);
     $(".add-patient").fadeIn(500);
+  });
+
+  $(".btn-cancel").click(() => {
+    $(".add-patient").hide();
+    $(".patients-table").fadeIn();
+    $(".patients-table").fadeIn(slow);
+    $(".patients-table").fadeIn(500);
   });
 });
