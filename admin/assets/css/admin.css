@@ -45,7 +45,9 @@ aside {
   color: var(--text-color-dark);
   padding: 0 !important;
 } 
-
+aside:hover {
+  width: 25%;
+}
 .side-profile > img {
   height: 60px;
   width: 60px;
