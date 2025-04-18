@@ -2,6 +2,10 @@ $("document").ready(() => {
   // Hide the patients page initially
   $(".patients-page").hide();
 });
+$(".menu").click(() => {
+  $(".nav-text").toggle();
+  $("aside").toggleClass(".minimize");
+});
 $("document").ready(() => {
   $(".main-page").addClass("page-item-active");
   $(".pts").click(() => {
@@ -14,13 +18,12 @@ $("document").ready(() => {
     $(".patients-page").fadeIn();
     $(".patients-page").fadeIn(slow);
     $(".patients-page").fadeIn(500);
-    
   });
 
   $(".main-page").click(() => {
     $(".main-page").addClass("page-item-active");
     $(".pts").removeClass("page-item-active");
-    
+
     //show main and hide patients page
     $(".patients-page").hide();
 
@@ -60,7 +63,6 @@ $("document").ready(() => {
   });
 
   $(".btnAddPatient").click(() => {
-    
     $(".patients-table").hide();
     $(".add-patient").fadeIn();
     $(".add-patient").fadeIn(slow);
