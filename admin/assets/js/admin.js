@@ -4,7 +4,8 @@ $("document").ready(() => {
 });
 $(".menu").click(() => {
   $(".nav-text").toggle();
-  $("aside").toggleClass(".minimize");
+  $("aside").toggleClass("minimize");
+  $(".side-profile").toggleClass("side-profile-minimized");
 });
 $("document").ready(() => {
   $(".main-page").addClass("page-item-active");

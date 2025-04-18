@@ -37,9 +37,17 @@ header {
 aside {
   background: white;
   height: 100vh;
-  transition: all 0.3s ease-in;
+  width: 25%;
+  transition: all 0.2s ease-in;
 }
 .minimize {
+  width: 100px;
+  color: var(--text-color-dark);
+  padding: 0 !important;
+} 
+
+.side-profile > img {
+  height: 60px;
   width: 60px;
 }
 main {
@@ -61,9 +69,22 @@ main::-webkit-scrollbar-thumb {
   color: var(--primary-color);
 }
 .main-content {
+  width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+.patients-page {
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.patients-page::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.patients-page::-webkit-scrollbar-thumb {
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 .main-content::-webkit-scrollbar {
   width: 0px;
@@ -78,9 +99,18 @@ main::-webkit-scrollbar-thumb {
 .main-content {
   height: 100vh;
 }
-#side-profile {
+.side-profile {
   height: 15%;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: white;
 }
+.side-profile-minimized {
+  border: 1px solid;
+  background-color: white !important;
+  padding: 0 !important;
+}
+
 #current-page {
   padding-left: 0;
   border-radius: 10px;
@@ -130,14 +160,23 @@ a {
   border-radius: 12px;
 }
 .icon-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: inline-flex;
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+  border-radius: 10px;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
 }
+.hero-page-details {
+  font-size: 1rem;
+}
+.hero-page-details span {
+  font-size: 2rem !important;
+  font-weight: 600;
+} 
+
 .stats-box {
   padding: 20px;
   font-size: 20px;
@@ -269,16 +308,7 @@ svg {
   border-radius: 50%;
   margin-right: 5px;
 }
-.patients-page {
-  overflow-y: scroll;
-}
-.patients-page::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
-.patients-page::-webkit-scrollbar-thumb {
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
+
 .patient-content {
   height:97vh;
 }

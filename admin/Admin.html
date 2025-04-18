@@ -86,18 +86,16 @@
       </div>
     </header>
 
-    <main class="col">
+    <main class="d-flex flex-row">
       <!--side nav-->
       <aside class="p-3 z-2 border sidebar-wrapper">
         <div
-          id="side-profile"
-          class="sidebar-profile mb-1 w-100 d-flex align-items-center justify-content-center bg-primary p-1 rounded text-white"
+          class="side-profile mb-1 w-100 d-flex align-items-center justify-content-center"
         >
           <img
             src="/assets/img/doctors/doctors-1.jpg"
-            class="rounded-5 border"
-            width="70px"
-            height="70px"
+            class="rounded-5"
+
           />
           <div id="side-profile-name" class="mx-1">
             <h3 class="text-white my-0"><span class="nav-text">Ali Bitun</span></h3>
@@ -162,23 +160,23 @@
               <h2 class="text-white">Dr. Ali Bitun</h2>
               <p>Your schedule today</p>
               <div class="row text-white mt-3">
-                <div class="col">
-                  <div class="icon-circle bg-info h-75 w-25">
+                <div class="col hero-page-details d-flex align-items-center justify-content-center">
+                  <div class="icon-circle bg-info">
                     <i class="bi bi-people-fill"></i>
                   </div>
-                  <p>9 Patients</p>
+                  <p class="mx-3"><span>9</span><br> Patients</p>
                 </div>
-                <div class="col">
+                <div class="col hero-page-details d-flex align-items-center justify-content-center">
                   <div class="icon-circle bg-success">
                     <i class="bi bi-lungs"></i>
                   </div>
-                  <p>3 Surgeries</p>
+                  <p class="mx-3"><span>3</span><br> Surgeries</p>
                 </div>
-                <div class="col">
+                <div class="col hero-page-details d-flex align-items-center justify-content-center">
                   <div class="icon-circle bg-warning">
                     <i class="bi bi-person-walking"></i>
                   </div>
-                  <p>2 Discharges</p>
+                  <p class="mx-3"><span>2</span><br> Discharges</p>
                 </div>
               </div>
             </div>
@@ -893,11 +891,8 @@
                 class="d-flex justify-content-between align-items-center py-2 px-5"
               >
                 <h5 class="mb-0">Add Patient</h5>
-                <button class="btn btn-primary rounded-5 shadow-sm px-3">
-                  <i class="bi bi-plus p-0 m-0"></i> Add Patient
-                </button>
               </div>
-              <div class="row g-3 my-0 p-3">
+              <div class="row gx-2 my-0 p-3">
                 <!--1st column-->
                 <div class="col">
                   <label for="patientName" class="form-label"
