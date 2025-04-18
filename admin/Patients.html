@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaCare Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/admin.css" />
+
+    <!-- Favicons -->
+    <link href="/assets/img/Frame 6.png" rel="icon" />
+    <link href="/assets/img/Frame 6.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="/assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+  </head>
+  <body>
+    <header
+      class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow-sm"
+    >
+    
+      <div class="menu d-flex align-items-center justify-content-between">
+        <div class="p-2 me-2 d-flex align-items-center justify-content-center">
+          <i class="bi bi-list menu-icon"></i>
+        </div>
+        <img
+          src="/assets/img/Frame 7.png"
+          width="35px"
+          height="50px"
+          class="py-2"
+        />
+        <img
+          src="/assets/img/Frame 5.png"
+          width="150px"
+          height="50px"
+          class="ms-2"
+        />
+      </div>
+      <div>
+        <div
+          id="search"
+          class="search-container d-flex align-items-center justify-content-center w-100"
+        >
+          <input
+            class="form-control shadow-sm me-2 border rounded ps-3 py-1 pe-2 py-1"
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search..."
+            style="width: 250px"
+          />
+          <button class="btn rounded-5 btn-primary shadow-sm">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="d-flex flex-row">
+      <!--side nav-->
+      <aside class="p-3 z-2 border sidebar-wrapper">
+        <div
+          class="side-profile mb-1 w-100 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="/assets/img/doctors/doctors-1.jpg"
+            class="rounded-5"
+
+          />
+          <div id="side-profile-name" class="mx-1">
+            <h3 class="text-white my-0"><span class="nav-text">Ali Bitun</span></h3>
+            <h6 class="my-0 text-white"><span class="nav-text">Dept Admin</span></h6>
+          </div>
+        </div>
+
+        <nav
+          aria-label="page navigation"
+          class="side-nav d-flex flex-column p-2"
+        >
+          <a href="Admin.html" class="main-page hp m-1 px-3 py-2"
+            ><i class="bi bi-hospital"></i><span class="nav-text">Hospital Dashboard</span></a
+          >
+          <a class="pts m-1 px-3 py-2"><i class="bi bi-people"></i><span class="nav-text">Patients</span></a>
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-people"></i><span class="nav-text">Staff</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-postage-heart"></i><span class="nav-text">Doctors</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-clipboard-heart"></i><span class="nav-text">Appointments</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-hospital"></i><span class="nav-text">Departments</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-credit-card"></i><span class="nav-text">Insurance</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-clipboard-data"></i><span class="nav-text">Reports</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a
+            </span></a
+          >
+          <a href="/landing/index.html" class="m-1 px-3 py-2"
+            ><i class="bi bi-arrow-right"></i><span class="nav-text">Logout</span></a
+          >
+        </nav>
+      </aside>
+
+      <!--Patients page-->
+      <div class="patients-page">
+        <nav
+          class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
+        >
+          <div>
+            <i class="bi bi-house-door text-primary px-2 py-1 border-end"></i>
+          </div>
+          <div class="nav-path d-flex ms-2">
+            <p class="txt-dark my-0 mx-1"><a href="#"> Home </a></p>
+            <p class="txt-dark my-0 mx-1 text-primary">/</p>
+            <p class="txt-dark my-0 mx-1"><a href="#"> Patients </a></p>
+          </div>
+        </nav>
+        <!-- main patients content-->
+        <div class="patient-content p-2 my-0">
+          <section class="patients-table border py-3 shadow-sm">
+            <div class="mx-1 my-2">
+              <div
+                class="d-flex justify-content-between align-items-center py-2 px-5"
+              >
+                <h5 class="mb-0">Patients</h5>
+                <button
+                  class="btn btn-primary btnAddPatient rounded-5 shadow-sm px-3"
+                >
+                  <i class="bi bi-plus p-0 m-0"></i> Add Patient
+                </button>
+              </div>
+            </div>
+            <table id="patientTable" class="table ">
+              <!--Table header-->
+              <thead>
+                <tr>
+                  <th scope="col" data-type="text">No.</th>
+                  <th scope="col" data-type="text">Patient Name</th>
+                  <th scope="col" data-type="text">Gender</th>
+                  <th scope="col" data-type="number">Age</th>
+                  <th scope="col" data-type="text">Blood Group</th>
+
+                  <th scope="col" data-type="text">Treatment</th>
+                  <th scope="col" data-type="text">Mobile</th>
+                  <th scope="col" data-type="text">Email</th>
+                  <th scope="col" data-type="text">Address</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <!--Table contents-->
+              <tbody>
+                <tr>
+                  <td>#89990</td>
+                  <td>Allan Stuart</td>
+                  <td>Male</td>
+                  <td>55</td>
+                  <td>AB+</td>
+                  <td>Cardiology</td>
+                  <td>+1 234 567 890</td>
+                  <td>test@testing</td>
+                  <td>337, McGinn Orchard</td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#89995</td>
+                  <td>Jada Poe</td>
+                  <td>Female</td>
+                  <td>60</td>
+                  <td>B+</td>
+                  <td>Cardiology</td>
+                  <td>+1 234 567 890</td>
+                  <td>test@testing</td>
+                  <td>337, McGinn Orchard</td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#89989</td>
+                  <td>Zamora Miko</td>
+                  <td>Male</td>
+                  <td>45</td>
+                  <td>B-</td>
+                  <td>surgery</td>
+                  <td>+1 234 567 890</td>
+                  <td>test@testing</td>
+                  <td>337, McGinn Orchard</td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#89993</td>
+                  <td>Jane Smith</td>
+                  <td>Female</td>
+                  <td>32</td>
+                  <td>O-</td>
+                  <td>Cardiology</td>
+                  <td>+1 234 567 890</td>
+                  <td>test@testing</td>
+                  <td>337, McGinn Orchard</td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="add-patient border py-3 shadow-sm bg-white">
+            <form>
+              <div
+                class="d-flex justify-content-between align-items-center py-2 px-5"
+              >
+                <h5 class="mb-0">Add Patient</h5>
+              </div>
+              <div class="row gx-2 my-0 p-3">
+                <!--1st column-->
+                <div class="col-sm-4">
+                  <label for="patientName" class="form-label"
+                    >First Name <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="patientName"
+                    required
+                  />
+
+                  <label class="form-label"
+                    >Gender <span class="text-danger">*</span></label
+                  >
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center me-3">
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="male-gender"
+                        class="mx-2"
+                      />
+                      <p class="mb-0">Male</p>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-center me-3"
+                    >
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="Female-gender"
+                        class="mx-2"
+                      />
+                      <p class="mb-0">Female</p>
+                    </div>
+                  </div>
+
+                  <label for="number" class="form-label"
+                    >Mobile number <span class="text-danger">*</span></label
+                  >
+                  <input type="text" class="form-control" />
+
+                  <label for="blood-type">Blood type <span class="text-danger">*</span></label>
+                  <select
+                    name="blood-type"
+                    class="form-select"
+                    id="blood-type"
+                    aria-label="default select example"
+                  >
+                    <option selected></option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="Not Known">Not known</option>
+                  </select>
+
+                  <label for="address" class="form-label">Address</label>
+                  <input type="text" class="form-control" />
+
+                  <label for="country" class="form-label">Country</label>
+                  <input type="text" class="form-control" name="country" />
+                </div>
+
+                <!--2nd column-->
+                <div class="col-sm-4">
+                  <label for="patientName" class="form-label"
+                    >Last Name <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="patientName"
+                    required
+                  />
+
+                  <label for="id" class="form-label"
+                    >Create ID <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="id"
+                    id="id"
+                    class="form-control"
+                    required
+                  />
+
+                  <label for="marital-status" class="form-label"
+                    >Marital Status</label
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    name="marital-status"
+                  >
+                    <option selected>Choose...</option>
+                    <option value="1">Single</option>
+                    <option value="2">Married</option>
+                    <option value="3">Divorced</option>
+                    <option value="4">Widowed</option>
+                    <option value="5">Separated</option>
+                  </select>
+
+                  <label for="blood-pressure" class="form-label"
+                    >Blood Pressure </label
+                  >
+                  <input type="text" class="form-control" id="blood-pressure" required/>
+
+                  <label for="city" class="form-label">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    name="city"
+                  />
+
+                  <label for="postal-code" class="form-label">Postal Code</label>
+                  <input type="text" class="form-control">
+                </div>
+
+                <!--3rd column-->
+                <div class="col-sm-4">
+                  <label for="patientName" class="form-label"
+                    >Age <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="patientName"
+                    required
+                  />
+
+                  <label for="email" class="form-label"
+                    >Email <span class="text-danger">*</span></label
+                  >
+                  <input type="text" class="form-control" />
+
+                  <label for="occupation" class="form-label">Occupation</label>
+                  <select name="occupation" id="occupation" class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="Civilian">Civilian</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="IT">IT</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Pharmacist">Pharmacist</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Business">Business</option>
+                    <option value="Student">Student</option>
+                    <option value="Unemployed">Unemployed</option>
+                    <option value="Retired">Retired</option>
+                    <option value="Other">Other</option>
+                  </select>
+
+                  <label for="sugar-levels" class="form-label">Sugar</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="mg/dl"
+                    id="sugar-levels"
+                    name="sugar-levels"
+                  />
+                  <label for="baranggay" class="form-label">Baranggay</label>
+                  <input type="text" class="form-control" name="baranggay" />
+                </div>
+                <div class="file-upload my-5">
+                  <label for="formFile" class="form-label">Click Or Drag health report Here <br> <span class="text-info-emphasis fw-bold fs-5">Upload Health Reports</span></label>
+                  <input type="file" class="form-control" id="formFile">
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                  <button class="btn btn-white text-danger btn-cancel" type="reset">Cancel</button>
+                  <button class="btn btn-primary" type="submit">Add Patient</button>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+      <!--end of patients page-->
+    </main>
+    <footer>
+      <div class="container-fluid text-center py-3 bg-light border-top">
+        <p class="mb-0">&copy; 2025 NovaCare. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="assets/js/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="assets/js/admin.js"></script> -->
+    <script src="assets/js/adminPatient.js"></script>
+  </body>
+</html>

@@ -74,18 +74,7 @@ main::-webkit-scrollbar-thumb {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-.patients-page {
-  width: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-.patients-page::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
-.patients-page::-webkit-scrollbar-thumb {
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
+
 .main-content::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* Optional: just make scrollbar invisible */
@@ -308,9 +297,24 @@ svg {
   border-radius: 50%;
   margin-right: 5px;
 }
+/* main content */
 
+/* patient page */
+.patients-page {
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.patients-page::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.patients-page::-webkit-scrollbar-thumb {
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
 .patient-content {
   height:97vh;
+  transition: all 0.3s ease-in;
 }
 .patients-table {
   height: 100%;
@@ -361,6 +365,9 @@ label {
 input[type="file"] {
   display: none;
 }
+/* end of patient page */
+
+
 
 @media  screen and (max-width: 425px) {
   
