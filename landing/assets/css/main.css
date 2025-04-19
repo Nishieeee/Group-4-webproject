@@ -5,19 +5,33 @@
   --nav-font: "Raleway",  sans-serif;
 }
 
+/* Idea Colors */
+:root {
+  --main-color: #044459;
+  --second-color: #619DB5;
+  --third-color: #8FBEC8;
+  --button-color: #F3AA4B; /* Button Colors */
+
+}
+
+
+
 :root { 
-  --background-color: #f7f7f7; /* Background color*/
-  --default-color: #444444; /* Text Color: Main Text */
-  --heading-color: #2c4964; /* Color: heading Subheadings */
-  --accent-color: #1977cc; /* Accent color: Button, Links */
+  --background-color: #D1DEE0; /* Background color*/
+  --default-color: #181818; /* Text Color: Main Text */
+  --heading-color: #044459; /* Color: heading Subheadings */
+  --accent-color: #044459; /* Accent color: Links */
   --surface-color: #ffffff; /* Box Color: For boxes of this thing */
   --contrast-color: #ffffff; /* For Contrast: backgrounds of accent, heading, or default colors. */
 }
 
+
+
+
 /* Nav Menu Colors: For navigation */
 :root {
   --nav-color: #2c4964;  /* Main Color */
-  --nav-hover-color: #1977cc; /* Hover or Activated */
+  --nav-hover-color: #F3AA4B; /* Hover or Activated */
   --nav-mobile-background-color: #ffffff; /* Background in mobile view */
   --nav-dropdown-background-color: #ffffff; /* Background color: Dropdown items Hovering over primary navigation items */
   --nav-dropdown-color: #2c4964; /* Navigation Link: Dropdown items  */
@@ -28,7 +42,7 @@
 /* Globa Colors */
 
 .light-background {
-  --background-color: #f1f7fc;
+  --background-color: #8FBEC8;
   --surface-color: #ffffff;
 }
 
@@ -67,12 +81,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
@@ -210,7 +219,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Header
+ # Global Header
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
@@ -408,7 +417,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--nav-color);
   }
 
   .navmenu .dropdown ul {
@@ -966,7 +975,9 @@ section,
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--contrast-color), transparent 80%);
   display: inline-block;
-  padding: 6px 30px 8px 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 30px 6px 30px;
   border-radius: 50px;
   transition: all ease-in-out 0.4s;
 }
@@ -1003,6 +1014,12 @@ section,
 .hero .content .icon-box p {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+#firstSection h3,h4,h2,p{
+  pointer-events: none;
+  cursor: pointer;
+
 }
 
 /*--------------------------------------------------------------
@@ -1219,7 +1236,7 @@ section,
   padding: 10px 12px;
 }
 
-.appointment .email-form button[type=submit] {
+.appointment .email-form button[type=button] {
   background: var(--accent-color);
   border: 0;
   padding: 10px 35px;
@@ -1228,7 +1245,7 @@ section,
   border-radius: 50px;
 }
 
-.appointment .email-form button[type=submit]:hover {
+.appointment .email-form button[type=button]:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 

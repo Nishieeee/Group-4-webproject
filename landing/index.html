@@ -102,7 +102,7 @@
 
       <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
 
-      <div class="container position-relative">
+      <div class="container position-relative" id = "firstSection">
 
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
           <h2>WELCOME TO NovaCare</h2>
@@ -358,7 +358,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <form action="" method="post" role="form" class="email-form">
+        <form method="POST" role="form" class="email-form" id="appointmentForm" >
           <div class="row">
             <div class="col-md-4 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
@@ -372,7 +372,7 @@
           </div>
           <div class="row">
             <div class="col-md-4 form-group mt-3">
-              <input type="datetime-local" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required="">
+              <input type="datetime-local" name="date" class="form-control datepicker" id="datetime" placeholder="Appointment Date" required="">
             </div>
             <div class="col-md-4 form-group mt-3">
               <select name="department" id="department" class="form-select" required="">
@@ -400,13 +400,16 @@
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-            <div class="text-center"><button type="submit">Make an Appointment</button></div>
+            <div class="text-center">
+              <button id="makeAppointmentButton" type="button">Make an Appointment</button>
+            </div>
           </div>
         </form>
 
       </div>
 
-    </section><!-- /Appointment Section -->
+    </section>
+    <!-- /Appointment Section -->
 
     <!-- Departments Section -->
     <section id="departments" class="departments section">

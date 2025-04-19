@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -148,4 +147,37 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+ 
+/** Appointment Form */
+const form = document.getElementById("appointmentForm");
+const appointmentButton = document.getElementById("makeAppointmentButton"); // Button ID from index.html
+
+// Add a click event listener to the "Make an Appointment" button
+appointmentButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    const formData = new FormData(form);
+    const params = new URLSearchParams();
+    let hasErrors = false;
+
+    // Iterate through form data entries
+    for (const [key, value] of formData.entries()) {
+        if (value.trim() === "") {
+            console.warn(`Field '${key}' is empty.`);
+            hasErrors = true;
+        } else {
+            params.append(key, value.trim());
+        }
+    }
+
+    // If there are errors, notify the user and stop the redirection
+    if (hasErrors) {
+        alert("Please fill in all required fields before proceeding.");
+        return;
+    }
+
+    // Redirect to signup.html with form values as query parameters
+    window.location.href = "/landing/signup.html?" + params.toString();
+});
 })();
