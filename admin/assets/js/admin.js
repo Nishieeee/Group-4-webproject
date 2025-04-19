@@ -1,6 +1,7 @@
 $("document").ready(() => {
   // Hide the patients page initially
   $(".patients-page").hide();
+  $(".main-content").addClass("width-100");
 });
 
 $("document").ready(() => {
@@ -8,6 +9,7 @@ $("document").ready(() => {
     $(".nav-text").toggle();
     $("aside").toggleClass("minimize");
     $(".side-profile").toggleClass("side-profile-minimized");
+   
   });
 
   $("aside").on("mouseenter", () => {

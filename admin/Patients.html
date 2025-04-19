@@ -88,7 +88,7 @@
 
     <main class="d-flex flex-row">
       <!--side nav-->
-      <aside class="p-3 z-2 border sidebar-wrapper">
+      <aside class="aside-patients p-3 z-2 border sidebar-wrapper">
         <div
           class="side-profile mb-1 w-100 d-flex align-items-center justify-content-center"
         >
@@ -140,7 +140,7 @@
       </aside>
 
       <!--Patients page-->
-      <div class="patients-page">
+      <div class="patients-page transition-width">
         <nav
           class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
         >
@@ -155,7 +155,7 @@
         </nav>
         <!-- main patients content-->
         <div class="patient-content p-2 my-0">
-          <section class="patients-table border py-3 shadow-sm">
+          <section class="patients-table border p-3 shadow-sm">
             <div class="mx-1 my-2">
               <div
                 class="d-flex justify-content-between align-items-center py-2 px-5"
@@ -168,7 +168,8 @@
                 </button>
               </div>
             </div>
-            <table id="patientTable" class="table ">
+           <div class="table-responsive border">
+              <table id="patientTable" class="table ">
               <!--Table header-->
               <thead>
                 <tr>
@@ -200,7 +201,7 @@
                   <td>
                     <button class="btn btn-danger m-1 h-100">
                       <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success m-1">
+                    ><button class="btn btn-success edit-ptnt m-1">
                       <i class="bi bi-pencil-square"></i>
                     </button>
                   </td>
@@ -218,7 +219,7 @@
                   <td>
                     <button class="btn btn-danger m-1 h-100">
                       <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success m-1">
+                    ><button class="btn btn-success edit-ptnt m-1">
                       <i class="bi bi-pencil-square"></i>
                     </button>
                   </td>
@@ -236,7 +237,7 @@
                   <td>
                     <button class="btn btn-danger m-1 h-100">
                       <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success m-1">
+                    ><button class="btn btn-success edit-ptnt m-1">
                       <i class="bi bi-pencil-square"></i>
                     </button>
                   </td>
@@ -254,13 +255,21 @@
                   <td>
                     <button class="btn btn-danger m-1 h-100">
                       <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success m-1">
+                    ><button class="btn btn-success edit-ptnt m-1">
                       <i class="bi bi-pencil-square"></i>
                     </button>
                   </td>
                 </tr>
               </tbody>
             </table>
+           </div>
+          </section>
+          <section class="patients-dashboard">
+            <div class="d-flex justify-content-between align-items-center py-2 px-5">
+              <h5 class="mb-0">Patients Dashboard</h5>
+              <button class="btn btn-primary btnAddPatient rounded-5 shadow-sm px-3">
+                <i class="bi bi-plus p-0 m-0"></i> Add Patient
+              </button>
           </section>
           <section class="add-patient border py-3 shadow-sm bg-white">
             <form>
@@ -446,7 +455,203 @@
                 </div>
                 <div class="d-flex justify-content-end mt-3">
                   <button class="btn btn-white text-danger btn-cancel" type="reset">Cancel</button>
-                  <button class="btn btn-primary" type="submit">Add Patient</button>
+                  <button class="btn btn-primary btn-add-patient" type="submit">Add Patient</button>
+                </div>
+              </div>
+            </form>
+          </section>
+          <section class="edit-patient-form border py-3 shadow-sm bg-white">
+            <form>
+              <div
+                class="d-flex justify-content-between align-items-center py-2 px-5"
+              >
+                <h5 class="mb-0">Edit Patient Details</h5>
+              </div>
+              <div class="row gx-2 my-0 p-3">
+                <!--1st column-->
+                <div class="col-sm-4">
+                  <label for="patientName" class="form-label"
+                    >First Name <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="patientName"
+                    value="Allan"
+                    required
+                  />
+
+                  <label class="form-label"
+                    >Gender <span class="text-danger">*</span></label
+                  >
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center me-3">
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="male-gender"
+                        class="mx-2"
+                        
+                      />
+                      <p class="mb-0">Male</p>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-center me-3"
+                    >
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="Female-gender"
+                        class="mx-2"
+                      />
+                      <p class="mb-0">Female</p>
+                    </div>
+                  </div>
+
+                  <label for="number" class="form-label"
+                    >Mobile number <span class="text-danger">*</span></label
+                  >
+                  <input type="text" class="form-control" value="+1 234 567 890"/>
+
+                  <label for="blood-type">Blood type <span class="text-danger">*</span></label>
+                  <select
+                    name="blood-type"
+                    class="form-select"
+                    id="blood-type"
+                    aria-label="default select example"
+                  >
+                    <option></option>
+                    <option selected value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="Not Known">Not known</option>
+                  </select>
+
+                  <label for="address" class="form-label">Address</label>
+                  <input type="text" class="form-control" value="Ayala, New york Philippines"/>
+
+                  <label for="country" class="form-label">Country</label>
+                  <input type="text" class="form-control" name="country" value="Philippines"/>
+                </div>
+
+                <!--2nd column-->
+                <div class="col-sm-4">
+                  <label for="patientName" class="form-label"
+                    >Last Name <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="patientName"
+                    value="Stuart"
+                    required
+                  />
+
+                  <label for="id" class="form-label"
+                    >Create ID <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="id"
+                    id="id"
+                    class="form-control"
+                    value="#89990"
+                    required
+                  />
+
+                  <label for="marital-status" class="form-label"
+                    >Marital Status</label
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    name="marital-status"
+                  >
+                    <option value="none">Choose...</option>
+                    <option selected value="single">Single</option>
+                    <option value="2">Married</option>
+                    <option value="3">Divorced</option>
+                    <option value="4">Widowed</option>
+                    <option value="5">Separated</option>
+                  </select>
+
+                  <label for="blood-pressure" class="form-label"
+                    >Blood Pressure </label
+                  >
+                  <input type="text" class="form-control" id="blood-pressure" value="3" required/>
+
+                  <label for="city" class="form-label">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    name="city"
+                    value="New York"
+                  />
+
+                  <label for="postal-code" class="form-label">Postal Code</label>
+                  <input type="text" class="form-control" value="10001">
+                </div>
+
+                <!--3rd column-->
+                <div class="col-sm-4">
+                  <label for="patientName" class="form-label"
+                    >Age <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="patientName"
+                    value="55"
+                    required
+                  />
+
+                  <label for="email" class="form-label"
+                    >Email <span class="text-danger">*</span></label
+                  >
+                  <input type="text" class="form-control" value="test@test.com"/>
+
+                  <label for="occupation" class="form-label">Occupation</label>
+                  <select name="occupation" id="occupation" class="form-select">
+                    <option >Choose...</option>
+                    <option selected value="Civilian">Civilian</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="IT">IT</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Pharmacist">Pharmacist</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Business">Business</option>
+                    <option value="Student">Student</option>
+                    <option value="Unemployed">Unemployed</option>
+                    <option value="Retired">Retired</option>
+                    <option value="Other">Other</option>
+                  </select>
+
+                  <label for="sugar-levels" class="form-label">Sugar</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="mg/dl"
+                    id="sugar-levels"
+                    name="sugar-levels"
+                    value="120"
+                  />
+                  <label for="baranggay" class="form-label">Baranggay</label>
+                  <input type="text" class="form-control" name="baranggay" value="ayala" />
+                </div>
+                <div class="file-upload my-5">
+                  <label for="formFile" class="form-label">Click Or Drag health report Here <br> <span class="text-info-emphasis fw-bold fs-5">Upload Health Reports</span></label>
+                  <input type="file" class="form-control" id="formFile">
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                  <button class="btn btn-white text-danger btn-cancel" type="reset">Cancel</button>
+                  <button class="btn btn-primary btn-add-patient" type="submit">Confirm</button>
                 </div>
               </div>
             </form>

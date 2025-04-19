@@ -2,12 +2,14 @@
 // Description: This file contains the JavaScript code for the admin patient management page.
 $("document").ready(() => {
   $(".add-patient").hide();
+  $(".edit-patient-form").hide();
   $(".pts").addClass("page-item-active");
 
   $(".menu").click(() => {
     $(".nav-text").toggle();
     $("aside").toggleClass("minimize");
     $(".side-profile").toggleClass("side-profile-minimized");
+    $(".patients-page").toggleClass("width-100");
   });
 
   $("aside").on("mouseenter", () => {
@@ -59,10 +61,27 @@ $("document").ready(() => {
     $(".add-patient").fadeIn(500);
   });
 
-  $(".btn-cancel").click(() => {
+  $(".btn-add-patient").click(() => {
+    $(".edit-patient-form").hide();
     $(".add-patient").hide();
     $(".patients-table").fadeIn();
     $(".patients-table").fadeIn(slow);
     $(".patients-table").fadeIn(500);
+  });
+
+  $(".btn-cancel").click(() => {
+    $(".add-patient").hide();
+    $(".edit-patient-form").hide();
+
+    $(".patients-table").fadeIn();
+    $(".patients-table").fadeIn(slow);
+    $(".patients-table").fadeIn(500);
+  });
+
+  $(".edit-ptnt").click(() => {
+    $(".patients-table").hide();
+    $(".edit-patient-form").fadeIn();
+    $(".edit-patient-form").fadeIn(slow);
+    $(".edit-patient-form").fadeIn(500);
   });
 });
