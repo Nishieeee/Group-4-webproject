@@ -1,6 +1,6 @@
 $("document").ready(() => {
-    $(".add-patient").hide();
-    $(".edit-patient-form").hide();
+    $(".add-doctor").hide();
+    $(".edit-doctor-form").hide();
     $(".drs").addClass("page-item-active");
   
     $(".menu").click(() => {
@@ -21,5 +21,23 @@ $("document").ready(() => {
         $(".nav-text").hide();
         $(".side-profile").addClass("side-profile-minimized");
       }
+    });
+
+    $(".btnAddDoctor").click(() => {
+     $(".doctors-list").hide();
+      $(".add-doctor").fadeIn();
+      $(".add-doctor").fadeIn(slow);
+      $(".add-doctor").fadeIn(1000);
+      $(".add-doctor").show();
+
+      $(".edit-patient-form").hide();
+    });
+
+    $(".btn-cancel").click(() => {
+        $(".add-doctor").hide();
+        $(".doctors-list").fadeIn();
+        $(".doctors-list").fadeIn(slow);
+        $(".doctors-list").fadeIn(1000);
+        $(".doctors-list").show();
     });
 });
