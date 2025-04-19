@@ -9,7 +9,6 @@ $("document").ready(() => {
     $(".nav-text").toggle();
     $("aside").toggleClass("minimize");
     $(".side-profile").toggleClass("side-profile-minimized");
-   
   });
 
   $("aside").on("mouseenter", () => {
@@ -18,6 +17,7 @@ $("document").ready(() => {
       $(".side-profile").removeClass("side-profile-minimized");
     }
   });
+  
   $("aside").on("mouseleave", () => {
     if ($("aside").hasClass("minimize")) {
       $(".nav-text").hide();
