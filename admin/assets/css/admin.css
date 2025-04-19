@@ -362,8 +362,9 @@ svg {
 table{
   width: max-content;
 }
+th,
 td {
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
   border-bottom: 1px solid #ddd;
   color: rgba(0, 0, 0, 0.75) !important;
