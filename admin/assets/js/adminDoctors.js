@@ -23,13 +23,49 @@ $("document").ready(() => {
       }
     });
 
+    $(".doctor-availability").hide();
+    $(".doctor-account").hide();
+
+    $(".btn-next-details").click(() => {
+        $(".doctor-details").hide();
+        $(".personal-details").removeClass("path-active");
+        $(".availability").addClass("path-active");
+        $(".doctor-availability").fadeIn();
+        $(".doctor-availability").fadeIn(slow);
+        $(".doctor-availability").fadeIn(1000);
+    });
+    
+    $(".btn-next-avail").click(() => {
+      $(".availability").removeClass("path-active");
+      $(".personal-account").addClass("path-active");
+        $(".doctor-availability").hide();
+        $(".doctor-account").fadeIn();
+        $(".doctor-account").fadeIn(slow);
+        $(".doctor-account").fadeIn(1000);      
+    });
+    $(".btn-finish").click(() => {
+      $(".personal-account").removeClass("path-active");
+        $(".doctor-details").hide();
+        $(".doctor-availability").hide();
+        $(".doctor-account").hide();
+        $(".doctors-list").fadeIn();
+        $(".doctors-list").fadeIn(slow);
+        $(".doctors-list").fadeIn(1000);
+        $(".doctors-list").show();
+    });
+
     $(".btnAddDoctor").click(() => {
-     $(".doctors-list").hide();
+      $(".doctors-list").hide();
+      $(".personal-details").addClass("path-active");
       $(".add-doctor").fadeIn();
       $(".add-doctor").fadeIn(slow);
       $(".add-doctor").fadeIn(1000);
       $(".add-doctor").show();
-
+      $(".doctor-details").show();
+      $(".doctor-details").fadeIn();
+      $(".doctor-details").fadeIn(slow);
+      $(".doctor-details").fadeIn(1000);
+      
       $(".edit-patient-form").hide();
     });
 
