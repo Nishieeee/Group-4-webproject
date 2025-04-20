@@ -57,17 +57,20 @@ $("document").ready(() => {
     $(".btnAddDoctor").click(() => {
       $(".doctors-list").hide();
       $(".personal-details").addClass("path-active");
-      $(".add-doctor").fadeIn();
-      $(".add-doctor").fadeIn(slow);
-      $(".add-doctor").fadeIn(1000);
-      $(".add-doctor").show();
-      $(".doctor-details").show();
-      $(".doctor-details").fadeIn();
-      $(".doctor-details").fadeIn(slow);
-      $(".doctor-details").fadeIn(1000);
+      showAddDoctorForm();
       
-      $(".edit-patient-form").hide();
     });
+
+  function showAddDoctorForm() {
+    $(".add-doctor").show();
+    $(".add-doctor").fadeIn();
+    $(".add-doctor").fadeIn(slow);
+    $(".add-doctor").fadeIn(1000);
+    $(".doctor-details").show();
+    $(".doctor-details").fadeIn();
+    $(".doctor-details").fadeIn(slow);
+    $(".doctor-details").fadeIn(1000);
+  }
 
     $(".btn-cancel").click(() => {
         $(".add-doctor").hide();
