@@ -350,21 +350,21 @@
             <div class="doctor-details">
                 <h5 class="mb-0 px-3 py-2" >Personal details</h5>
                 <form class="d-flex flex-column p-3 ms-3">              
-                    <div class="doctor-name">
-                        <div class="doctor-name-input">
+                    <div class="row">
+                        <div class="col-xxl-6 col-lg-4 col-sm-3">
                             <label for="doctor-name">Doctor Name</label>
                             <input type="text" id="doctor-name" class="form-control" placeholder="Enter Doctor Name" required/>
                         </div>
-                        <div class="doctor-name-input">
+                        <div class="doctor-name-input col-xxl-6 col-lg-4 col-sm-3">
                             <label for="doctor-name">Doctor ID</label>
                             <input type="text" id="doctor-id" class="form-control" placeholder="Enter Doctor ID" required/>
                         </div>
-                    </div>
-                    <div class="doctor-designation">
+                    
+                    <div class="doctor-designation col-xxl-6 col-lg-4 col-sm-3">
                         <label for="doctor-designation">Designation</label>
                         <input type="text" id="doctor-designation" class="form-control" placeholder="Enter Designation" required/>
                     </div>
-                    <div class="doctor-specialization">
+                    <div class="doctor-specialization col-xxl-6 col-lg-4 col-sm-3">
                         <label for="doctor-specialization">Specialization</label>
                         <select name="specialization" id="specialization" class="form-select" required>
                           <option value="" disabled selected>Choose...</option>
@@ -383,32 +383,34 @@
                         </select>
 
                     </div>
-                    <div class="doctor-education">
+                    <div class="doctor-education col-xxl-6 col-lg-4 col-sm-3">
                         <label for="doctor-education">Education</label>
                         <input type="text" id="doctor-education" class="form-control" placeholder="Enter Education" required/>
                     </div>
-                    <div class="doctor-experience">
+                    <div class="doctor-experience col-xxl-6 col-lg-4 col-sm-3">
                         <label for="doctor-experience">Experience</label>
                         <input type="text" id="doctor-experience" class="form-control" placeholder="Enter Experience" required/>
                     </div>
-                    <div class="doctor-contact">
+                    <div class="doctor-contact col-xxl-6 col-lg-4 col-sm-3">
                         <label for="doctor-contact">Contact Number</label>
                         <input type="text" id="doctor-contact" class="form-control" placeholder="Enter Contact Number" required/>
                     </div>
-                    <div class="doctor-email">
+                    <div class="doctor-email col-xxl-6 col-lg-4 col-sm-3">
                         <label for="doctor-email">Email</label>
                         <input type="email" id="doctor-email" class="form-control" placeholder="Enter Email" required/>
                     </div>
-                    <div class="doctor-address">
+                    <div class="doctor-address col-xxl-6 col-lg-4 col-sm-3">
                         <label for="doctor-address">Address</label>
                         <input type="text" id="doctor-address" class="form-control" placeholder="Enter Address" />
                     </div>
-                    <div class="d-flex justify-content-end mt-3">
-                        <button class="btn btn-white text-danger btn-cancel mx-2">Cancel</button>
+                    
+                  </div>
+                  <div class="d-flex justify-content-end mt-3">
+                    <button class="btn btn-white text-danger btn-cancel mx-2">Cancel</button>
 
-                        <button class="btn btn-danger mx-1" type="reset">Reset</button>
-                        <button class=" btn-next-details btn btn-primary  mx-1" type="submit">Next</button>
-                    </div>
+                    <button class="btn btn-danger mx-1" type="reset">Reset</button>
+                    <button class=" btn-next-details btn btn-primary  mx-1" type="submit">Next</button>
+                </div>
                 </form>
             </div>
             <div class="doctor-availability">
@@ -577,6 +579,76 @@
                   <button class="btn btn-danger mx-1" type="reset">Reset</button>
                   <button class="btn-finish btn btn-primary btn-add-doctor mx-1" type="submit">Add Doctor</button>
               </div>
+              </form>
+            </div>
+          </section>
+          <section class="edit-doctor-form p-3 my-0 border rounded shadow-sm">
+            <div>
+              <h5>Edit Details</h5>
+            </div>
+            <div class="p-2 m-0">
+              <form action="" class="form-ring">
+                <div class="row">
+                    <div class="col-xxl-6 col-lg-4 col-sm-3">
+                        <label for="doctor-name">Doctor Name</label>
+                        <input type="text" id="doctor-name" class="form-control" placeholder="Enter Doctor Name" value="John doe" required/>
+                    </div>
+                    <div class="doctor-name-input col-xxl-6 col-lg-4 col-sm-3">
+                        <label for="doctor-name">Doctor ID</label>
+                        <input type="text" id="doctor-id" class="form-control" placeholder="Enter Doctor ID" value="1" required/>
+                    </div>
+                
+                  <div class="doctor-designation col-xxl-6 col-lg-4 col-sm-3">
+                      <label for="doctor-designation">Designation</label>
+                      <input type="text" id="doctor-designation" class="form-control" placeholder="Enter Designation" value="Surgeon" required/>
+                  </div>
+                  <div class="doctor-specialization col-xxl-6 col-lg-4 col-sm-3">
+                      <label for="doctor-specialization">Specialization</label>
+                      <select name="specialization" id="specialization" class="form-select" required>
+                        <option value="" disabled>Choose...</option>
+                        <option value="Cardiologist" selected>Cardiologist</option>
+                        <option value="Surgeon">Surgeon</option>
+                        <option value="Dermatologist">Dermatologist</option>
+                        <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
+                        <option value="Pediatrician">Pediatrician</option>
+                        <option value="Neurologist">Neurologist</option>
+                        <option value="Gynecologist">Gynecologist</option>
+                        <option value="Urologist">Urologist</option>
+                        <option value="General Surgeon">General Surgeon</option>
+                        <option value="Psychiatrist">Psychiatrist</option>
+                        <option value="Ophthalmologist">Ophthalmologist</option>
+
+                      </select>
+
+                  </div>
+                  <div class="doctor-education col-xxl-6 col-lg-4 col-sm-3">
+                      <label for="doctor-education">Education</label>
+                      <input type="text" id="doctor-education" class="form-control" placeholder="Enter Education" value="Harvard University, Doctorate in something" required/>
+                  </div>
+                  <div class="doctor-experience col-xxl-6 col-lg-4 col-sm-3">
+                      <label for="doctor-experience">Experience</label>
+                      <input type="text" id="doctor-experience" class="form-control" placeholder="Enter Experience" value="Vietnam Field Doctor 1958" required/>
+                  </div>
+                  <div class="doctor-contact col-xxl-6 col-lg-4 col-sm-3">
+                      <label for="doctor-contact">Contact Number</label>
+                      <input type="text" id="doctor-contact" class="form-control" placeholder="Enter Contact Number" value="+125 911 111 111" required/>
+                  </div>
+                  <div class="doctor-email col-xxl-6 col-lg-4 col-sm-3">
+                      <label for="doctor-email">Email</label>
+                      <input type="email" id="doctor-email" class="form-control" placeholder="Enter Email" value="test@test" required/>
+                  </div>
+                  <div class="doctor-address col-xxl-6 col-lg-4 col-sm-3">
+                      <label for="doctor-address">Address</label>
+                      <input type="text" id="doctor-address" class="form-control" placeholder="Enter Address" value="Ayala, Zamboanga City"/>
+                  </div>
+                  
+                </div>
+                <div class="d-flex justify-content-end mt-5">
+                  <button class="btn btn-white text-danger btn-cancel mx-2">Cancel</button>
+
+                  <button class="btn btn-danger mx-1" type="reset">Reset</button>
+                  <button class=" btn-next-details btn btn-primary  mx-1" type="submit">Submit</button>
+                </div>
               </form>
             </div>
           </section>

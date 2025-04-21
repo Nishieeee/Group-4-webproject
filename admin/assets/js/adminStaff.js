@@ -76,6 +76,7 @@ $("document").ready(() => {
 
       $(".btn-finish").click(() => {
         $(".add-staff").hide();
+        $(".edit-staff").hide();
         $(".added-success").show();
 
         setTimeout(() => { 

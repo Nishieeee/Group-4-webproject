@@ -39,6 +39,7 @@ $("document").ready(() => {
         $(".doctor-availability").fadeIn();
         $(".doctor-availability").fadeIn(slow);
         $(".doctor-availability").fadeIn(1000);
+        $('html, body').scrollTop(0);
     });
     
     $(".btn-next-avail").click(() => {
@@ -47,8 +48,10 @@ $("document").ready(() => {
         $(".doctor-availability").hide();
         $(".doctor-account").fadeIn();
         $(".doctor-account").fadeIn(slow);
-        $(".doctor-account").fadeIn(1000);      
+        $(".doctor-account").fadeIn(1000);  
+        $('html, body').scrollTop(0);    
     });
+    
     $(".btn-finish").click(() => {
       $(".personal-account").removeClass("path-active");
         $(".doctor-details").hide();
@@ -65,6 +68,7 @@ $("document").ready(() => {
         $(".doctors-list").fadeIn(slow);
         $(".doctors-list").fadeIn(1000);
         $(".doctors-list").show();
+        $('html, body').scrollTop(0);
         
     });
 
@@ -72,6 +76,7 @@ $("document").ready(() => {
       $(".doctors-list").hide();
       $(".personal-details").addClass("path-active");
       showAddDoctorForm();
+      $('html, body').scrollTop(0);
       
     });
 
@@ -88,12 +93,22 @@ $("document").ready(() => {
 
     $(".btn-cancel").click(() => {
         $(".add-doctor").hide();
+        $(".edit-doctor-form").hide();
         $(".doctors-list").fadeIn();
         $(".doctors-list").fadeIn(slow);
         $(".doctors-list").fadeIn(1000);
         $(".doctors-list").show();
+        $('html, body').scrollTop(0);
     });
 
+    $(".edit-ptnt").click(() => {
+      $(".doctors-list").hide();
+      $(".edit-doctor-form").fadeIn();
+      $(".edit-doctor-form").fadeIn(slow);
+      $(".edit-doctor-form").fadeIn(400);
+      $('html, body').scrollTop(0);
+
+    });
     $("#patientTable th").click(function () {
       var table = $(this).parents("table");
       var tbody = table.find("tbody");
