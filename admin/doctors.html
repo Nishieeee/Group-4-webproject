@@ -340,61 +340,247 @@
             </div>
           </section>
           <section class="add-doctor p-3 my-0 border rounded shadow-sm">
-            <div class="doctor-details ">
-                <h5 class="mb-0 px-3 py-2" >Add Doctor</h5>
-                <form action="" method="post" class="d-flex flex-column p-3 ms-3">
-                
-                <div class="doctor-name">
-                    <div class="doctor-name-input">
-                        <label for="doctor-name">Doctor Name</label>
-                        <input type="text" id="doctor-name" class="form-control" placeholder="Enter Doctor Name" required/>
+            <div class="add-doctor-path w-50 d-flex align-items-start px-2 border-bottom">
+              <a class="fw-light my-0 personal-details"><i class="bi bi-briefcase mx-1"></i>Personal Details</a>
+              <a class="fw-light availability"><i class="bi bi-calendar-check mx-1"></i>Availability</a>
+              <a class="fw-light personal-account"><i class="bi bi-person-lock mx-1"></i>Personal Account</a>
+            </div>
+            <div class="doctor-details">
+                <h5 class="mb-0 px-3 py-2" >Personal details</h5>
+                <form class="d-flex flex-column p-3 ms-3">              
+                    <div class="doctor-name">
+                        <div class="doctor-name-input">
+                            <label for="doctor-name">Doctor Name</label>
+                            <input type="text" id="doctor-name" class="form-control" placeholder="Enter Doctor Name" required/>
+                        </div>
+                        <div class="doctor-name-input">
+                            <label for="doctor-name">Doctor ID</label>
+                            <input type="text" id="doctor-id" class="form-control" placeholder="Enter Doctor ID" required/>
+                        </div>
                     </div>
-                    <div class="doctor-name-input">
-                        <label for="doctor-name">Doctor ID</label>
-                        <input type="text" id="doctor-id" class="form-control" placeholder="Enter Doctor ID" required/>
+                    <div class="doctor-designation">
+                        <label for="doctor-designation">Designation</label>
+                        <input type="text" id="doctor-designation" class="form-control" placeholder="Enter Designation" required/>
                     </div>
-                </div>
-                <div class="doctor-designation">
-                    <label for="doctor-designation">Designation</label>
-                    <input type="text" id="doctor-designation" class="form-control" placeholder="Enter Designation" required/>
-                </div>
-                <div class="doctor-specialization">
-                    <label for="doctor-specialization">Specialization</label>
-                    <input type="text" id="doctor-specialization" class="form-control" placeholder="Enter Specialization" required />
-                </div>
-                <div class="doctor-education">
-                    <label for="doctor-education">Education</label>
-                    <input type="text" id="doctor-education" class="form-control" placeholder="Enter Education" required/>
-                </div>
-                <div class="doctor-experience">
-                    <label for="doctor-experience">Experience</label>
-                    <input type="text" id="doctor-experience" class="form-control" placeholder="Enter Experience" required/>
-                </div>
-                <div class="doctor-contact">
-                    <label for="doctor-contact">Contact Number</label>
-                    <input type="text" id="doctor-contact" class="form-control" placeholder="Enter Contact Number" required/>
-                </div>
-                <div class="doctor-email">
-                    <label for="doctor-email">Email</label>
-                    <input type="email" id="doctor-email" class="form-control" placeholder="Enter Email" required/>
-                </div>
-                <div class="doctor-address">
-                    <label for="doctor-address">Address</label>
-                    <input type="text" id="doctor-address" class="form-control" placeholder="Enter Address" />
-                </div>
-                <div class="d-flex justify-content-end mt-3">
-                    <button class="btn btn-white text-danger btn-cancel mx-2" type="reset">Cancel</button>
-                    <button class="btn btn-danger mx-1" type="reset">Reset</button>
-                    <button class="btn btn-primary btn-add-doctor mx-1" type="submit">Add Doctor</button>
-                  </div>
+                    <div class="doctor-specialization">
+                        <label for="doctor-specialization">Specialization</label>
+                        <select name="specialization" id="specialization" class="form-select" required>
+                          <option value="" disabled selected>Choose...</option>
+                          <option value="Cardiologist">Cardiologist</option>
+                          <option value="Surgeon">Surgeon</option>
+                          <option value="Dermatologist">Dermatologist</option>
+                          <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
+                          <option value="Pediatrician">Pediatrician</option>
+                          <option value="Neurologist">Neurologist</option>
+                          <option value="Gynecologist">Gynecologist</option>
+                          <option value="Urologist">Urologist</option>
+                          <option value="General Surgeon">General Surgeon</option>
+                          <option value="Psychiatrist">Psychiatrist</option>
+                          <option value="Ophthalmologist">Ophthalmologist</option>
+
+                        </select>
+
+                    </div>
+                    <div class="doctor-education">
+                        <label for="doctor-education">Education</label>
+                        <input type="text" id="doctor-education" class="form-control" placeholder="Enter Education" required/>
+                    </div>
+                    <div class="doctor-experience">
+                        <label for="doctor-experience">Experience</label>
+                        <input type="text" id="doctor-experience" class="form-control" placeholder="Enter Experience" required/>
+                    </div>
+                    <div class="doctor-contact">
+                        <label for="doctor-contact">Contact Number</label>
+                        <input type="text" id="doctor-contact" class="form-control" placeholder="Enter Contact Number" required/>
+                    </div>
+                    <div class="doctor-email">
+                        <label for="doctor-email">Email</label>
+                        <input type="email" id="doctor-email" class="form-control" placeholder="Enter Email" required/>
+                    </div>
+                    <div class="doctor-address">
+                        <label for="doctor-address">Address</label>
+                        <input type="text" id="doctor-address" class="form-control" placeholder="Enter Address" />
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                        <button class="btn btn-white text-danger btn-cancel mx-2">Cancel</button>
+
+                        <button class="btn btn-danger mx-1" type="reset">Reset</button>
+                        <button class=" btn-next-details btn btn-primary  mx-1" type="submit">Next</button>
+                    </div>
                 </form>
             </div>
-            <div class="doctor-availability"></div>
-            <div class="doctor-account"></div>
+            <div class="doctor-availability">
+              <h5 class="mb-0 px-3 py-2">Availability</h5>
+              <p class="px-3 py-2">Select the days and time slots for the doctor</p>
+                <div class="row">
+                  <div class="col-xxl-3 col-lg-4 col-sm-6">
+                    <label for="sun">Sunday</label>
+                    <div class="input-group">                
+                        <select class="form-select" id="sun">
+                          <option value="" selected disabled>From</option>
+                          <option value="7AM">7 AM</option>
+                          <option value="8AM">8 AM</option>
+                          <option value="9AM">9 AM</option>
+                        </select>
+                        <select name="sun" id="sun" class="form-select col-md-6">
+                          <option value="To:" selected disabled>To:</option>
+                          <option value="3PM">3 PM</option>
+                          <option value="4PM">4 PM</option>
+                          <option value="5PM">5 PM</option>
+                        </select>                 
+                    </div>
+                  </div>    
+
+                  <div class="col-xxl-3 col-lg-4 col-sm-6">
+                    <label for="sun">Monday</label>
+                    <div class="input-group">                
+                        <select class="form-select" id="sun">
+                          <option value="" selected disabled>From</option>
+                          <option value="7AM">7 AM</option>
+                          <option value="8AM">8 AM</option>
+                          <option value="9AM">9 AM</option>
+                        </select>
+                        <select name="sun" id="sun" class="form-select col-md-6">
+                          <option value="To:" selected disabled>To:</option>
+                          <option value="3PM">3 PM</option>
+                          <option value="4PM">4 PM</option>
+                          <option value="5PM">5 PM</option>
+                        </select> 
+                    </div>
+                  </div>
+
+                 <div class="col-xxl-3 col-lg-4 col-sm-6">
+                    <label for="sun">Tuesday</label>
+                    <div class="input-group">                
+                        <select class="form-select" id="sun">
+                          <option value="" selected disabled>From</option>
+                          <option value="7AM">7 AM</option>
+                          <option value="8AM">8 AM</option>
+                          <option value="9AM">9 AM</option>
+                        </select>
+                        <select name="sun" id="sun" class="form-select col-md-6">
+                          <option value="To:" selected disabled>To:</option>
+                          <option value="3PM">3 PM</option>
+                          <option value="4PM">4 PM</option>
+                          <option value="5PM">5 PM</option>
+                        </select> 
+                    </div>
+                 </div>
+
+                 <div class="col-xxl-3 col-lg-4 col-sm-6">
+                  <label for="sun">Wednesday</label>
+                  <div class="input-group">                
+                      <select class="form-select" id="sun">
+                        <option value="" selected disabled>From</option>
+                        <option value="7AM">7 AM</option>
+                        <option value="8AM">8 AM</option>
+                        <option value="9AM">9 AM</option>
+                      </select>
+                      <select name="sun" id="sun" class="form-select col-md-6">
+                        <option value="To:" selected disabled>To:</option>
+                        <option value="3PM">3 PM</option>
+                        <option value="4PM">4 PM</option>
+                        <option value="5PM">5 PM</option>
+                      </select> 
+                  </div>
+                 </div>
+
+                 <div class="col-xxl-3 col-lg-4 col-sm-6">
+                <label for="sun">Thursday</label>
+                <div class="input-group">                
+                    <select class="form-select" id="sun">
+                      <option value="" selected disabled>From</option>
+                      <option value="7AM">7 AM</option>
+                      <option value="8AM">8 AM</option>
+                      <option value="9AM">9 AM</option>
+                    </select>
+                    <select name="sun" id="sun" class="form-select col-md-6">
+                      <option value="To:" selected disabled>To:</option>
+                      <option value="3PM">3 PM</option>
+                      <option value="4PM">4 PM</option>
+                      <option value="5PM">5 PM</option>
+                    </select> 
+                </div>
+                  </div>
+
+                  <div class="col-xxl-3 col-lg-4 col-sm-6">
+                      <label for="sun">Friday</label>
+                      <div class="input-group">                
+                          <select class="form-select" id="sun">
+                            <option value="" selected disabled>From</option>
+                            <option value="7AM">7 AM</option>
+                            <option value="8AM">8 AM</option>
+                            <option value="9AM">9 AM</option>
+                          </select>
+                          <select name="sun" id="sun" class="form-select col-md-6">
+                            <option value="To:" selected disabled>To:</option>
+                            <option value="3PM">3 PM</option>
+                            <option value="4PM">4 PM</option>
+                            <option value="5PM">5 PM</option>
+                          </select> 
+                      </div>
+                  </div>
+
+                  <div class="col-xxl-3 col-lg-4 col-sm-6">
+                      <label for="sun">Saturday</label>
+                      <div class="input-group">                
+                          <select class="form-select" id="sun">
+                            <option value="" selected disabled>From</option>
+                            <option value="7AM">7 AM</option>
+                            <option value="8AM">8 AM</option>
+                            <option value="9AM">9 AM</option>
+                          </select>
+                          <select name="sun" id="sun" class="form-select col-md-6">
+                            <option value="To:" selected disabled>To:</option>
+                            <option value="3PM">3 PM</option>
+                            <option value="4PM">4 PM</option>
+                            <option value="5PM">5 PM</option>
+                          </select> 
+                      </div>
+                  </div>
+
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                  <button class="btn btn-white text-danger btn-cancel mx-2">Cancel</button>
+
+                  <button class="btn btn-danger mx-1" type="reset">Reset</button>
+                  <button class="btn-next-avail btn btn-primary btn-add-doctor mx-1" type="submit">Next</button>
+              </div>
+              
+            </div>
+            <div class="doctor-account">
+              <h5 class="mb-0 px-3 py-2">Account</h5>
+              <p class="px-3 py-2">Create an account for the doctor</p>
+              <form action="" class="form">
+                <div class="row">
+                  <div class="col-xxl-3">
+                    <label for="account-name" class="form-label">Account User Name</label>
+                    <input type="text" class="form-control" id="account-name" placeholder="Enter Account User Name" required />
+                  </div>
+                  <div class="col-xxl-3">
+                    <label for="account-email" class="form-label">Account Email</label>
+                    <input type="email" class="form-control" id="account-email" placeholder="Enter Account Email" required />
+                  </div>
+                  <div class="col-xxl-3">
+                    <label for="account-password" class="form-label">Account Password</label>
+                    <input type="password" class="form-control" id="account-password" placeholder="Password must be 8-12 Characters long." required />
+                  </div>
+                  <div class="col-xxl-3">
+                    <label for="account-password" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="account-password" placeholder="Enter Account Password" required />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                  <button class="btn btn-white text-danger btn-cancel mx-2">Cancel</button>
+                  <button class="btn btn-danger mx-1" type="reset">Reset</button>
+                  <button class="btn-finish btn btn-primary btn-add-doctor mx-1" type="submit">Add Doctor</button>
+              </div>
+              </form>
+            </div>
           </section>
         </div>
       </div>
-      <!--end of patients page-->
+      <!--end of doctors page-->
     </main>
     <footer>
       <div class="container-fluid text-center py-3 bg-light border-top">

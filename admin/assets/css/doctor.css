@@ -20,3 +20,17 @@
 tr td:nth-child(4) {
     color: var(--text-color-danger) !important;
 }
+
+.add-doctor > .add-doctor-path > a:hover {
+    border-bottom: lightgray 1px solid;
+}
+
+.add-doctor > .add-doctor-path > a {
+    transition: all 0.3s ease-in-out;
+}
+.path-active {
+    border-bottom: var(--primary-color) 2px solid;
+}
+td, th {
+    padding: 1rem;
+}
