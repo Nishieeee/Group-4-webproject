@@ -1,8 +1,8 @@
-
+$(".added-success").hide();
 
 $("document").ready(() => {
   
-    $(".added-success").hide();
+    
   
      
       $(".add-department").hide();
