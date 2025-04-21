@@ -1,0 +1,19 @@
+.staff-page {
+    height: 95vh;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+.staff-page::webkiy-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+.staff-page::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+.staff-page::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}

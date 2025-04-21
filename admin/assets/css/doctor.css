@@ -1,3 +1,20 @@
+
+
+aside {
+    background: white;
+    height: 110vh;
+    width: 25%;
+    transition: all 0.105s ease-in;
+}
+.side-nav > a > i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+.side-profile-minimized {
+  border: 1px solid;
+  background-color: white !important;
+  padding: 0 !important;
+}
 .doctors-page {
     width: 80%;
     overflow-y: scroll;

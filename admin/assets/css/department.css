@@ -1,0 +1,19 @@
+.doctor-images img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    border: 2px solid #fff; 
+    margin-left: -15px; 
+    object-fit: cover; 
+    background: lightblue; 
+  }
+
+tr td:nth-child(3) {
+    padding: 1.1rem;
+}
+.add-department {
+    height: 105vh;
+}
+#message {
+    height: 150px;
+}

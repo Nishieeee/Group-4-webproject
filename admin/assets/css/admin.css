@@ -142,7 +142,6 @@ a {
 }
 .side-nav > a {
   transition: color 0.3s ease-in-out;
-  
 }
 .side-nav > a > i {
   margin-right: 10px;

@@ -111,7 +111,7 @@
             ><i class="bi bi-hospital"></i><span class="nav-text">Hospital Dashboard</span></a
           >
           <a class="pts m-1 px-3 py-2"><i class="bi bi-people"></i><span class="nav-text">Patients</span></a>
-          <a href="#" class="m-1 px-3 py-2"
+          <a href="staffs.html" class="m-1 px-3 py-2"
             ><i class="bi bi-people"></i><span class="nav-text">Staff</span></a
           >
           <a href="doctors.html" class="m-1 px-3 py-2"
@@ -120,7 +120,7 @@
           <a href="#" class="m-1 px-3 py-2"
             ><i class="bi bi-clipboard-heart"></i><span class="nav-text">Appointments</span></a
           >
-          <a href="#" class="m-1 px-3 py-2"
+          <a href="departments.html" class="m-1 px-3 py-2"
             ><i class="bi bi-hospital"></i><span class="nav-text">Departments</span></a
           >
           <a href="#" class="m-1 px-3 py-2"
@@ -152,6 +152,8 @@
           </div>
         </nav>
         <!-- main patients content-->
+        <div id="added-success" class="bg-success text-white p-3"><i class="bi bi-person-check mx-1" style="font-size: 20px;"></i>Patient Successfully Added!</div>
+ 
         <div class="patient-content p-2 my-0">
           <section class="patients-table border p-3 shadow-sm">
             <div class="mx-1 my-2">
@@ -160,16 +162,16 @@
               >
                 <h5 class="mb-0">Patients</h5>
                 <button
-                  class="btn btn-primary btnAddPatient rounded-5 shadow-sm px-3"
+                  class="btn btn-primary btnAddPatient rounded shadow-sm px-3"
                 >
                   <i class="bi bi-plus p-0 m-0"></i> Add Patient
                 </button>
               </div>
             </div>
            <div class="table-responsive border">
-              <table id="patientTable" class="table ">
+              <table id="patientTable" class="table table-hover text-center">
               <!--Table header-->
-              <thead>
+              <thead class="table-primary text-center border">
                 <tr>
                   <th scope="col" data-type="text">No.</th>
                   <th scope="col" data-type="text">Patient Name</th>
