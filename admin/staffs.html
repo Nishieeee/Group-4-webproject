@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaCare Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/admin.css" />
+
+    <!-- Favicons -->
+    <link href="/assets/img/Frame 6.png" rel="icon" />
+    <link href="/assets/img/Frame 6.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="/assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/staff.css" />
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+  </head>
+  <body>
+    <header
+      class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow-sm"
+    >
+    
+      <div class="menu d-flex align-items-center justify-content-between">
+        <div class="p-2 me-2 d-flex align-items-center justify-content-center">
+          <i class="bi bi-list menu-icon"></i>
+        </div>
+        <img
+          src="/assets/img/Frame 7.png"
+          width="35px"
+          height="50px"
+          class="py-2"
+        />
+        <img
+          src="/assets/img/Frame 5.png"
+          width="150px"
+          height="50px"
+          class="ms-2"
+        />
+      </div>
+      <div>
+        <div
+          id="search"
+          class="search-container d-flex align-items-center justify-content-center w-100"
+        >
+          <input
+            class="form-control shadow-sm me-2 border rounded ps-3 py-1 pe-2 py-1"
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search..."
+            style="width: 250px"
+          />
+          <button class="btn rounded-5 btn-primary shadow-sm">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="d-flex flex-row">
+      <!--side nav-->
+      <aside class="p-3 z-2 border sidebar-wrapper">
+        <div
+          class="side-profile mb-1 w-100 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="/assets/img/doctors/doctors-1.jpg"
+            class="rounded-5"
+
+          />
+          <div id="side-profile-name" class="mx-1">
+            <h3 class="text-white my-0"><span class="nav-text">Ali Bitun</span></h3>
+            <h6 class="my-0 text-white"><span class="nav-text">Dept Admin</span></h6>
+          </div>
+        </div>
+
+        <nav
+          aria-label="page navigation"
+          class="side-nav d-flex flex-column p-2"
+        >
+          <a href="Admin.html" class=" m-1 px-3 py-2"
+            ><i class="bi bi-hospital"></i><span class="nav-text">Hospital Dashboard</span></a
+          >
+          <a href="Patients.html" class="m-1 px-3 py-2"
+          ><i class="bi bi-people"></i><span class="nav-text">Patients</span></a>
+          <a href="#" class="stffs m-1 px-3 py-2"
+            ><i class="bi bi-people"></i><span class="nav-text">Staff</span></a
+          >
+          <a href="doctors.html" class=" m-1 px-3 py-2"
+            ><i class="bi bi-postage-heart "></i><span class="nav-text">Doctors</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-clipboard-heart"></i><span class="nav-text">Appointments</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-hospital"></i><span class="nav-text">Departments</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-credit-card"></i><span class="nav-text">Insurance</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-clipboard-data"></i><span class="nav-text">Reports</span></a
+          >
+          <a href="#" class="m-1 px-3 py-2"
+            ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a>
+
+          <a href="/landing/index.html" class="m-1 px-3 py-2"
+            ><i class="bi bi-arrow-right"></i><span class="nav-text">Logout</span></a
+          >
+        </nav>
+      </aside>
+        <!--main content-->
+        <div class="staff-page transition-width">
+            <nav
+          class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
+        >
+          <div>
+            <i class="bi bi-house-door text-primary px-2 py-1 border-end"></i>
+          </div>
+          <div class="nav-path d-flex ms-2">
+            <p class="txt-dark my-0 mx-1"><a href="#"> Home </a></p>
+            <p class="txt-dark my-0 mx-1 text-primary">/</p>
+            <p class="txt-dark my-0 mx-1"><a href="doctors.html"> Doctors </a></p>
+          </div>
+            </nav>
+            <div id="added-success" class="added-success bg-success text-white p-3"><i class="bi bi-person-check mx-1" style="font-size: 20px;"></i>Staff Successfully Added!</div>
+            <div class="staff-content p-2 my-0">
+              <section class="staff-list p-3 my-0 border rounded shadow-sm">
+                
+                  <div
+                    class="d-flex justify-content-between align-items-center py-2 px-5"
+                  >
+                    <h5 class="mb-0">Staffs</h5>
+                    <button
+                      class="btn btn-primary btnAddStaff rounded-5 shadow-sm px-3"
+                    >
+                      <i class="bi bi-plus p-0 m-0"></i> Add Staff
+                    </button>
+                  </div>
+                
+                  <div class="table-responsive">
+                      <table id="patientTable" class="table table-hover text-center">
+                          <thead class="table-primary text-center">
+                              <tr>
+                                  <th scope="col">Staff ID</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Designation</th>
+                                  <th scope="col">Phone</th>
+                                  <th scope="col">DOJ</th>
+                                  <th scope="col">Action</th>
+                              </tr>
+                          </thead>
+                          <tbody class="table-white">
+                              <tr class="text-center">
+                                  <td>1</td>
+                                  <td>Ali Bitun</td>
+                                  <td>Dept Admin</td>
+                                  <td>+251 911 111 111</td>
+                                  <td>2025-01-01</td>
+                                  <td>
+                                    <button class="btn btn-danger m-1 h-100">
+                                      <i class="bi bi-trash"></i></button
+                                    ><button class="btn btn-success edit-ptnt m-1">
+                                      <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                  </td>
+                              </tr>
+                              <tr class="text-center">
+                                  <td>2</td>
+                                  <td>John Doe</td>
+                                  <td>Nurse</td>
+                                  <td>+251 911 222 222</td>
+                                  <td>2025-02-01</td>
+                                  <td>
+                                    <button class="btn btn-danger m-1 h-100">
+                                      <i class="bi bi-trash"></i></button
+                                    ><button class="btn btn-success edit-ptnt m-1">
+                                      <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                  </td>
+                              </tr>
+                              <tr class="text-center">
+                                  <td>3</td>
+                                  <td>Jane Smith</td>
+                                  <td>Doctor</td>
+                                  <td>+251 911 333 333</td>
+                                  <td>2025-03-01</td>
+                                  <td>
+                                    <button class="btn btn-danger m-1 h-100">
+                                      <i class="bi bi-trash"></i></button
+                                    ><button class="btn btn-success edit-ptnt m-1">
+                                      <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>4</td>
+                                  <td>Mary Johnson</td>
+                                  <td>Receptionist</td>
+                                  <td>+251 911 444 444</td>
+                                  <td>2025-04-01</td>
+                                  <td>
+                                    <button class="btn btn-danger m-1 h-100">
+                                      <i class="bi bi-trash"></i></button
+                                    ><button class="btn btn-success edit-ptnt m-1">
+                                      <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>5</td>
+                                  <td>Michael Brown</td>
+                                  <td>Pharmacist</td>
+                                  <td>+251 911 555 555</td>
+                                  <td>2025-05-01</td>
+                                  <td>
+                                    <button class="btn btn-danger m-1 h-100">
+                                      <i class="bi bi-trash"></i></button
+                                    ><button class="btn btn-success edit-ptnt m-1">
+                                      <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>6</td>
+                                  <td>Linda Davis</td>
+                                  <td>Lab Technician</td>
+                                  <td>+251 911 666 666</td>
+                                  <td>2025-06-01</td>
+                                  <td>
+                                    <button class="btn btn-danger m-1 h-100">
+                                      <i class="bi bi-trash"></i></button
+                                    ><button class="btn btn-success edit-ptnt m-1">
+                                      <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>7</td>
+                                  <td>James Wilson</td>
+                                  <td>Surgeon</td>
+                                  <td>+251 911 777 777</td>
+                                  <td>2025-07-01</td>
+                                  <td>
+                                    <button class="btn btn-danger m-1 h-100">
+                                      <i class="bi bi-trash"></i></button
+                                    ><button class="btn btn-success edit-ptnt m-1">
+                                      <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>8</td>
+                                  <td>Patricia Garcia</td>
+                                  <td>Physical Therapist</td>
+                                  <td>+251 911 888 888</td>
+                                  <td>2025-08-01</td>
+                                  <td>
+                                    <button class="btn btn-danger m-1 h-100">
+                                      <i class="bi bi-trash"></i></button
+                                    ><button class="btn btn-success edit-ptnt m-1">
+                                      <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                  </td>
+                              </tr>
+
+                              
+                          </tbody>
+                          <tbody id="staff-list-body">
+                              <!-- Staff list will be populated here -->
+                          </tbody>
+                      </table>
+                  </div>
+              </section>
+              <section class="add-staff p-3 my-0 border rounded shadow-sm">
+                <div class="p-2"><h5>Add Staff</h5></div>
+                <div class="p-2 m-0">
+
+                  <form action="" class="focus-ring-primary">
+                    <div class="row">
+
+                      <div class="col-xxl-6 col-lg-4 col-sm-3">
+                        <label for="staff-name" class="form-label">First Name</label>
+                        <input
+                          type="text"
+                          class="form-control shadow-sm"
+                          id="staff-name"
+                          placeholder="Enter First Name"
+                        />
+                      </div>
+
+                      <div class="col-xxl-6 col-lg-4 col-sm-3">
+                        <label for="staff-name" class="form-label">Last Name</label>
+                        <input
+                          type="text"
+                          class="form-control shadow-sm"
+                          id="staff-name"
+                          placeholder="Enter Last Name"
+                        />
+                    </div>
+                  
+                    <div class="col-xxl-6 col-lg-4 col-sm-3">
+                          <label for="staff-name" class="form-label">Phone</label>
+                          <input
+                            type="text"
+                            class="form-control shadow-sm"
+                            id="staff-name"
+                            placeholder="Enter Phone Number"
+                          />
+                    </div>
+  
+                        <div class="col-xxl-6 col-lg-4 col-sm-3">
+                          <label for="staff-name" class="form-label">Email</label>
+                          <input
+                            type="email"
+                            class="form-control shadow-sm"
+                            id="staff-name"
+                            placeholder="Enter Email Address"
+                          />
+                        </div>
+  
+                        <div class="col-xxl-6 col-lg-4 col-sm-3">
+                          <label for="staff-name" class="form-label">Designation</label>
+                          <input
+                            type="text"
+                            class="form-control shadow-sm"
+                            id="staff-name"
+                            placeholder="Enter Designation"
+                          />
+                        </div>
+  
+                        <div class="col-xxl-6 col-lg-4 col-sm-3">
+                          <label for="staff-name" class="form-label">Department</label>
+                          <input
+                            type="text"
+                            class="form-control shadow-sm"
+                            id="staff-name"
+                            placeholder="Enter Department Name"
+                          />
+                        </div>
+                        <div class="col-xxl-6 col-lg-4 col-sm-3">
+                          <label for="staff-name" class="form-label">Qualification</label>
+                          <input
+                            type="text"
+                            class="form-control shadow-sm"
+                            id="staff-name"
+                            placeholder="Enter Qualification">
+                        </div>
+                        <div class="col-xxl-6 col-lg-4 col-sm-3">
+                          <label for="staff-name" class="form-label">Date of Joining</label>
+                          <input
+                            type="date"
+                            class="form-control shadow-sm"
+                            id="staff-name"
+                            placeholder="Enter Date of Joining"
+                          />
+                        </div>
+                        <div class="col-xxl-6 col-lg-4 col-sm-3">
+                          <label for="staff-address" class="form-label">Address</label>
+                          <input
+                            type="text"
+                            class="form-control shadow-sm"
+                            id="staff-address"
+                            placeholder="Enter Address" >
+                        </div>
+                  </div>
+                  <div class="file-upload my-5">
+                    <label for="formFile" class="form-label">Click Or Drag to Add staff documents Here <br> <span class="text-info-emphasis fw-bold fs-5">Upload Documents</span></label>
+                    <input type="file" class="form-control" id="formFile">
+                  </div>
+                  <div class="d-flex justify-content-end mt-3">
+                    <button class="btn-cancel text-danger bg-white border-0 mx-2">Cancel</button>
+                    <button type="submit" class="btn-finish btn btn-primary rounded-5 shadow-sm px-3"> Add Staff
+                    </button>
+                  </div>      
+                  </form>
+                </div>
+              </section>
+              <section class="edit-staff p-3 my-0 border rounded shadow-sm">
+                <div class="edit-"></div>
+              </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="container-fluid text-center py-3 bg-light border-top">
+        <p class="mb-0">&copy; 2025 NovaCare. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="assets/js/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="assets/js/admin.js"></script> -->
+     <!-- <script src="assets/js/adminPatient.js"></script> -->
+    <script src="assets/js/adminStaff.js"></script>
+  </body>
+</html>

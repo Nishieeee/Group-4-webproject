@@ -41,7 +41,7 @@
       rel="stylesheet"
     />
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/admin.css" />
     <link rel="stylesheet" href="assets/css/doctor.css" />
     <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
   </head>
@@ -108,11 +108,12 @@
           aria-label="page navigation"
           class="side-nav d-flex flex-column p-2"
         >
-          <a href="Admin.html" class=" hp m-1 px-3 py-2"
+          <a href="Admin.html" class=" m-1 px-3 py-2"
             ><i class="bi bi-hospital"></i><span class="nav-text">Hospital Dashboard</span></a
           >
-          <a href="Patients.html" class=" m-1 px-3 py-2"><i class="bi bi-people"></i><span class="nav-text">Patients</span></a>
-          <a href="#" class="m-1 px-3 py-2"
+          <a href="Patients.html" class="m-1 px-3 py-2"
+          ><i class="bi bi-people"></i><span class="nav-text">Patients</span></a>
+          <a href="staffs.html" class="m-1 px-3 py-2"
             ><i class="bi bi-people"></i><span class="nav-text">Staff</span></a
           >
           <a href="doctors.html" class="drs m-1 px-3 py-2"
@@ -154,6 +155,7 @@
           </div>
         </nav>
         <!-- main doctors content-->
+        <div id="added-success" class="bg-success text-white p-3"><i class="bi bi-person-check mx-1" style="font-size: 20px;"></i>Doctor Successfully Added!</div>
         <div class="doctors-content p-2 my-0">
           <section class="doctors-list p-3 my-0 border rounded shadow-sm">
             <div
@@ -169,8 +171,8 @@
             <div class="table-responsive">
                 <div class="mx-1 my-2">
                   </div>
-                <table id="patientTable" class="table">
-                    <thead>
+                <table id="patientTable" class="table table-hover text-center">
+                    <thead class="table-primary border text-center">
                         <th>ID</th>
                         <th>Doctors Name</th>
                         <th>Designation</th>
@@ -589,7 +591,7 @@
     </footer>
     <script src="assets/js/jquery/dist/jquery.min.js"></script>
     <!-- <script src="assets/js/admin.js"></script> -->
-     <script src="assets/js/adminPatient.js"></script>
+     <!-- <script src="assets/js/adminPatient.js"></script> -->
     <script src="assets/js/adminDoctors.js"></script>
   </body>
 </html>
