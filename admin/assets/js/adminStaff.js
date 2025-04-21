@@ -77,10 +77,20 @@ $("document").ready(() => {
       $(".btn-finish").click(() => {
         $(".add-staff").hide();
         $(".added-success").show();
+
+        setTimeout(() => { 
+          $(".added-success").fadeOut(400);
+        }, 3000);
         $(".staff-list").fadeIn();
         $(".staff-list").fadeIn(slow);
         $(".staff-list").fadeIn(1000);
-        $(".staff-list").show();
-       
+        $(".staff-list").show(); 
+      });
+
+      $(".edit-ptnt").click(() => {
+        $(".staff-list").hide();
+        $(".edit-staff").fadeIn();
+        $(".edit-staff").fadeIn(slow);
+        $(".edit-staff").fadeIn(1000);
       });
 });

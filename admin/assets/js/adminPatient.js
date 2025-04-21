@@ -1,6 +1,7 @@
 // File: admin/assets/js/adminPatient.js
 // Description: This file contains the JavaScript code for the admin patient management page.
 $("document").ready(() => {
+  $("#added-success").hide();
   $(".add-patient").hide();
   $(".edit-patient-form").hide();
   $(".pts").addClass("page-item-active");
@@ -64,6 +65,10 @@ $("document").ready(() => {
   $(".btn-add-patient").click(() => {
     $(".edit-patient-form").hide();
     $(".add-patient").hide();
+    $("#added-success").show();
+    setTimeout(() => {
+      $("#added-success").fadeOut(400);
+    }, 3000);
     $(".patients-table").fadeIn();
     $(".patients-table").fadeIn(slow);
     $(".patients-table").fadeIn(500);

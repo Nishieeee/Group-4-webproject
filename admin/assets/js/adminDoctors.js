@@ -53,9 +53,14 @@ $("document").ready(() => {
       $(".personal-account").removeClass("path-active");
         $(".doctor-details").hide();
         $(".doctor-availability").hide();
-        
+
         $(".doctor-account").hide();
         $("#added-success").show();
+
+        setTimeout(() => {
+          $("#added-success").fadeOut(400);
+        }, 3000);
+        
         $(".doctors-list").fadeIn();
         $(".doctors-list").fadeIn(slow);
         $(".doctors-list").fadeIn(1000);
