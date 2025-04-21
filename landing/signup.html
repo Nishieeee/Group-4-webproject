@@ -8,60 +8,69 @@
 
 </head>
 <body>
-    <div class="container">
-        <h1>Medical Appointment Sign Up</h1>
-        <form action="/submit-appointment" method="POST" role="form" class="email-form" id="appointmentForm" >
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    <main>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-
-            <label for="datetime">Preferred Appointment Date & Time</label>
-            <input type="datetime-local" id="date" name="datetime" required>
-
-            <label for="department">Department</label>
-            <select id="department" name="department" required>
-                <option value="">Select a department</option>
-                <option value="general">General Medicine</option>
-                <option value="pediatrics">Pediatrics</option>
-                <option value="cardiology">Cardiology</option>
-                <option value="orthopedics">Orthopedics</option>
-                <option value="dermatology">Dermatology</option>
-                <option value="neurology">Neurology</option>
-            </select>
-
-            <label for="doctor">Preferred Doctor</label>
-            <select id="doctor" name="doctor" required>
-                <option value="">Select Doctor</option>
-                <option value="Doctor 1">John Doe</option>
-                <option value="Doctor 2">Jane Doe</option>
-                <option value="Doctor 3">John Smith</option>
-                <option value="Doctor 4">Jane Smith</option>
-            </select>
-
-            <label for="message">Additional Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Enter any additional details or concerns"></textarea>
-
-            <label for="insurance">Insurance Provider</label>
-            <input type="text" id="insurance" name="insurance" placeholder="Enter your insurance provider (if any)">
-
-            <label for="address">Address</label>
-            <div>
-                <input type="number" id="block" name="block" placeholder="Block" required>
-                <input type="number" id="block" name="lot" placeholder="lot" required>
-                <input type="text" id="street" name="street" placeholder="Street" required>
-                <input type="text" id="city" name="city" placeholder="City" required>
-                <input type="text" id="state" name="state" placeholder="State" required>
-                <input type="number" id="zip" name="zip" placeholder="Zip Code" required>
+        <div class="container">
+            <div class="logo">
+                <img src="/assets/img/Icon.png" alt="" height="50px" width="50px"> 
+                <img src="/assets/img/Horizontal_Icon.png" alt="" height="50px" width="150px">
             </div>
-
-            <button type="submit">Submit Appointment</button>
-        </form>
-    </div>
-    <script src = "/landing/assets/js/signup.js"></script>
+            
+            <form action="/submit-appointment" method="POST" role="form" class="email-form" id="appointmentForm" >
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+    
+                <label for="datetime">Preferred Appointment Date & Time</label>
+                <input type="datetime-local" id="date" name="datetime" required>
+    
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="">Select a department</option>
+                    <option value="general">General Medicine</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="orthopedics">Orthopedics</option>
+                    <option value="dermatology">Dermatology</option>
+                    <option value="neurology">Neurology</option>
+                </select>
+    
+                <label for="doctor">Preferred Doctor</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="">Select Doctor</option>
+                    <option value="Doctor 1">John Doe</option>
+                    <option value="Doctor 2">Jane Doe</option>
+                    <option value="Doctor 3">John Smith</option>
+                    <option value="Doctor 4">Jane Smith</option>
+                </select>
+    
+                <label for="message">Additional Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter any additional details or concerns"></textarea>
+    
+                <label for="insurance">Insurance Provider</label>
+                <input type="text" id="insurance" name="insurance" placeholder="Enter your insurance provider (if any)">
+    
+                <label for="address">Address</label>
+                <div>
+                    <input type="number" id="block" name="block" placeholder="Block" required>
+                    <input type="number" id="block" name="lot" placeholder="lot" required>
+                    <input type="text" id="street" name="street" placeholder="Street" required>
+                    <input type="text" id="city" name="city" placeholder="City" required>
+                    <input type="text" id="state" name="state" placeholder="State" required>
+                    <input type="number" id="zip" name="zip" placeholder="Zip Code" required>
+                </div>
+    
+                <button type="submit">Submit Appointment</button>
+            </form>
+        </div>
+        <!-- Scripts    -->
+        <script src = "/landing/assets/js/signup.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    </main>
 </body>
 </html>
