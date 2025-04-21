@@ -180,4 +180,32 @@ appointmentButton.addEventListener("click", function (event) {
     // Redirect to signup.html with form values as query parameters
     window.location.href = "/landing/signup.html?" + params.toString();
 });
+
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get email and password values
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  // Define valid accounts
+  const accounts = {
+    "doctor@admin.com": { password: "123", redirect: "/admin/Admin.html" },
+    "doctor@doctor.com": { password: "123", redirect: "/Doctors/Doctors.html" },
+    "patient@gmail.com": { password: "123", redirect: "/patient/patients.html" },
+  };
+
+  // Check if the email exists and the password matches
+  if (accounts[email] && accounts[email].password === password) {
+    // Redirect to the appropriate page
+    window.location.href = accounts[email].redirect;
+  } else {
+    // Show error message
+    const errorMessage = document.getElementById("errorMessage");
+    errorMessage.style.display = "block";
+    errorMessage.textContent = "Invalid email or password. Please try again.";
+  }
+});
+
+
 })();

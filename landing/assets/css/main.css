@@ -911,6 +911,71 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Login
+--------------------------------------------------------------*/
+
+
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  border-bottom: none;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body .form-label {
+  font-weight: bold;
+}
+
+.modal-body .form-control {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.modal-body .btn-primary {
+  background-color: #007BFF;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.modal-body .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.modal-body .text-primary {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.modal-body .text-primary:hover {
+  text-decoration: underline;
+}
+
+.modal-body .text-muted {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.modal-body .text-muted:hover {
+  text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
@@ -931,47 +996,92 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: -1;
 }
 
 .hero .container {
-  z-index: 3;
+  z-index: 1;
 }
 
 .hero .welcome h2 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
+  text-align: center;
 }
 
 .hero .welcome p {
   font-size: 24px;
   margin: 0;
+  text-align: center;
 }
 
-.hero .content {
+
+
+
+/*--------------------------------------------------------------
+# Info Section
+--------------------------------------------------------------*/
+.info {
+  background-color: var(--main-color);
+  width: 100%;
+  min-height: calc(100vh - 112px);
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.info img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.info .container {
+  z-index: 2;
+}
+
+.info .welcome h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.info .welcome p {
+  font-size: 24px;
+  margin: 0;
+}
+
+.info .content {
   margin-top: 40px;
 }
 
-.hero .content .why-box {
+.info .content .why-box {
   color: var(--contrast-color);
   background: var(--accent-color);
   padding: 30px;
   border-radius: 4px;
 }
 
-.hero .content .why-box h3 {
+.info .content .why-box h3 {
   color: var(--contrast-color);
   font-weight: 700;
   font-size: 34px;
   margin-bottom: 30px;
 }
 
-.hero .content .why-box p {
+.info .content .why-box p {
   margin-bottom: 30px;
 }
 
-.hero .content .why-box .more-btn {
+.info .content .why-box .more-btn {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--contrast-color), transparent 80%);
   display: inline-block;
@@ -982,16 +1092,16 @@ section,
   transition: all ease-in-out 0.4s;
 }
 
-.hero .content .why-box .more-btn i {
+.info .content .why-box .more-btn i {
   font-size: 14px;
 }
 
-.hero .content .why-box .more-btn:hover {
+.info .content .why-box .more-btn:hover {
   background: var(--surface-color);
   color: var(--accent-color);
 }
 
-.hero .content .icon-box {
+.info .content .icon-box {
   text-align: center;
   border-radius: 10px;
   background: color-mix(in srgb, var(--surface-color), transparent 20%);
@@ -1000,23 +1110,23 @@ section,
   width: 100%;
 }
 
-.hero .content .icon-box i {
+.info .content .icon-box i {
   font-size: 40px;
   color: var(--accent-color);
 }
 
-.hero .content .icon-box h4 {
+.info .content .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
   margin: 10px 0 20px 0;
 }
 
-.hero .content .icon-box p {
+.info .content .icon-box p {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-#firstSection h3,h4,h2,p{
+#secondSection h3,h4,h2,p{
   pointer-events: none;
   cursor: pointer;
 
@@ -1534,121 +1644,6 @@ section,
   color: var(--accent-color);
 }
 
-
-
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-.testimonials .info h3 {
-  font-weight: 700;
-  font-size: 32px;
-}
-
-.testimonials .swiper {
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--surface-color);
-}
-
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-.testimonials .testimonial-item {
-  box-sizing: content-box;
-  min-height: 200px;
-  position: relative;
-  margin: 30px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50px;
-  border: 6px solid var(--background-color);
-  margin-right: 10px;
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-}
-
-.testimonials .testimonial-item h4 {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 14px;
-  margin: 0;
-}
-
-.testimonials .testimonial-item .stars {
-  margin: 10px 0;
-}
-
-.testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  font-size: 26px;
-  line-height: 0;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 15px auto 15px auto;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-  border: none;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-@media (max-width: 767px) {
-
-  .testimonials .testimonials-carousel,
-  .testimonials .testimonials-slider {
-    overflow: hidden;
-  }
-
-  .testimonials .testimonial-item {
-    margin: 15px;
-  }
-}
 
 
 
