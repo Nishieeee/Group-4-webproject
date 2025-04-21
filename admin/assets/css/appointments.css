@@ -1,0 +1,7 @@
+calendar > tr td {
+  font-size: 1rem;
+  padding: 2rem 0.8rem !important;
+}
+.btn-cln-apptnmnt {
+    padding: 0 10px;
+}
