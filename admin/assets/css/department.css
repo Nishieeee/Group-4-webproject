@@ -11,3 +11,9 @@
 tr td:nth-child(3) {
     padding: 1.1rem;
 }
+.add-department {
+    height: 105vh;
+}
+#message {
+    height: 150px;
+}

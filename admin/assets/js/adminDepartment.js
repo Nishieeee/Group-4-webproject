@@ -5,8 +5,8 @@ $("document").ready(() => {
     $(".added-success").hide();
   
      
-      $(".add-staff").hide();
-      $(".edit-staff").hide();
+      $(".add-department").hide();
+      $(".edit-department").hide();
   
       $(".menu").click(() => {
           $(".nav-text").toggle();
@@ -58,29 +58,45 @@ $("document").ready(() => {
         });
   
   
-        $(".btnAddStaff").click(() => {
-          
+        $(".btnAddDepartment").click(() => {
+          $(".main-department-section").hide();
+          $(".add-department").fadeIn();
+          $(".add-department").fadeIn(slow);
+          $(".add-department").fadeIn(4000);
         });
   
         $(".btn-cancel").click(() => {
-          
+            $(".add-department").hide();
+            $(".edit-department").hide();
+
+            $(".main-department-section").fadeIn();
+            $(".main-department-section").fadeIn(slow);
+            $(".main-department-section").fadeIn(1000);
+            $(".main-department-section").show(); 
         });
   
         $(".btn-finish").click(() => {
-          $(".add-staff").hide();
-          $(".edit-staff").hide();
+          $(".add-department").hide();
+          $(".edit-department").hide();
           $(".added-success").show();
   
           setTimeout(() => { 
             $(".added-success").fadeOut(400);
           }, 3000);
-          $(".staff-list").fadeIn();
-          $(".staff-list").fadeIn(slow);
-          $(".staff-list").fadeIn(1000);
-          $(".staff-list").show(); 
+          $(".main-department-section").fadeIn();
+          $(".main-department-section").fadeIn(slow);
+          $(".main-department-section").fadeIn(1000);
+          $(".main-department-section").show(); 
         });
   
         $(".edit-ptnt").click(() => {
+            $(".main-department-section").hide();
+
+
+          $(".edit-department").fadeIn();
+          $(".edit-department").fadeIn(slow);
+          $(".edit-department").fadeIn(4000);
+
           
         });
   });
