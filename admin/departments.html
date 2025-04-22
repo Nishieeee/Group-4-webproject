@@ -41,9 +41,9 @@
       rel="stylesheet"
     />
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/admin.css" />
-    <link rel="stylesheet" href="assets/css/department.css">
+    <link rel="stylesheet" href="assets/css/department.css" />
     <link rel="stylesheet" href="assets/css/staff.css" />
     <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
   </head>
@@ -51,9 +51,10 @@
     <header
       class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow-sm"
     >
-    
       <div class="menu d-flex align-items-center justify-content-between">
-        <div class="hamburger p-2 me-2 align-items-center justify-content-center">
+        <div
+          class="hamburger p-2 me-2 align-items-center justify-content-center"
+        >
           <i class="bi bi-list menu-icon"></i>
         </div>
         <img
@@ -95,14 +96,14 @@
         <div
           class="side-profile mb-1 w-100 d-flex align-items-center justify-content-center"
         >
-          <img
-            src="/assets/img/doctors/doctors-1.jpg"
-            class="rounded-5"
-
-          />
+          <img src="/assets/img/doctors/doctors-1.jpg" class="rounded-5" />
           <div id="side-profile-name" class="mx-1">
-            <h3 class="text-white my-0"><span class="nav-text">Ali Bitun</span></h3>
-            <h6 class="my-0 text-white"><span class="nav-text">Dept Admin</span></h6>
+            <h3 class="text-white my-0">
+              <span class="nav-text">Ali Bitun</span>
+            </h3>
+            <h6 class="my-0 text-white">
+              <span class="nav-text">Dept Admin</span>
+            </h6>
           </div>
         </div>
 
@@ -110,35 +111,43 @@
           aria-label="page navigation"
           class="side-nav d-flex flex-column p-2"
         >
-          <a href="Admin.html" class=" m-1 px-3 py-2"
-            ><i class="bi bi-hospital"></i><span class="nav-text">Hospital Dashboard</span></a
+          <a href="Admin.html" class="m-1 px-3 py-2"
+            ><i class="bi bi-hospital"></i
+            ><span class="nav-text">Hospital Dashboard</span></a
           >
           <a href="Patients.html" class="m-1 px-3 py-2"
-          ><i class="bi bi-people"></i><span class="nav-text">Patients</span></a>
+            ><i class="bi bi-people"></i
+            ><span class="nav-text">Patients</span></a
+          >
           <a href="#" class="stffs m-1 px-3 py-2"
             ><i class="bi bi-people"></i><span class="nav-text">Staff</span></a
           >
-          <a href="doctors.html" class=" m-1 px-3 py-2"
-            ><i class="bi bi-postage-heart "></i><span class="nav-text">Doctors</span></a
+          <a href="doctors.html" class="m-1 px-3 py-2"
+            ><i class="bi bi-postage-heart"></i
+            ><span class="nav-text">Doctors</span></a
           >
           <a href="appointments.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-clipboard-heart"></i><span class="nav-text">Appointments</span></a
+            ><i class="bi bi-clipboard-heart"></i
+            ><span class="nav-text">Appointments</span></a
           >
           <a href="departments.html" class="m-1 px-3 py-2 page-item-active"
-            ><i class="bi bi-hospital"></i><span class="nav-text">Departments</span></a
+            ><i class="bi bi-hospital"></i
+            ><span class="nav-text">Departments</span></a
           >
-          
+
           <a href="#" class="m-1 px-3 py-2"
-            ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a>
+            ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a
+          >
 
           <a href="adminLogin.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-arrow-right"></i><span class="nav-text">Logout</span></a
+            ><i class="bi bi-arrow-right"></i
+            ><span class="nav-text">Logout</span></a
           >
         </nav>
       </aside>
-        <!--main content-->
-        <div class="staff-page w-100 transition-width">
-            <nav
+      <!--main content-->
+      <div class="staff-page w-100 transition-width">
+        <nav
           class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
         >
           <div>
@@ -147,306 +156,527 @@
           <div class="nav-path d-flex ms-2">
             <p class="txt-dark my-0 mx-1"><a href="#"> Home </a></p>
             <p class="txt-dark my-0 mx-1 text-primary">/</p>
-            <p class="txt-dark my-0 mx-1"><a href="doctors.html"> Departments </a></p>
+            <p class="txt-dark my-0 mx-1">
+              <a href="doctors.html"> Departments </a>
+            </p>
           </div>
-            </nav>
-            <div id="added-success" class="added-success bg-success text-white p-3"><i class="bi bi-person-check mx-1" style="font-size: 20px;"></i>Department Successfully Added!</div>
-            <div class="department-content p-2 my-0">
-              <section class="main-department-section p-3 my-0 border rounded shadow-sm">
-                <div
-                      class="d-flex justify-content-between align-items-center py-2 px-5 my-3"
-                    >
-                      <h5 class="mb-0">Deparments</h5>
-                      <button
-                        class="btn btn-primary btnAddDepartment rounded shadow-sm px-3"
-                      >
-                        <i class="bi bi-plus p-0 m-0"></i>New Deparment
-                      </button>
-                    </div>
-                <div class="table-responsive">
-                    <table id="patientTable" class="table text-center table-hover">
-                        <thead class="table-primary">
-                            <th>#</th>
-                            <th>Deparment</th>
-                            <th>Department Head</th>
-                            <th>Doctors List</th>
-                            <th>Actions</th>
-                        </thead>
-                        <tbody class="table-striped">
-                            <tr>
-                                <td>001</td>
-                                <td>Surgeon</td>
-                                <td class=" d-flex align-items-center justify-content-center"><img src="../assets/img/doctors/doctors-2.jpg" class=" m-0 rounded-5 shadow-sm me-1" height="40px" width="45px">John Doe</td>
-                                <td class="doctor-images">
-                                    <img src="../assets/img/doctors/doctors-2.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-1.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-3.jpg" class="rounded-5 shadow-sm" height="20" width="20">       
-                                </td>
-                                <td>
-                                    <button class="btn btn-danger m-1 h-100">
-                                      <i class="bi bi-trash"></i></button
-                                    ><button class="btn btn-success edit-ptnt m-1">
-                                      <i class="bi bi-pencil-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>002</td>
-                                <td>Gynecologist</td>
-                                <td class="d-flex align-items-center justify-content-center"><img src="../assets/img/doctors/doctors-2.jpg" class="rounded-5 shadow-sm me-1" height="40px" width="45px">Hetcor Banks</td>
-                                <td class="doctor-images">
-                                    <img src="../assets/img/doctors/doctors-2.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-1.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-3.jpg" class="rounded-5 shadow-sm" height="20" width="20">       
-                                </td>
-                                <td>
-                                    <button class="btn btn-danger m-1 h-100">
-                                      <i class="bi bi-trash"></i></button
-                                    ><button class="btn btn-success edit-ptnt m-1">
-                                      <i class="bi bi-pencil-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>003</td>
-                                <td>Psychiatrist</td>
-                                <td class="d-flex align-items-center justify-content-center"><img src="../assets/img/doctors/doctors-3.jpg" class="rounded-5 shadow-sm me-1" height="40px" width="45px">Owen Scott</td>
-                                <td class="doctor-images">
-                                    <img src="../assets/img/doctors/doctors-2.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-1.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-3.jpg" class="rounded-5 shadow-sm" height="20" width="20">       
-                                </td>
-                                <td>
-                                    <button class="btn btn-danger m-1 h-100">
-                                      <i class="bi bi-trash"></i></button
-                                    ><button class="btn btn-success edit-ptnt m-1">
-                                      <i class="bi bi-pencil-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>004</td>
-                                <td>Urologist</td>
-                                <td class="d-flex align-items-center justify-content-center"><img src="../assets/img/doctors/doctors-1.jpg" class="rounded-5 shadow-sm me-1" height="40px" width="45px">Allison Scott</td>
-                                <td class="doctor-images">
-                                    <img src="../assets/img/doctors/doctors-3.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-2.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-4.jpg" class="rounded-5 shadow-sm" height="20" width="20">       
-                                </td>
-                                <td>
-                                    <button class="btn btn-danger m-1 h-100">
-                                      <i class="bi bi-trash"></i></button
-                                    ><button class="btn btn-success edit-ptnt m-1">
-                                      <i class="bi bi-pencil-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>005</td>
-                                <td>Pediatrician</td>
-                                <td class="d-flex align-items-center justify-content-center"><img src="../assets/img/doctors/doctors-3.jpg" class="rounded-5 shadow-sm me-1" height="40px" width="45px">Mitchell Owen</td>
-                                <td class="doctor-images">
-                                    <img src="../assets/img/doctors/doctors-2.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-1.jpg" class="rounded-5 shadow-sm" height="20" width="20">
-                                    <img src="../assets/img/doctors/doctors-3.jpg" class="rounded-5 shadow-sm" height="20" width="20">       
-                                </td>
-                                <td>
-                                    <button class="btn btn-danger m-1 h-100">
-                                      <i class="bi bi-trash"></i></button
-                                    ><button class="btn btn-success edit-ptnt m-1">
-                                      <i class="bi bi-pencil-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-              </section>
-              <section class="add-department p-3 my-0 border rounded shadow-sm">
-                <div class="p-2 m-0">
-                    <div
-                      class="d-flex justify-content-between align-items-center py-2 px-5 my-3"
-                    >
-                      <h5 class="mb-0">Add Deparment</h5>
-                      
-                    </div>
-                    <form action="">
-                        <div class="row">
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="deparment" class="form-label">Deparment Name</label>
-                                <input type="text" class="form-control" placeholder="Department Name" required>
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="department-email" class="form-label">Deparment Email</label>
-                                <input type="email" class="form-control" placeholder="Department Email" required> 
-                             </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="department-head" class="form-label">Department Head</label>
-                                <input type="text" class="form-control" placeholder="Department Head" required>
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="Department-phone" class="form-label">Department Phone</label>
-                                <input type="text" class="form-control" placeholder="Department Phone" required>
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="Number-rooms" class="form-label">Number Of Rooms</label>
-                                <select name="no-rooms" id="no-rooms" class="form-control">
-                                    <option selected disabled>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="no-beds" class="form-label">Number of Beds</label>
-                                <select name="no-beds" id="no-beds" class="form-control">
-                                    option selected disabled>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="my-3 p-1">
-                            <label for="active-status" class="form-label">Active Status</label>
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="d-flex align-items-center me-3">
-                                  <input
-                                    type="radio"
-                                    name="status"
-                                    id="active"
-                                    class="mx-2 form-check-input shadow-sm p-2"
-                                  />
-                                  <p class="mb-0">Active</p>
-                                </div>
-                                <div
-                                  class="d-flex align-items-center justify-content-center me-3"
-                                >
-                                  <input
-                                    type="radio"
-                                    name="status"
-                                    id="Inactive"
-                                    class="mx-2 form-check-input p-2"
-                                  />
-                                  <p class="mb-0">Inactive</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="my-3 mx-1">
-                            <label for="message" class="form-label">Message</label>
-                            <input type="text" id="message" class="form-control" placeholder="Message (optional)";>
-                        </div>
-                        <div class="d-flex justify-content-end mt-3">
-                            <button class="btn btn-white text-danger btn-cancel" type="reset">Cancel</button>
-                            <button class="btn btn-primary btn-finish" type="submit">Add Department</button>
-                        </div>
-                    </form>
-
-                </div>
-              </section>
-              <section class="edit-department">
-                <div class="p-2 m-0">
-                    <div
-                      class="d-flex justify-content-between align-items-center py-2 px-5 my-3"
-                    >
-                      <h5 class="mb-0">Edit Deparment</h5>
-                      
-                    </div>
-                    <form action="">
-                        <div class="row">
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="deparment" class="form-label">Deparment Name</label>
-                                <input type="text" class="form-control" placeholder="Department Name" required value="Gynecology">
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="department-email" class="form-label">Deparment Email</label>
-                                <input type="email" class="form-control" placeholder="Department Email" required value="test@test"> 
-                             </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="department-head" class="form-label">Department Head</label>
-                                <input type="text" class="form-control" placeholder="Department Head" required value="Owen wilson">
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="Department-phone" class="form-label">Department Phone</label>
-                                <input type="text" class="form-control" placeholder="Department Phone" required value="+251 911 420 420 69">
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="Number-rooms" class="form-label">Number Of Rooms</label>
-                                <select name="no-rooms" id="no-rooms" class="form-control">
-                                    <option  disabled>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option selected value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-4 col-sm-3">
-                                <label for="no-beds" class="form-label">Number of Beds</label>
-                                <select name="no-beds" id="no-beds" class="form-control">
-                                    <option disabled>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option  selected value="5">5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="my-3 p-1">
-                            <label for="active-status" class="form-label">Active Status</label>
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="d-flex align-items-center me-3">
-                                  <input
-                                    type="radio"
-                                    name="status"
-                                    id="active"
-                                    class="mx-2 form-check-input shadow-sm p-2"
-                                    checked
-                                  />
-                                  <p class="mb-0">Active</p>
-                                </div>
-                                <div
-                                  class="d-flex align-items-center justify-content-center me-3"
-                                >
-                                  <input
-                                    type="radio"
-                                    name="status"
-                                    id="Inactive"
-                                    class="mx-2 form-check-input p-2"
-                                  />
-                                  <p class="mb-0">Inactive</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="my-3 mx-1">
-                            <label for="message" class="form-label">Message</label>
-                            <input type="text" id="message" class="form-control" placeholder="Message (optional)";>
-                        </div>
-                        <div class="d-flex justify-content-end mt-3">
-                            <button class="btn btn-white text-danger btn-cancel" type="reset">Cancel</button>
-                            <button class="btn btn-primary btn-finish" type="submit">Update Department</button>
-                        </div>
-                    </form>
-
-                </div>
-              </section>
+        </nav>
+        <div id="added-success" class="added-success bg-success text-white p-3">
+          <i class="bi bi-person-check mx-1" style="font-size: 20px"></i
+          >Department Successfully Added!
+        </div>
+        <div class="department-content p-2 my-0">
+          <section
+            class="main-department-section p-3 my-0 border rounded shadow-sm"
+          >
+            <div
+              class="d-flex justify-content-between align-items-center py-2 px-5 my-3"
+            >
+              <h5 class="mb-0">Deparments</h5>
+              <button
+                class="btn btn-primary btnAddDepartment rounded shadow-sm px-3"
+              >
+                <i class="bi bi-plus p-0 m-0"></i>New Deparment
+              </button>
             </div>
+            <div class="table-responsive">
+              <table id="patientTable" class="table text-center table-hover">
+                <thead class="table-primary">
+                  <th>#</th>
+                  <th>Deparment</th>
+                  <th>Department Head</th>
+                  <th>Doctors List</th>
+                  <th>Actions</th>
+                </thead>
+                <tbody class="table-striped">
+                  <tr>
+                    <td>001</td>
+                    <td>Surgeon</td>
+                    <td
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="../assets/img/doctors/doctors-2.jpg"
+                        class="m-0 rounded-5 shadow-sm me-1"
+                        height="40px"
+                        width="45px"
+                      />John Doe
+                    </td>
+                    <td class="doctor-images">
+                      <img
+                        src="../assets/img/doctors/doctors-2.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-1.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-3.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                    </td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>002</td>
+                    <td>Gynecologist</td>
+                    <td
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="../assets/img/doctors/doctors-2.jpg"
+                        class="rounded-5 shadow-sm me-1"
+                        height="40px"
+                        width="45px"
+                      />Hetcor Banks
+                    </td>
+                    <td class="doctor-images">
+                      <img
+                        src="../assets/img/doctors/doctors-2.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-1.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-3.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                    </td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>003</td>
+                    <td>Psychiatrist</td>
+                    <td
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="../assets/img/doctors/doctors-3.jpg"
+                        class="rounded-5 shadow-sm me-1"
+                        height="40px"
+                        width="45px"
+                      />Owen Scott
+                    </td>
+                    <td class="doctor-images">
+                      <img
+                        src="../assets/img/doctors/doctors-2.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-1.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-3.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                    </td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>004</td>
+                    <td>Urologist</td>
+                    <td
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="../assets/img/doctors/doctors-1.jpg"
+                        class="rounded-5 shadow-sm me-1"
+                        height="40px"
+                        width="45px"
+                      />Allison Scott
+                    </td>
+                    <td class="doctor-images">
+                      <img
+                        src="../assets/img/doctors/doctors-3.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-2.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-4.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                    </td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>005</td>
+                    <td>Pediatrician</td>
+                    <td
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="../assets/img/doctors/doctors-3.jpg"
+                        class="rounded-5 shadow-sm me-1"
+                        height="40px"
+                        width="45px"
+                      />Mitchell Owen
+                    </td>
+                    <td class="doctor-images">
+                      <img
+                        src="../assets/img/doctors/doctors-2.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-1.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                      <img
+                        src="../assets/img/doctors/doctors-3.jpg"
+                        class="rounded-5 shadow-sm"
+                        height="20"
+                        width="20"
+                      />
+                    </td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="add-department p-3 my-0 border rounded shadow-sm">
+            <div class="p-2 m-0">
+              <div
+                class="d-flex justify-content-between align-items-center py-2 px-5 my-3"
+              >
+                <h5 class="mb-0">Add Deparment</h5>
+              </div>
+              <form action="">
+                <div class="row">
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="deparment" class="form-label"
+                      >Deparment Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Department Name"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="department-email" class="form-label"
+                      >Deparment Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Department Email"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="department-head" class="form-label"
+                      >Department Head</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Department Head"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="Department-phone" class="form-label"
+                      >Department Phone</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Department Phone"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="Number-rooms" class="form-label"
+                      >Number Of Rooms</label
+                    >
+                    <select name="no-rooms" id="no-rooms" class="form-control">
+                      <option selected disabled>0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="no-beds" class="form-label"
+                      >Number of Beds</label
+                    >
+                    <select name="no-beds" id="no-beds" class="form-control">
+                      <option selected disabled>0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="my-3 p-1">
+                  <label for="active-status" class="form-label"
+                    >Active Status</label
+                  >
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center me-3">
+                      <input
+                        type="radio"
+                        name="status"
+                        id="active"
+                        class="mx-2 form-check-input shadow-sm p-2"
+                      />
+                      <p class="mb-0">Active</p>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-center me-3"
+                    >
+                      <input
+                        type="radio"
+                        name="status"
+                        id="Inactive"
+                        class="mx-2 form-check-input p-2"
+                      />
+                      <p class="mb-0">Inactive</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-3 mx-1">
+                  <label for="message" class="form-label">Message</label>
+                  <input
+                    type="text"
+                    id="message"
+                    class="form-control"
+                    placeholder="Message (optional)"
+                    ;
+                  />
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                  <button
+                    class="btn btn-white text-danger btn-cancel"
+                    type="reset"
+                  >
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary btn-finish" type="submit">
+                    Add Department
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="edit-department">
+            <div class="p-2 m-0">
+              <div
+                class="d-flex justify-content-between align-items-center py-2 px-5 my-3"
+              >
+                <h5 class="mb-0">Edit Deparment</h5>
+              </div>
+              <form action="">
+                <div class="row">
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="deparment" class="form-label"
+                      >Deparment Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Department Name"
+                      required
+                      value="Gynecology"
+                    />
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="department-email" class="form-label"
+                      >Deparment Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Department Email"
+                      required
+                      value="test@test"
+                    />
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="department-head" class="form-label"
+                      >Department Head</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Department Head"
+                      required
+                      value="Owen wilson"
+                    />
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="Department-phone" class="form-label"
+                      >Department Phone</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Department Phone"
+                      required
+                      value="+251 911 420 420 69"
+                    />
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="Number-rooms" class="form-label"
+                      >Number Of Rooms</label
+                    >
+                    <select name="no-rooms" id="no-rooms" class="form-control">
+                      <option disabled>0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option selected value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+
+                  <div class="col-xxl-6 col-lg-4 col-sm-3">
+                    <label for="no-beds" class="form-label"
+                      >Number of Beds</label
+                    >
+                    <select name="no-beds" id="no-beds" class="form-control">
+                      <option disabled>0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option selected value="5">5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="my-3 p-1">
+                  <label for="active-status" class="form-label"
+                    >Active Status</label
+                  >
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center me-3">
+                      <input
+                        type="radio"
+                        name="status"
+                        id="active"
+                        class="mx-2 form-check-input shadow-sm p-2"
+                        checked
+                      />
+                      <p class="mb-0">Active</p>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-center me-3"
+                    >
+                      <input
+                        type="radio"
+                        name="status"
+                        id="Inactive"
+                        class="mx-2 form-check-input p-2"
+                      />
+                      <p class="mb-0">Inactive</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-3 mx-1">
+                  <label for="message" class="form-label">Message</label>
+                  <input
+                    type="text"
+                    id="message"
+                    class="form-control"
+                    placeholder="Message (optional)"
+                    ;
+                  />
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                  <button
+                    class="btn btn-white text-danger btn-cancel"
+                    type="reset"
+                  >
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary btn-finish" type="submit">
+                    Update Department
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="container-fluid text-center py-3 bg-light border-top">
@@ -455,7 +685,7 @@
     </footer>
     <script src="assets/js/jquery/dist/jquery.min.js"></script>
     <!-- <script src="assets/js/admin.js"></script> -->
-     <!-- <script src="assets/js/adminPatient.js"></script> -->
+    <!-- <script src="assets/js/adminPatient.js"></script> -->
     <script src="assets/js/adminDepartment.js"></script>
   </body>
 </html>

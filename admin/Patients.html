@@ -48,9 +48,10 @@
     <header
       class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow-sm"
     >
-    
       <div class="menu d-flex align-items-center justify-content-between">
-        <div class="hamburger p-2 me-2 align-items-center justify-content-center">
+        <div
+          class="hamburger p-2 me-2 align-items-center justify-content-center"
+        >
           <i class="bi bi-list menu-icon"></i>
         </div>
         <img
@@ -92,14 +93,14 @@
         <div
           class="side-profile mb-1 w-100 d-flex align-items-center justify-content-center"
         >
-          <img
-            src="/assets/img/doctors/doctors-1.jpg"
-            class="rounded-5"
-
-          />
+          <img src="/assets/img/doctors/doctors-1.jpg" class="rounded-5" />
           <div id="side-profile-name" class="mx-1">
-            <h3 class="text-white my-0"><span class="nav-text">Ali Bitun</span></h3>
-            <h6 class="my-0 text-white"><span class="nav-text">Dept Admin</span></h6>
+            <h3 class="text-white my-0">
+              <span class="nav-text">Ali Bitun</span>
+            </h3>
+            <h6 class="my-0 text-white">
+              <span class="nav-text">Dept Admin</span>
+            </h6>
           </div>
         </div>
 
@@ -108,27 +109,36 @@
           class="side-nav d-flex flex-column p-2"
         >
           <a href="Admin.html" class="main-page hp m-1 px-3 py-2"
-            ><i class="bi bi-hospital"></i><span class="nav-text">Hospital Dashboard</span></a
+            ><i class="bi bi-hospital"></i
+            ><span class="nav-text">Hospital Dashboard</span></a
           >
-          <a class="pts m-1 px-3 py-2"><i class="bi bi-people"></i><span class="nav-text">Patients</span></a>
+          <a class="pts m-1 px-3 py-2"
+            ><i class="bi bi-people"></i
+            ><span class="nav-text">Patients</span></a
+          >
           <a href="staffs.html" class="m-1 px-3 py-2"
             ><i class="bi bi-people"></i><span class="nav-text">Staff</span></a
           >
           <a href="doctors.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-postage-heart"></i><span class="nav-text">Doctors</span></a
+            ><i class="bi bi-postage-heart"></i
+            ><span class="nav-text">Doctors</span></a
           >
           <a href="appointments.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-clipboard-heart"></i><span class="nav-text">Appointments</span></a
+            ><i class="bi bi-clipboard-heart"></i
+            ><span class="nav-text">Appointments</span></a
           >
           <a href="departments.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-hospital"></i><span class="nav-text">Departments</span></a
+            ><i class="bi bi-hospital"></i
+            ><span class="nav-text">Departments</span></a
           >
-         
+
           <a href="#" class="m-1 px-3 py-2"
-            ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a>
-            
+            ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a
+          >
+
           <a href="adminLogin.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-arrow-right"></i><span class="nav-text">Logout</span></a
+            ><i class="bi bi-arrow-right"></i
+            ><span class="nav-text">Logout</span></a
           >
         </nav>
       </aside>
@@ -148,9 +158,14 @@
           </div>
         </nav>
         <!-- main patients content-->
-        <div id="added-success" class="bg-success text-white p-3"><i class="bi bi-person-check mx-1" style="font-size: 20px;"></i>Patient Successfully Added!</div>
- 
+        <!--add success feedback-->
+        <div id="added-success" class="bg-success text-white p-3">
+          <i class="bi bi-person-check mx-1" style="font-size: 20px"></i>Patient
+          Successfully Added!
+        </div>
+        <!--content page-->
         <div class="patient-content p-2 my-0">
+          <!--patient list-->
           <section class="patients-table border p-3 shadow-sm">
             <div class="mx-1 my-2">
               <div
@@ -164,157 +179,157 @@
                 </button>
               </div>
             </div>
-           <div class="table-responsive border">
+            <div class="table-responsive border">
               <table id="patientTable" class="table table-hover text-center">
-              <!--Table header-->
-              <thead class="table-primary text-center border">
-                <tr>
-                  <th scope="col" data-type="text">No.</th>
-                  <th scope="col" data-type="text">Patient Name</th>
-                  <th scope="col" data-type="text">Gender</th>
-                  <th scope="col" data-type="number">Age</th>
-                  <th scope="col" data-type="text">Blood Group</th>
+                <!--Table header-->
+                <thead class="table-primary text-center border">
+                  <tr>
+                    <th scope="col" data-type="text">No.</th>
+                    <th scope="col" data-type="text">Patient Name</th>
+                    <th scope="col" data-type="text">Gender</th>
+                    <th scope="col" data-type="number">Age</th>
+                    <th scope="col" data-type="text">Blood Group</th>
 
-                  <th scope="col" data-type="text">Treatment</th>
-                  <th scope="col" data-type="text">Mobile</th>
-                  <th scope="col" data-type="text">Email</th>
-                  <th scope="col" data-type="text">Address</th>
-                  <th scope="col">Actions</th>
-                </tr>
-              </thead>
-              <!--Table contents-->
-              <tbody>
-                <tr>
-                  <td>#89990</td>
-                  <td>Allan Stuart</td>
-                  <td>Male</td>
-                  <td>55</td>
-                  <td>AB+</td>
-                  <td>Cardiology</td>
-                  <td>+1 234 567 890</td>
-                  <td>test@testing</td>
-                  <td>337, McGinn Orchard</td>
-                  <td>
-                    <button class="btn btn-danger m-1 h-100">
-                      <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success edit-ptnt m-1">
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>#89995</td>
-                  <td>Jada Poe</td>
-                  <td>Female</td>
-                  <td>60</td>
-                  <td>B+</td>
-                  <td>Cardiology</td>
-                  <td>+1 234 567 890</td>
-                  <td>test@testing</td>
-                  <td>337, McGinn Orchard</td>
-                  <td>
-                    <button class="btn btn-danger m-1 h-100">
-                      <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success edit-ptnt m-1">
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>#89989</td>
-                  <td>Zamora Miko</td>
-                  <td>Male</td>
-                  <td>45</td>
-                  <td>B-</td>
-                  <td>surgery</td>
-                  <td>+1 234 567 890</td>
-                  <td>test@testing</td>
-                  <td>337, McGinn Orchard</td>
-                  <td>
-                    <button class="btn btn-danger m-1 h-100">
-                      <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success edit-ptnt m-1">
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>#89993</td>
-                  <td>Jane Smith</td>
-                  <td>Female</td>
-                  <td>32</td>
-                  <td>O-</td>
-                  <td>Cardiology</td>
-                  <td>+1 234 567 890</td>
-                  <td>test@testing</td>
-                  <td>337, McGinn Orchard</td>
-                  <td>
-                    <button class="btn btn-danger m-1 h-100">
-                      <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success edit-ptnt m-1">
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>#89994</td>
-                  <td>John Doe</td>
-                  <td>Male</td>
-                  <td>40</td>
-                  <td>A+</td>
-                  <td>Cardiology</td>
-                  <td>+1 234 567 890</td>
-                  <td>test@testing</td>
-                  <td>337, McGinn Orchard</td>
-                  <td>
-                    <button class="btn btn-danger m-1 h-100">
-                      <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success edit-ptnt m-1">
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>#89996</td>
-                  <td>Mary Johnson</td>
-                  <td>Female</td>
-                  <td>28</td>
-                  <td>AB-</td>
-                  <td>Cardiology</td>
-                  <td>+1 234 567 890</td>
-                  <td>test@testing</td>
-                  <td>337, McGinn Orchard</td>
-                  <td>
-                    <button class="btn btn-danger m-1 h-100">
-                      <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success edit-ptnt m-1">
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>#89997</td>
-                  <td>Michael Brown</td>
-                  <td>Male</td>
-                  <td>50</td>
-                  <td>O+</td>
-                  <td>Cardiology</td>
-                  <td>+1 234 567 890</td>
-                  <td>test@testing</td>
-                  <td>337, McGinn Orchard</td>
-                  <td>
-                    <button class="btn btn-danger m-1 h-100">
-                      <i class="bi bi-trash"></i></button
-                    ><button class="btn btn-success edit-ptnt m-1">
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
-                  </td>
-                </tr>
-                
-              </tbody>
-            </table>
-           </div>
+                    <th scope="col" data-type="text">Treatment</th>
+                    <th scope="col" data-type="text">Mobile</th>
+                    <th scope="col" data-type="text">Email</th>
+                    <th scope="col" data-type="text">Address</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <!--Table contents-->
+                <tbody>
+                  <tr>
+                    <td>#89990</td>
+                    <td>Allan Stuart</td>
+                    <td>Male</td>
+                    <td>55</td>
+                    <td>AB+</td>
+                    <td>Cardiology</td>
+                    <td>+1 234 567 890</td>
+                    <td>test@testing</td>
+                    <td>337, McGinn Orchard</td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#89995</td>
+                    <td>Jada Poe</td>
+                    <td>Female</td>
+                    <td>60</td>
+                    <td>B+</td>
+                    <td>Cardiology</td>
+                    <td>+1 234 567 890</td>
+                    <td>test@testing</td>
+                    <td>337, McGinn Orchard</td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#89989</td>
+                    <td>Zamora Miko</td>
+                    <td>Male</td>
+                    <td>45</td>
+                    <td>B-</td>
+                    <td>surgery</td>
+                    <td>+1 234 567 890</td>
+                    <td>test@testing</td>
+                    <td>337, McGinn Orchard</td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#89993</td>
+                    <td>Jane Smith</td>
+                    <td>Female</td>
+                    <td>32</td>
+                    <td>O-</td>
+                    <td>Cardiology</td>
+                    <td>+1 234 567 890</td>
+                    <td>test@testing</td>
+                    <td>337, McGinn Orchard</td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#89994</td>
+                    <td>John Doe</td>
+                    <td>Male</td>
+                    <td>40</td>
+                    <td>A+</td>
+                    <td>Cardiology</td>
+                    <td>+1 234 567 890</td>
+                    <td>test@testing</td>
+                    <td>337, McGinn Orchard</td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#89996</td>
+                    <td>Mary Johnson</td>
+                    <td>Female</td>
+                    <td>28</td>
+                    <td>AB-</td>
+                    <td>Cardiology</td>
+                    <td>+1 234 567 890</td>
+                    <td>test@testing</td>
+                    <td>337, McGinn Orchard</td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#89997</td>
+                    <td>Michael Brown</td>
+                    <td>Male</td>
+                    <td>50</td>
+                    <td>O+</td>
+                    <td>Cardiology</td>
+                    <td>+1 234 567 890</td>
+                    <td>test@testing</td>
+                    <td>337, McGinn Orchard</td>
+                    <td>
+                      <button class="btn btn-danger m-1 h-100">
+                        <i class="bi bi-trash"></i></button
+                      ><button class="btn btn-success edit-ptnt m-1">
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
+          <!-- add patient form -->
           <section class="add-patient border py-3 shadow-sm bg-white">
             <form>
               <div
@@ -366,7 +381,9 @@
                   >
                   <input type="text" class="form-control" />
 
-                  <label for="blood-type">Blood type <span class="text-danger">*</span></label>
+                  <label for="blood-type"
+                    >Blood type <span class="text-danger">*</span></label
+                  >
                   <select
                     name="blood-type"
                     class="form-select"
@@ -432,9 +449,14 @@
                   </select>
 
                   <label for="blood-pressure" class="form-label"
-                    >Blood Pressure </label
-                  >
-                  <input type="text" class="form-control" id="blood-pressure" required/>
+                    >Blood Pressure
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="blood-pressure"
+                    required
+                  />
 
                   <label for="city" class="form-label">City</label>
                   <input
@@ -444,8 +466,10 @@
                     name="city"
                   />
 
-                  <label for="postal-code" class="form-label">Postal Code</label>
-                  <input type="text" class="form-control">
+                  <label for="postal-code" class="form-label"
+                    >Postal Code</label
+                  >
+                  <input type="text" class="form-control" />
                 </div>
 
                 <!--3rd column-->
@@ -494,16 +518,29 @@
                   <input type="text" class="form-control" name="baranggay" />
                 </div>
                 <div class="file-upload my-5">
-                  <label for="formFile" class="form-label">Click Or Drag health report Here <br> <span class="text-info-emphasis fw-bold fs-5">Upload Health Reports</span></label>
-                  <input type="file" class="form-control" id="formFile">
+                  <label for="formFile" class="form-label"
+                    >Click Or Drag health report Here <br />
+                    <span class="text-info-emphasis fw-bold fs-5"
+                      >Upload Health Reports</span
+                    ></label
+                  >
+                  <input type="file" class="form-control" id="formFile" />
                 </div>
                 <div class="d-flex justify-content-end mt-3">
-                  <button class="btn btn-white text-danger btn-cancel" type="reset">Cancel</button>
-                  <button class="btn btn-primary btn-add-patient" type="submit">Add Patient</button>
+                  <button
+                    class="btn btn-white text-danger btn-cancel"
+                    type="reset"
+                  >
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary btn-add-patient" type="submit">
+                    Add Patient
+                  </button>
                 </div>
               </div>
             </form>
           </section>
+          <!-- edit patient form -->
           <section class="edit-patient-form border py-3 shadow-sm bg-white">
             <form>
               <div
@@ -535,7 +572,6 @@
                         name="gender"
                         id="male-gender"
                         class="mx-2"
-                        
                       />
                       <p class="mb-0">Male</p>
                     </div>
@@ -555,9 +591,15 @@
                   <label for="number" class="form-label"
                     >Mobile number <span class="text-danger">*</span></label
                   >
-                  <input type="text" class="form-control" value="+1 234 567 890"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    value="+1 234 567 890"
+                  />
 
-                  <label for="blood-type">Blood type <span class="text-danger">*</span></label>
+                  <label for="blood-type"
+                    >Blood type <span class="text-danger">*</span></label
+                  >
                   <select
                     name="blood-type"
                     class="form-select"
@@ -577,10 +619,19 @@
                   </select>
 
                   <label for="address" class="form-label">Address</label>
-                  <input type="text" class="form-control" value="Ayala, New york Philippines"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    value="Ayala, New york Philippines"
+                  />
 
                   <label for="country" class="form-label">Country</label>
-                  <input type="text" class="form-control" name="country" value="Philippines"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="country"
+                    value="Philippines"
+                  />
                 </div>
 
                 <!--2nd column-->
@@ -625,9 +676,15 @@
                   </select>
 
                   <label for="blood-pressure" class="form-label"
-                    >Blood Pressure </label
-                  >
-                  <input type="text" class="form-control" id="blood-pressure" value="3" required/>
+                    >Blood Pressure
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="blood-pressure"
+                    value="3"
+                    required
+                  />
 
                   <label for="city" class="form-label">City</label>
                   <input
@@ -638,8 +695,10 @@
                     value="New York"
                   />
 
-                  <label for="postal-code" class="form-label">Postal Code</label>
-                  <input type="text" class="form-control" value="10001">
+                  <label for="postal-code" class="form-label"
+                    >Postal Code</label
+                  >
+                  <input type="text" class="form-control" value="10001" />
                 </div>
 
                 <!--3rd column-->
@@ -658,11 +717,15 @@
                   <label for="email" class="form-label"
                     >Email <span class="text-danger">*</span></label
                   >
-                  <input type="text" class="form-control" value="test@test.com"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    value="test@test.com"
+                  />
 
                   <label for="occupation" class="form-label">Occupation</label>
                   <select name="occupation" id="occupation" class="form-select">
-                    <option >Choose...</option>
+                    <option>Choose...</option>
                     <option selected value="Civilian">Civilian</option>
                     <option value="engineer">Engineer</option>
                     <option value="IT">IT</option>
@@ -687,15 +750,32 @@
                     value="120"
                   />
                   <label for="baranggay" class="form-label">Baranggay</label>
-                  <input type="text" class="form-control" name="baranggay" value="ayala" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="baranggay"
+                    value="ayala"
+                  />
                 </div>
                 <div class="file-upload my-5">
-                  <label for="formFile" class="form-label">Click Or Drag health report Here <br> <span class="text-info-emphasis fw-bold fs-5">Upload Health Reports</span></label>
-                  <input type="file" class="form-control" id="formFile">
+                  <label for="formFile" class="form-label"
+                    >Click Or Drag health report Here <br />
+                    <span class="text-info-emphasis fw-bold fs-5"
+                      >Upload Health Reports</span
+                    ></label
+                  >
+                  <input type="file" class="form-control" id="formFile" />
                 </div>
                 <div class="d-flex justify-content-end mt-3">
-                  <button class="btn btn-white text-danger btn-cancel" type="reset">Cancel</button>
-                  <button class="btn btn-primary btn-add-patient" type="submit">Confirm</button>
+                  <button
+                    class="btn btn-white text-danger btn-cancel"
+                    type="reset"
+                  >
+                    Cancel
+                  </button>
+                  <button class="btn btn-primary btn-add-patient" type="submit">
+                    Confirm
+                  </button>
                 </div>
               </div>
             </form>

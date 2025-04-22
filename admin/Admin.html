@@ -48,9 +48,10 @@
     <header
       class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow-sm"
     >
-    
       <div class="menu d-flex align-items-center justify-content-between">
-        <div class="hamburger p-2 me-2 align-items-center justify-content-center">
+        <div
+          class="hamburger p-2 me-2 align-items-center justify-content-center"
+        >
           <i class="bi bi-list menu-icon"></i>
         </div>
         <img
@@ -92,14 +93,14 @@
         <div
           class="side-profile mb-1 w-100 d-flex align-items-center justify-content-center"
         >
-          <img
-            src="/assets/img/doctors/doctors-1.jpg"
-            class="rounded-5"
-
-          />
+          <img src="/assets/img/doctors/doctors-1.jpg" class="rounded-5" />
           <div id="side-profile-name" class="mx-1">
-            <h3 class="text-white my-0"><span class="nav-text">Ali Bitun</span></h3>
-            <h6 class="my-0 text-white"><span class="nav-text">Dept Admin</span></h6>
+            <h3 class="text-white my-0">
+              <span class="nav-text">Ali Bitun</span>
+            </h3>
+            <h6 class="my-0 text-white">
+              <span class="nav-text">Dept Admin</span>
+            </h6>
           </div>
         </div>
 
@@ -108,32 +109,42 @@
           class="side-nav d-flex flex-column p-2"
         >
           <a class="main-page hp m-1 px-3 py-2"
-            ><i class="bi bi-hospital"></i><span class="nav-text flex-shrink-1">Hospital Dashboard</span></a
+            ><i class="bi bi-hospital"></i
+            ><span class="nav-text flex-shrink-1">Hospital Dashboard</span></a
           >
-          <a href="Patients.html" class="pts m-1 px-3 py-2"><i class="bi bi-people"></i><span class="nav-text">Patients</span></a>
+          <a href="Patients.html" class="pts m-1 px-3 py-2"
+            ><i class="bi bi-people"></i
+            ><span class="nav-text">Patients</span></a
+          >
           <a href="staffs.html" class="m-1 px-3 py-2"
             ><i class="bi bi-people"></i><span class="nav-text">Staff</span></a
           >
           <a href="doctors.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-postage-heart"></i><span class="nav-text">Doctors</span></a
+            ><i class="bi bi-postage-heart"></i
+            ><span class="nav-text">Doctors</span></a
           >
           <a href="appointments.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-clipboard-heart"></i><span class="nav-text">Appointments</span></a
+            ><i class="bi bi-clipboard-heart"></i
+            ><span class="nav-text">Appointments</span></a
           >
           <a href="departments.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-hospital"></i><span class="nav-text">Departments</span></a
+            ><i class="bi bi-hospital"></i
+            ><span class="nav-text">Departments</span></a
           >
           <a href="#" class="m-1 px-3 py-2"
-            ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a>
-           
+            ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a
+          >
+
           <a href="adminLogin.html" class="m-1 px-3 py-2"
-            ><i class="bi bi-arrow-right"></i><span class="nav-text">Logout</span></a
+            ><i class="bi bi-arrow-right"></i
+            ><span class="nav-text">Logout</span></a
           >
         </nav>
       </aside>
-      
+
       <!--main Content here-->
       <div class="main-content transition-width">
+        <!--nav-path-->
         <nav
           class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
         >
@@ -146,34 +157,52 @@
             <p class="txt-dark my-0 mx-1"><a href="#"> Dashboard </a></p>
           </div>
         </nav>
+        <!--main content-->
         <div class="main">
+          <!-- hero page -->
           <section id="hero-page" class="container-fluid p-3 my-0">
             <div class="dashboard-header">
               <h4 class="text-white">Good Morning,</h4>
               <h2 class="text-white">Dr. Ali Bitun</h2>
               <p>Your schedule today</p>
               <div class="row text-white mt-3">
-                <div class="col hero-page-details d-flex align-items-center justify-content-center">
+                <div
+                  class="col hero-page-details d-flex align-items-center justify-content-center"
+                >
                   <div class="icon-circle bg-info">
                     <i class="bi bi-people-fill"></i>
                   </div>
-                  <p class="mx-3"><span>9</span><br> Patients</p>
+                  <p class="mx-3">
+                    <span>9</span><br />
+                    Patients
+                  </p>
                 </div>
-                <div class="col hero-page-details d-flex align-items-center justify-content-center">
+                <div
+                  class="col hero-page-details d-flex align-items-center justify-content-center"
+                >
                   <div class="icon-circle bg-success">
                     <i class="bi bi-lungs"></i>
                   </div>
-                  <p class="mx-3"><span>3</span><br> Surgeries</p>
+                  <p class="mx-3">
+                    <span>3</span><br />
+                    Surgeries
+                  </p>
                 </div>
-                <div class="col hero-page-details d-flex align-items-center justify-content-center">
+                <div
+                  class="col hero-page-details d-flex align-items-center justify-content-center"
+                >
                   <div class="icon-circle bg-warning">
                     <i class="bi bi-person-walking"></i>
                   </div>
-                  <p class="mx-3"><span>2</span><br> Discharges</p>
+                  <p class="mx-3">
+                    <span>2</span><br />
+                    Discharges
+                  </p>
                 </div>
               </div>
             </div>
           </section>
+          <!-- statistics page -->
           <section id="statistics" class="p-3 my-0">
             <div class="row g-4 my-0">
               <div class="col-md-3">
@@ -210,6 +239,7 @@
               </div>
             </div>
           </section>
+
           <section class="p-3 my-0">
             <div class="p-3 row gx-3 my-0">
               <div class="col-xl-2 col-sm-6 col-12 my-0">
@@ -752,8 +782,9 @@
               </div>
             </div>
           </section>
+          <!--end of stats page-->
         </div>
-      </div>   
+      </div>
     </main>
     <footer>
       <div class="container-fluid text-center py-3 bg-light border-top">
