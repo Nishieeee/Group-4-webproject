@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const accounts = {
       "doctor@admin.com": { password: "123", redirect: "/admin/Admin.html" },
       "doctor@doctor.com": { password: "123", redirect: "/Doctors/docdashboard.html" },
-      "patient@gmail.com": { password: "123", redirect: "/patient/patients.html" },
+      "patient@gmail.com": { password: "123", redirect: "/patients/patients.html" },
     };
 
     if (accounts[email] && accounts[email].password === password) {
