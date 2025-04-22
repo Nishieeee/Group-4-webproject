@@ -407,13 +407,25 @@ input[type="file"] {
   display: none;
 }
 /* end of patient page */
-
-
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
+}
+.hamburger {
+  display: flex;
+}
 
 @media  screen and (max-width: 425px) {
   
-  aside {
-    display: none;
+  .nav-text {
+    display: none !important;
   }
+  .hamburger {
+    display: none !important;
+  }
+  
+  
 
 }

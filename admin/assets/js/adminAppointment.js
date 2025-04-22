@@ -8,6 +8,7 @@ $("document").ready(() => {
       $(".menu").click(() => {
           $(".nav-text").toggle();
           $("aside").toggleClass("minimize");
+          $("aside").toggleClass(".d-block");
           $(".side-profile").toggleClass("side-profile-minimized");
       });
       
