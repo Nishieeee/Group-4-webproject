@@ -2,7 +2,6 @@
 // Description: This file contains the JavaScript code for the admin patient management page.
 $("#added-success").hide();
 $("document").ready(() => {
-  
   $(".add-patient").hide();
   $(".edit-patient-form").hide();
   $(".pts").addClass("page-item-active");
