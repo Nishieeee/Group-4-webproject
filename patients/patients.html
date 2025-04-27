@@ -39,6 +39,7 @@
   </head> 
 
   <style> 
+  
   .services .service-item {
     background-color: var(--surface-color);
     text-align: center;
@@ -189,7 +190,67 @@
     padding: 0;
     font-size: 14px;
     transition: all 0.5s;
-}
+} 
+
+
+.appointment .email-form {
+    width: 100%;
+  }
+  
+  .appointment .email-form .form-group {
+    padding-bottom: 8px;
+  }
+  
+  .appointment .email-form input,
+  .appointment .email-form textarea,
+  .appointment .email-form select {
+    color: var(--default-color);
+    background-color: transparent;
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 10px !important;
+  }
+  
+  .appointment .email-form input:focus,
+  .appointment .email-form textarea:focus,
+  .appointment .email-form select:focus {
+    border-color: var(--accent-color);
+  }
+  
+  .appointment .email-form input::placeholder,
+  .appointment .email-form textarea::placeholder,
+  .appointment .email-form select::placeholder {
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
+  }
+  
+  .appointment .email-form input,
+  .appointment .email-form select {
+    height: 44px;
+  }
+  
+  .appointment .email-form textarea {
+    padding: 10px 12px;
+  }
+  
+  .appointment .email-form button[type=button] {
+    background: var(--accent-color);
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+  
+  .appointment .email-form button[type=button]:hover {
+    background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+  }
+  
+
+
+
+
   </style>
 </head>
 <body> 
