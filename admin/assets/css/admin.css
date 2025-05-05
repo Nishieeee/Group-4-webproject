@@ -38,6 +38,9 @@ header {
   display: flex;
   transition: all 0.3s ease-in;
 }
+.search-container {
+  display: flex;
+}
 .menu-icon {
   cursor: pointer;
   transition: all 0.2s ease-in;
@@ -424,15 +427,25 @@ input[type="file"] {
 
 @media screen and (max-width: 425px) {
   main {
-    padding-top: 10px !important;
+    padding-top: 85px !important;
   }
   .nav-text {
     display: none !important;
   }
+  
   .hamburger {
     display: none !important;
   }
   header {
     display: block !important;
+  }
+  .search-container {
+    display: none !important;
+  }
+  .btn-primary > .bi-plus {
+    display: none;
+  } 
+  .btn-primary {
+    font-size: smaller;
   }
 }

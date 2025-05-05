@@ -17,3 +17,8 @@ tr td:nth-child(3) {
 #message {
   height: 150px;
 }
+@media screen and (max-width: 425px) {
+  .d-flex > h5 {
+    font-size: smaller;
+  }
+}
