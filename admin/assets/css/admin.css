@@ -1,3 +1,4 @@
+
 :root {
   --primary-color: #044459; /*boostrap blue*/
   --secondary-color: #f8f9fa; /*text 3*/
@@ -30,8 +31,11 @@
 .txt-info {
   color: var(--text-color-info);
 }
-
+body {
+  font-size: 11pt;
+}
 header {
+  display: flex;
   transition: all 0.3s ease-in;
 }
 .menu-icon {
@@ -63,7 +67,8 @@ aside:hover {
 main {
   padding-top: 85px;
   display: grid;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 main::-webkit-scrollbar {
   width: 0px;
@@ -418,10 +423,16 @@ input[type="file"] {
 }
 
 @media screen and (max-width: 425px) {
+  main {
+    padding-top: 10px !important;
+  }
   .nav-text {
     display: none !important;
   }
   .hamburger {
     display: none !important;
+  }
+  header {
+    display: block !important;
   }
 }
