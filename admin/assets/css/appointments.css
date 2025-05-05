@@ -5,7 +5,10 @@
 .btn-cln-apptnmnt {
   padding: 0 10px;
 }
-
+.appointment-calendar {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
 .d-none {
   display: none;
 }

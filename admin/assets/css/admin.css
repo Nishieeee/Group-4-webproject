@@ -54,7 +54,16 @@ aside {
   width: 25%;
   transition: all 0.3s ease-in;
 }
-
+.nav-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.side-nav > a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .minimize {
   width: 100px;
   color: var(--text-color-dark);
@@ -424,7 +433,9 @@ input[type="file"] {
 .hamburger {
   display: flex;
 }
-
+.page-nav {
+  position:sticky;
+}
 @media screen and (max-width: 425px) {
   main {
     padding-top: 85px !important;
