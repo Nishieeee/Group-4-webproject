@@ -102,6 +102,49 @@ $("document").ready(() => {
     $(".edit-doctor-form").fadeIn(400);
     $("html, body").scrollTop(0);
   });
+  // Add these event handlers after your existing document.ready function
+$(".personal-details").click(() => {
+  // Show personal details form
+  $(".doctor-details").show();
+  $(".doctor-availability").hide();
+  $(".doctor-account").hide();
+  
+  // Update active states
+  $(".personal-details").addClass("path-active");
+  $(".availability").removeClass("path-active");
+  $(".personal-account").removeClass("path-active");
+  
+  $("html, body").scrollTop(0);
+});
+
+$(".availability").click(() => {
+  // Show availability form
+  $(".doctor-details").hide();
+  $(".doctor-availability").show();
+  $(".doctor-account").hide();
+  
+  // Update active states
+  $(".personal-details").removeClass("path-active");
+  $(".availability").addClass("path-active");
+  $(".personal-account").removeClass("path-active");
+  
+  $("html, body").scrollTop(0);
+});
+
+$(".personal-account").click(() => {
+
+  $(".doctor-details").hide();
+  $(".doctor-availability").hide();
+  $(".doctor-account").show();
+  
+
+  $(".personal-details").removeClass("path-active");
+  $(".availability").removeClass("path-active");
+  $(".personal-account").addClass("path-active");
+  
+  $("html, body").scrollTop(0);
+});
+
   $("#patientTable th").click(function () {
     var table = $(this).parents("table");
     var tbody = table.find("tbody");
