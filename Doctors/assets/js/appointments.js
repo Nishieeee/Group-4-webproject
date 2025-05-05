@@ -1,15 +1,13 @@
+$(".added-success").hide();
 
-$("#added-success").hide();
 $("document").ready(() => {
-  $(".add-patient").hide();
-  $(".edit-patient-form").hide();
-  $(".pts").addClass("page-item-active");
+  $(".appointment-list").hide();
 
   $(".menu").click(() => {
     $(".nav-text").toggle();
     $("aside").toggleClass("minimize");
+    $("aside").toggleClass(".d-block");
     $(".side-profile").toggleClass("side-profile-minimized");
-    $(".patients-page").toggleClass("width-100");
   });
 
   $("aside").on("mouseenter", () => {
@@ -18,13 +16,14 @@ $("document").ready(() => {
       $(".side-profile").removeClass("side-profile-minimized");
     }
   });
+
   $("aside").on("mouseleave", () => {
     if ($("aside").hasClass("minimize")) {
       $(".nav-text").hide();
       $(".side-profile").addClass("side-profile-minimized");
     }
   });
-  //table sorter
+
   $("#patientTable th").click(function () {
     var table = $(this).parents("table");
     var tbody = table.find("tbody");
@@ -54,38 +53,18 @@ $("document").ready(() => {
     });
   });
 
-  $(".btnAddPatient").click(() => {
-    $(".patients-table").hide();
-    $(".add-patient").fadeIn();
-    $(".add-patient").fadeIn(slow);
-    $(".add-patient").fadeIn(500);
+  $(".btn-cln-apptnmnt").click(() => {
+    $(".appointments-calendar").hide();
+    $(".appointment-list").fadeIn();
+    $(".appointment-list").fadeIn(slow);
+    $(".appointment-list").fadeIn(4000);
+    $(".appointment-list").show();
   });
-
-  $(".btn-add-patient").click(() => {
-    $(".edit-patient-form").hide();
-    $(".add-patient").hide();
-    $("#added-success").show();
-    setTimeout(() => {
-      $("#added-success").fadeOut(400);
-    }, 3000);
-    $(".patients-table").fadeIn();
-    $(".patients-table").fadeIn(slow);
-    $(".patients-table").fadeIn(500);
-  });
-
   $(".btn-cancel").click(() => {
-    $(".add-patient").hide();
-    $(".edit-patient-form").hide();
-
-    $(".patients-table").fadeIn();
-    $(".patients-table").fadeIn(slow);
-    $(".patients-table").fadeIn(500);
-  });
-
-  $(".edit-ptnt").click(() => {
-    $(".patients-table").hide();
-    $(".edit-patient-form").fadeIn();
-    $(".edit-patient-form").fadeIn(slow);
-    $(".edit-patient-form").fadeIn(500);
+    $(".appointment-list").hide();
+    $(".appointments-calendar").fadeIn();
+    $(".appointments-calendar").fadeIn(slow);
+    $(".appointments-calendar").fadeIn(4000);
+    $(".appointments-calendar").show();
   });
 });

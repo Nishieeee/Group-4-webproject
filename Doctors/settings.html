@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaCare Doctor Settings</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/meddashboard.css" />
+
+    <!-- Favicons -->
+    <link href="/assets/img/Frame 6.png" rel="icon" />
+    <link href="/assets/img/Frame 6.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <header class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow-sm">
+      <div class="menu d-flex align-items-center justify-content-between">
+        <div class="p-2 me-2 d-flex align-items-center justify-content-center">
+          <i class="bi bi-list menu-icon"></i>
+        </div>
+        <img src="/assets/img/Frame 7.png" width="35px" height="50px" class="py-2" />
+        <img src="/assets/img/Frame 5.png" width="150px" height="50px" class="ms-2" />
+      </div>
+      <div>
+        <div id="search" class="search-container d-flex align-items-center justify-content-center w-100">
+          <input
+            class="form-control shadow-sm me-2 border rounded ps-3 py-1 pe-2 py-1"
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search..."
+            style="width: 250px"
+          />
+          <button class="btn rounded-5 btn-primary shadow-sm">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="d-flex flex-row">
+      <!--side nav-->
+      <aside class="p-3 z-2 border sidebar-wrapper">
+        <div class="side-profile mb-1 w-100 d-flex align-items-center justify-content-center">
+          <img src="/assets/img/doctors/doctors-1.jpg" class="rounded-5" />
+          <div id="side-profile-name" class="mx-1">
+            <h3 class="text-white my-0"><span class="nav-text">Ali Bitun</span></h3>
+            <h6 class="my-0 text-white"><span class="nav-text">Doctor</span></h6>
+          </div>
+        </div>
+
+        <nav aria-label="page navigation" class="side-nav d-flex flex-column p-2">
+          <a href="docdashboard.html" class="m-1 px-3 py-2">
+            <i class="bi bi-hospital"></i><span class="nav-text">Medical Dashboard</span>
+          </a>
+          <a href="Patients.html" class="m-1 px-3 py-2">
+            <i class="bi bi-people"></i><span class="nav-text">Patients</span>
+          </a>
+          <a href="appointments.html" class="m-1 px-3 py-2">
+            <i class="bi bi-clipboard-heart"></i><span class="nav-text">Appointments</span>
+          </a>
+          <a href="#" class="settings m-1 px-3 py-2">
+            <i class="bi bi-gear"></i><span class="nav-text">Settings</span>
+          </a>
+          <a href="/index.html" class="m-1 px-3 py-2">
+            <i class="bi bi-arrow-right"></i><span class="nav-text">Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!--main Content here-->
+      <div class="main-content transition-width">
+        <!--nav-path-->
+        <nav class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm">
+          <div>
+            <i class="bi bi-house-door text-primary px-2 py-1 border-end"></i>
+          </div>
+          <div class="nav-path d-flex ms-2">
+            <p class="txt-dark my-0 mx-1"><a href="docdashboard.html"> Home </a></p>
+            <p class="txt-dark my-0 mx-1 text-primary">/</p>
+            <p class="txt-dark my-0 mx-1"><a href="#"> Settings </a></p>
+          </div>
+        </nav>
+        
+        <!--main content-->
+        <div class="main">
+          <!-- Settings Hero Section -->
+          <section id="hero-page" class="container-fluid p-3 my-0">
+            <div class="dashboard-header">
+              <h4 class="text-white">Settings</h4>
+              <h2 class="text-white">Doctor Profile & Preferences</h2>
+              <p>Manage your account settings and preferences</p>
+            </div>
+          </section>
+          
+          <!-- Settings Content -->
+          <section class="p-4">
+            <div class="row g-4">
+              <!-- Profile Settings Card -->
+              <div class="col-lg-6">
+                <div class="card border h-100">
+                  <div class="card-header bg-white">
+                    <div class="d-flex align-items-center">
+                      <div class="icon-container rounded-5 text-primary me-3">
+                        <i class="bi bi-person-circle"></i>
+                      </div>
+                      <h5 class="mb-0">Profile Settings</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3 d-flex justify-content-center">
+                        <div class="position-relative">
+                          <img src="/assets/img/doctors/doctors-1.jpg" class="rounded-circle" width="100" height="100" alt="Profile Picture">
+                          <button class="btn btn-sm btn-primary position-absolute bottom-0 end-0 rounded-circle">
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" value="Dr. Ali Bitun">
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" value="ali.bitun@novacare.com">
+                        </div>
+                        <div class="col">
+                          <label for="phone" class="form-label">Phone</label>
+                          <input type="tel" class="form-control" id="phone" value="+1 (555) 123-4567">
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="specialization" class="form-label">Specialization</label>
+                        <input type="text" class="form-control" id="specialization" value="Cardiologist">
+                      </div>
+                      <div class="mb-3">
+                        <label for="experience" class="form-label">Years of Experience</label>
+                        <input type="number" class="form-control" id="experience" value="15">
+                      </div>
+                      <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Security Settings Card -->
+              <div class="col-lg-6">
+                <div class="card border h-100">
+                  <div class="card-header bg-white">
+                    <div class="d-flex align-items-center">
+                      <div class="icon-container rounded-5 text-primary me-3">
+                        <i class="bi bi-shield-lock"></i>
+                      </div>
+                      <h5 class="mb-0">Security Settings</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="currentPassword" class="form-label">Current Password</label>
+                        <input type="password" class="form-control" id="currentPassword">
+                      </div>
+                      <div class="mb-3">
+                        <label for="newPassword" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="newPassword">
+                      </div>
+                      <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control" id="confirmPassword">
+                      </div>
+                      <div class="mb-4">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="twoFactorAuth" checked>
+                          <label class="form-check-label" for="twoFactorAuth">Enable Two-Factor Authentication</label>
+                        </div>
+                      </div>
+                      <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Notification Settings Card -->
+              <div class="col-lg-6">
+                <div class="card border h-100">
+                  <div class="card-header bg-white">
+                    <div class="d-flex align-items-center">
+                      <div class="icon-container rounded-5 text-primary me-3">
+                        <i class="bi bi-bell"></i>
+                      </div>
+                      <h5 class="mb-0">Notification Settings</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label class="form-label fw-bold">Email Notifications</label>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" id="emailNewAppointment" checked>
+                          <label class="form-check-label" for="emailNewAppointment">
+                            New appointment notifications
+                          </label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" id="emailPatientUpdates" checked>
+                          <label class="form-check-label" for="emailPatientUpdates">
+                            Patient status updates
+                          </label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" id="emailEmergencies" checked>
+                          <label class="form-check-label" for="emailEmergencies">
+                            Emergency alerts
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <label class="form-label fw-bold">Push Notifications</label>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" id="pushUrgentAlerts" checked>
+                          <label class="form-check-label" for="pushUrgentAlerts">
+                            Urgent alerts and emergencies
+                          </label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" id="pushAppointmentReminders" checked>
+                          <label class="form-check-label" for="pushAppointmentReminders">
+                            Appointment reminders
+                          </label>
+                        </div>
+                      </div>
+                      <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Save Preferences</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Appearance Settings Card -->
+              <div class="col-lg-6">
+                <div class="card border h-100">
+                  <div class="card-header bg-white">
+                    <div class="d-flex align-items-center">
+                      <div class="icon-container rounded-5 text-primary me-3">
+                        <i class="bi bi-palette"></i>
+                      </div>
+                      <h5 class="mb-0">Appearance Settings</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label class="form-label">Theme Mode</label>
+                        <div class="d-flex gap-3">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="themeMode" id="lightMode" checked>
+                            <label class="form-check-label" for="lightMode">
+                              Light
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="themeMode" id="darkMode">
+                            <label class="form-check-label" for="darkMode">
+                              Dark
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="themeMode" id="systemMode">
+                            <label class="form-check-label" for="systemMode">
+                              System Default
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <label class="form-label">Color Accent</label>
+                        <div class="d-flex gap-2">
+                          <button type="button" class="btn btn-primary color-swatch active"></button>
+                          <button type="button" class="btn color-swatch" style="background-color: #22C55E;"></button>
+                          <button type="button" class="btn color-swatch" style="background-color: #F59E0B;"></button>
+                          <button type="button" class="btn color-swatch" style="background-color: #EF4444;"></button>
+                          <button type="button" class="btn color-swatch" style="background-color: #8B5CF6;"></button>
+                        </div>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <label for="fontSize" class="form-label">Font Size</label>
+                        <select class="form-select" id="fontSize">
+                          <option>Small</option>
+                          <option selected>Medium</option>
+                          <option>Large</option>
+                        </select>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="compactMode">
+                          <label class="form-check-label" for="compactMode">Compact Mode</label>
+                        </div>
+                      </div>
+                      
+                      <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Apply Changes</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="container-fluid text-center py-3 bg-light border-top">
+        <p class="mb-0">&copy; 2025 NovaCare. All rights reserved.</p>
+      </div>
+    </footer>
+    
+    <script src="assets/js/jquery/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $(".settings").addClass("page-item-active");
+      });
+    </script>
+  </body>
+</html>

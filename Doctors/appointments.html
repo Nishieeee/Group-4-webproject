@@ -42,14 +42,16 @@
     />
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <link rel="stylesheet" href="assets/css/appointments.css" />
   </head>
   <body>
     <header
       class="header position-fixed z-3 top-0 bg-white w-100 d-flex justify-content-between align-items-center text-bg-white py-3 px-5 shadow-sm"
     >
-      <div class="menu d-flex align-items-center justify-content-between">
-        <div class="p-2 me-2 d-flex align-items-center justify-content-center">
+      <div class="menu d-flex align-items-center justify-content-around">
+        <div
+          class="hamburger p-2 me-2 align-items-center justify-content-center"
+        >
           <i class="bi bi-list menu-icon"></i>
         </div>
         <img
@@ -65,7 +67,7 @@
           class="ms-2"
         />
       </div>
-      <div>
+      <div class="m-3">
         <div
           id="search"
           class="search-container d-flex align-items-center justify-content-center w-100"
@@ -91,10 +93,7 @@
         <div
           class="side-profile mb-1 w-100 d-flex align-items-center justify-content-center"
         >
-          <img
-            src="/assets/img/doctors/doctors-1.jpg"
-            class="rounded-5"
-          />
+          <img src="/assets/img/doctors/doctors-1.jpg" class="rounded-5" />
           <div id="side-profile-name" class="mx-1">
             <h3 class="text-white my-0">
               <span class="nav-text">Ali Bitun</span>
@@ -109,31 +108,29 @@
           aria-label="page navigation"
           class="side-nav d-flex flex-column p-2"
         >
-          <a href="docdashboard.html" class="main-page hp m-1 px-3 py-2">
-            <i class="bi bi-hospital"></i
+          <a href="docdashboard.html" class="m-1 px-3 py-2"
+            ><i class="bi bi-hospital"></i
             ><span class="nav-text">Medical Dashboard</span></a
           >
-          <a href="Patients.html" class="pts m-1 px-3 py-2">
-            <i class="bi bi-people"></i
+          <a href="Patients.html" class="m-1 px-3 py-2"
+            ><i class="bi bi-people"></i
             ><span class="nav-text">Patients</span></a
           >
-          <a href="#" class="m-1 px-3 py-2">
-            <i class="bi bi-clipboard-heart"></i
+          <a href="#" class="m-1 px-3 py-2 page-item-active"
+            ><i class="bi bi-clipboard-heart"></i
             ><span class="nav-text">Appointments</span></a
           >
-          <a href="#" class="m-1 px-3 py-2">
-            <i class="bi bi-gear"></i
-            ><span class="nav-text">Settings</span></a
+          <a href="settings.html" class="m-1 px-3 py-2"
+            ><i class="bi bi-gear"></i><span class="nav-text">Settings</span></a
           >
-          <a href="/index.html" class="m-1 px-3 py-2">
-            <i class="bi bi-arrow-right"></i
-            ><span class="nav-text">Logout</span></a
+          <a href="/index.html" class="m-1 px-3 py-2"
+            ><i class="bi bi-arrow-right"></i><span class="nav-text">Logout</span></a
           >
         </nav>
       </aside>
 
-      <!--Appointments page-->
-      <div class="appointments-page">
+      <!--main Content here-->
+      <div class="staff-page w-100 transition-width">
         <nav
           class="nav-loc z-3 border bg-white d-flex align-items-center justify-content-start p-2 shadow-sm"
         >
@@ -143,228 +140,377 @@
           <div class="nav-path d-flex ms-2">
             <p class="txt-dark my-0 mx-1"><a href="#"> Home </a></p>
             <p class="txt-dark my-0 mx-1 text-primary">/</p>
-            <p class="txt-dark my-0 mx-1"><a href="#"> Appointments </a></p>
+            <p class="txt-dark my-0 mx-1">
+              <a href="doctors.html"> Appointments </a>
+            </p>
           </div>
         </nav>
-
-        <!-- Main Appointments Content -->
-        <div class="appointments-content p-2 my-0">
-          <section class="appointments-table border p-3 shadow-sm">
-            <div class="mx-1 my-2">
-              <div
-                class="d-flex justify-content-between align-items-center py-2 px-5"
-              >
-                <h5 class="mb-0">Appointments</h5>
-                <button
-                  class="btn btn-primary btnAddAppointment rounded-5 shadow-sm px-3"
-                >
-                  <i class="bi bi-plus p-0 m-0"></i> Add Appointment
-                </button>
-              </div>
+        <div id="added-success" class="added-success bg-success text-white p-3">
+          <i class="bi bi-person-check mx-1" style="font-size: 20px"></i>Appointment Successfully Added!
+        </div>
+        <div class="appointments p-2 my-0">
+          <!--view appointment calendar-->
+          <section
+            class="appointments-calendar p-3 my-0 border rounded shadow-sm"
+          >
+            <div
+              class="d-flex justify-content-between align-items-center py-2 px-5 my-3"
+            >
+              <h5 class="mb-0">Appointments</h5>
             </div>
-            <div class="table-responsive border">
-              <table id="appointmentTable" class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Appointment ID</th>
-                    <th scope="col">Patient Name</th>
-                    <th scope="col">Doctor</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Department</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Actions</th>
-                  </tr>
+            <div class="appointment-calendar table-responsive">
+              <table class="table table-bordered table-hover text-wrap">
+                <thead class="table-primary">
+                  <th>Sun</th>
+                  <th>Mon</th>
+                  <th>Tues</th>
+                  <th>Weds</th>
+                  <th>Thurs</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
                 </thead>
-                <tbody>
+                <tbody class="calendar">
                   <tr>
-                    <td>#APT001</td>
-                    <td>Allan Stuart</td>
-                    <td>Dr. Jane Doe</td>
-                    <td>2024-01-20</td>
-                    <td>10:00 AM</td>
-                    <td>Cardiology</td>
-                    <td>Confirmed</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
                     <td>
-                      <button class="btn btn-danger m-1 h-100">
-                        <i class="bi bi-trash"></i>
+                      1
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        5 Appointments
                       </button>
-                      <button class="btn btn-success edit-aptnt m-1">
-                        <i class="bi bi-check2-circle"></i>
+                    </td>
+                    <td>
+                      2
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        10 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      3
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        13 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      4
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        14 Appointments
                       </button>
                     </td>
                   </tr>
                   <tr>
-                    <td>#APT002</td>
-                    <td>Jada Poe</td>
-                    <td>Dr. John Smith</td>
-                    <td>2024-01-21</td>
-                    <td>02:30 PM</td>
-                    <td>Neurology</td>
-                    <td>Pending</td>
                     <td>
-                      <button class="btn btn-danger m-1 h-100">
-                        <i class="bi bi-trash"></i>
+                      5
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        4 Appointments
                       </button>
-                      <button class="btn btn-success edit-aptnt m-1">
-                        <i class="bi bi-check2-circle"></i>
+                    </td>
+                    <td>
+                      6
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        10 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      7
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        11 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      8
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        25 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      9
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        14 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      10
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        12 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      11
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        9 Appointments
                       </button>
                     </td>
                   </tr>
-                  <!-- Add more rows as needed -->
+                  <tr>
+                    <td>
+                      12
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        8 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      13
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        7 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      14
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        6 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      15
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        4 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      16
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        3 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      17
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        2 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      18
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        1 Appointments
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      19
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        0 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      20
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        0 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      21
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        0 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      22
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        10 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      23
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        11 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      24
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        7 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      25
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        8 Appointments
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      26
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        6 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      27
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        7 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      28
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        7 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      29
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        9 Appointments
+                      </button>
+                    </td>
+                    <td>
+                      30
+                      <button
+                        class="btn-cln-apptnmnt w-100 border-primary text-primary bg-white rounded"
+                      >
+                        10 Appointments
+                      </button>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
           </section>
-
-          <section class="add-appointment border py-3 shadow-sm bg-white">
-            <form>
-              <div
-                class="d-flex justify-content-between align-items-center py-2 px-5"
-              >
-                <h5 class="mb-0">Add Appointment</h5>
-              </div>
-              <div class="row gx-2 my-0 p-3">
-                <div class="col-sm-6">
-                  <label for="patientName" class="form-label">Patient Name</label>
-                  <input type="text" class="form-control" id="patientName" />
-
-                  <label for="doctorName" class="form-label">Doctor</label>
-                  <select class="form-select" id="doctorName">
-                    <option selected>Choose...</option>
-                    <option value="Dr. Jane Doe">Dr. Jane Doe</option>
-                    <option value="Dr. John Smith">Dr. John Smith</option>
-                    <!-- Add more doctors as needed -->
-                  </select>
-
-                  <label for="appointmentDate" class="form-label">Date</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="appointmentDate"
-                  />
-                </div>
-
-                <div class="col-sm-6">
-                  <label for="appointmentTime" class="form-label">Time</label>
-                  <input
-                    type="time"
-                    class="form-control"
-                    id="appointmentTime"
-                  />
-
-                  <label for="department" class="form-label">Department</label>
-                  <select class="form-select" id="department">
-                    <option selected>Choose...</option>
-                    <option value="Cardiology">Cardiology</option>
-                    <option value="Neurology">Neurology</option>
-                    <!-- Add more departments as needed -->
-                  </select>
-
-                  <label for="appointmentStatus" class="form-label">Status</label>
-                  <select class="form-select" id="appointmentStatus">
-                    <option selected>Choose...</option>
-                    <option value="Confirmed">Confirmed</option>
-                    <option value="Pending">Pending</option>
-                    <option value="Cancelled">Cancelled</option>
-                  </select>
-                </div>
-
-                <div class="d-flex justify-content-end mt-3">
-                  <button
-                    class="btn btn-white text-danger btn-cancel"
-                    type="reset"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    class="btn btn-primary btn-add-appointment"
-                    type="submit"
-                  >
-                    Add Appointment
-                  </button>
-                </div>
-              </div>
-            </form>
-          </section>
-
-          <section class="edit-appointment border py-3 shadow-sm bg-white">
-            <form>
-              <div
-                class="d-flex justify-content-between align-items-center py-2 px-5"
-              >
-                <h5 class="mb-0">Edit Appointment</h5>
-              </div>
-              <div class="row gx-2 my-0 p-3">
-                <div class="col-sm-6">
-                  <label for="patientNameEdit" class="form-label">Patient Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="patientNameEdit"
-                    value="Allan Stuart"
-                  />
-
-                  <label for="doctorNameEdit" class="form-label">Doctor</label>
-                  <select class="form-select" id="doctorNameEdit">
-                    <option value="Dr. Jane Doe" selected>Dr. Jane Doe</option>
-                    <option value="Dr. John Smith">Dr. John Smith</option>
-                    <!-- Add more doctors as needed -->
-                  </select>
-
-                  <label for="appointmentDateEdit" class="form-label">Date</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="appointmentDateEdit"
-                    value="2024-01-20"
-                  />
-                </div>
-
-                <div class="col-sm-6">
-                  <label for="appointmentTimeEdit" class="form-label">Time</label>
-                  <input
-                    type="time"
-                    class="form-control"
-                    id="appointmentTimeEdit"
-                    value="10:00"
-                  />
-
-                  <label for="departmentEdit" class="form-label">Department</label>
-                  <select class="form-select" id="departmentEdit">
-                    <option value="Cardiology" selected>Cardiology</option>
-                    <option value="Neurology">Neurology</option>
-                    <!-- Add more departments as needed -->
-                  </select>
-
-                  <label for="appointmentStatusEdit" class="form-label">Status</label>
-                  <select class="form-select" id="appointmentStatusEdit">
-                    <option value="Confirmed" selected>Confirmed</option>
-                    <option value="Pending">Pending</option>
-                    <option value="Cancelled">Cancelled</option>
-                  </select>
-                </div>
-
-                <div class="d-flex justify-content-end mt-3">
-                  <button
-                    class="btn btn-white text-danger btn-cancel"
-                    type="reset"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    class="btn btn-primary btn-update-appointment"
-                    type="submit"
-                  >
-                    Update Appointment
-                  </button>
-                </div>
-              </div>
-            </form>
+          <!--appointment-list-->
+          <section class="appointment-list p-3 my-0 border rounded shadow-sm">
+            <button class="btn btn-primary btn-cancel">
+              <i class="bi bi-arrow-return-right mx-2"></i>Return
+            </button>
+            <div
+              class="d-flex justify-content-between align-items-center py-2 px-5 my-3"
+            >
+              <h5 class="mb-0">Appointments List</h5>
+            </div>
+            <table id="patientTable" class="table table-hover text-center">
+              <thead class="table-primary">
+                <th>#</th>
+                <th>Patient Name</th>
+                <th>Age</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Reported Problem</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001</td>
+                  <td>Deena Cooley</td>
+                  <td>65</td>
+                  <td>05/23/2024</td>
+                  <td>9:30AM</td>
+                  <td>Diabeties</td>
+                  <td><span class="badge bg-warning">Pending</span></td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success edit-ptnt m-1">
+                      <i class="bi bi-check2-circle"></i>
+                    </button>
+                    <button class="btn btn-primary edit-ptnt m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Jerry Wilcox</td>
+                  <td>73</td>
+                  <td>05/23/2024</td>
+                  <td>9:45AM</td>
+                  <td>Fever</td>
+                  <td><span class="badge bg-success">Confirmed</span></td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success edit-ptnt m-1">
+                      <i class="bi bi-check2-circle"></i>
+                    </button>
+                    <button class="btn btn-primary edit-ptnt m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>003</td>
+                  <td>Laura Kinney</td>
+                  <td>42</td>
+                  <td>05/24/2024</td>
+                  <td>10:00AM</td>
+                  <td>Chest Pain</td>
+                  <td><span class="badge bg-danger">Cancelled</span></td>
+                  <td>
+                    <button class="btn btn-danger m-1 h-100">
+                      <i class="bi bi-trash"></i></button
+                    ><button class="btn btn-success edit-ptnt m-1">
+                      <i class="bi bi-check2-circle"></i>
+                    </button>
+                    <button class="btn btn-primary edit-ptnt m-1">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </section>
         </div>
       </div>
-      <!--end of appointments page-->
     </main>
     <footer>
       <div class="container-fluid text-center py-3 bg-light border-top">
