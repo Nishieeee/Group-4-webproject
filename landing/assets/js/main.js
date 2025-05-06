@@ -207,5 +207,137 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/** Added More */
+document.addEventListener('DOMContentLoaded', function() {
+  const doctorSelect = document.getElementById('doctor');
+  const checkAppointmentBtn = document.getElementById('checkAppointment');
+  const appointmentsSection = document.querySelector('.appointments');
+  const timeSlotModal = new bootstrap.Modal(document.getElementById('timeSlotModal'));
+  
+  // Enable/disable appointment button based on doctor selection
+  doctorSelect.addEventListener('change', function() {
+    checkAppointmentBtn.disabled = !this.value;
+  });
+
+  // Show appointments calendar when button is clicked
+  checkAppointmentBtn.addEventListener('click', function() {
+    appointmentsSection.style.display = 'block';
+  });
+
+  // Handle appointment button clicks
+  document.querySelectorAll('.btn-cln-apptnmnt').forEach(button => {
+    const appointmentCount = parseInt(button.textContent.split(' ')[0]);
+    
+    if (appointmentCount >= 25) {
+      button.classList.add('disabled');
+      button.disabled = true;
+      button.title = 'No available slots';
+    } else {
+      button.addEventListener('click', function() {
+        showTimeSlots(button.closest('td').textContent.trim().split('\n')[0]);
+      });
+    }
+  });
+
+  function showTimeSlots(date) {
+    const timeSlots = [
+      '09:00 AM', '09:30 AM', '10:00 AM', '10:30 AM',
+      '11:00 AM', '11:30 AM', '02:00 PM', '02:30 PM',
+      '03:00 PM', '03:30 PM', '04:00 PM', '04:30 PM'
+    ];
+
+    const timeSlotContainer = document.querySelector('.time-slots');
+    timeSlotContainer.innerHTML = '';
+
+    timeSlots.forEach(time => {
+      const slot = document.createElement('div');
+      slot.className = 'time-slot';
+      slot.textContent = time;
+      
+      // Randomly disable some slots (you can modify this logic)
+      if (Math.random() < 0.3) {
+        slot.classList.add('disabled');
+      } else {
+        slot.addEventListener('click', () => selectTimeSlot(slot, date, time));
+      }
+      
+      timeSlotContainer.appendChild(slot);
+    });
+
+    timeSlotModal.show();
+  }
+
+  function selectTimeSlot(slot, date, time) {
+    if (slot.classList.contains('disabled')) return;
+
+    // Remove selection from other slots
+    document.querySelectorAll('.time-slot').forEach(s => {
+      s.classList.remove('selected');
+    });
+
+    // Select this slot
+    slot.classList.add('selected');
+
+    // Here you can handle the appointment creation
+    // For example, show a confirmation dialog
+    if (confirm(`Confirm appointment for ${date} at ${time}?`)) {
+      // Add appointment to the list
+      addAppointmentToList(date, time);
+      timeSlotModal.hide();
+    }
+  }
+
+  function addAppointmentToList(date, time) {
+    const table = document.getElementById('patientTable');
+    const newRow = table.insertRow(-1);
+    
+    const appointmentId = String(table.rows.length - 1).padStart(3, '0');
+    
+    newRow.innerHTML = `
+      <td>${appointmentId}</td>
+      <td>${doctorSelect.options[doctorSelect.selectedIndex].text}</td>
+      <td>--</td>
+      <td>${date}</td>
+      <td>${time}</td>
+      <td>--</td>
+      <td><span class="badge bg-warning">Pending</span></td>
+      <td>
+        <button class="btn btn-danger m-1 h-100">
+          <i class="bi bi-trash"></i>
+        </button>
+        <button class="btn btn-success edit-ptnt m-1">
+          <i class="bi bi-check2-circle"></i>
+        </button>
+        <button class="btn btn-primary edit-ptnt m-1">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </td>
+    `;
+
+    // Update appointment count for the selected date
+    const dateCell = Array.from(document.querySelectorAll('td')).find(td => 
+      td.textContent.includes(date)
+    );
+    if (dateCell) {
+      const appointmentButton = dateCell.querySelector('.btn-cln-apptnmnt');
+      const currentCount = parseInt(appointmentButton.textContent.split(' ')[0]);
+      appointmentButton.textContent = `${currentCount + 1} Appointments`;
+
+      // Disable if reached 25
+      if (currentCount + 1 >= 25) {
+        appointmentButton.classList.add('disabled');
+        appointmentButton.disabled = true;
+      }
+    }
+  }
+
+  // Handle return button
+  document.querySelector('.btn-cancel').addEventListener('click', function() {
+    appointmentsSection.style.display = 'none';
+  });
+});
+
+
+
 
 })();
